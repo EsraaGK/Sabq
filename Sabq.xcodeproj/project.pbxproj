@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		498772A625C19474567EBB4C /* Pods_Sabq.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98EF09688DA941D3FFB027A /* Pods_Sabq.framework */; };
+		B16DB9C1235A3C1B0035ECDF /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16DB9BF235A3C1B0035ECDF /* SliderCollectionViewCell.swift */; };
+		B16DB9C2235A3C1B0035ECDF /* SliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B16DB9C0235A3C1B0035ECDF /* SliderCollectionViewCell.xib */; };
 		CEA80EA52358A35E004C6C70 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA80EA32358A35E004C6C70 /* DetailsViewController.swift */; };
 		CEA80EA62358A35E004C6C70 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA80EA42358A35E004C6C70 /* DetailsViewController.xib */; };
 		CEA80EAA2358A55B004C6C70 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA80EA82358A55B004C6C70 /* SearchViewController.swift */; };
@@ -28,6 +30,8 @@
 /* Begin PBXFileReference section */
 		012817EA5DEAD8C964936C39 /* Pods-Sabq.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sabq.debug.xcconfig"; path = "Target Support Files/Pods-Sabq/Pods-Sabq.debug.xcconfig"; sourceTree = "<group>"; };
 		32856859724E71E1228D61A7 /* Pods-Sabq.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sabq.release.xcconfig"; path = "Target Support Files/Pods-Sabq/Pods-Sabq.release.xcconfig"; sourceTree = "<group>"; };
+		B16DB9BF235A3C1B0035ECDF /* SliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewCell.swift; sourceTree = "<group>"; };
+		B16DB9C0235A3C1B0035ECDF /* SliderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCollectionViewCell.xib; sourceTree = "<group>"; };
 		CEA80EA32358A35E004C6C70 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		CEA80EA42358A35E004C6C70 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 		CEA80EA82358A55B004C6C70 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +64,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B16DB9BD235A3B150035ECDF /* SliderCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				CEF2D13F2358930A005D2C96 /* SliderTableViewCell.swift */,
+				CEF2D1402358930A005D2C96 /* SliderTableViewCell.xib */,
+				B16DB9BF235A3C1B0035ECDF /* SliderCollectionViewCell.swift */,
+				B16DB9C0235A3C1B0035ECDF /* SliderCollectionViewCell.xib */,
+			);
+			path = SliderCollectionView;
+			sourceTree = "<group>";
+		};
+		B16DB9BE235A3B5F0035ECDF /* OrdinaryTabelViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CEF2D13B235892D5005D2C96 /* OrdinaryCellTableViewCell.swift */,
+				CEF2D13C235892D5005D2C96 /* OrdinaryCellTableViewCell.xib */,
+			);
+			path = OrdinaryTabelViewCell;
+			sourceTree = "<group>";
+		};
 		CEA80EA22358A333004C6C70 /* DetailsScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,12 +139,10 @@
 		CEF2D13223589117005D2C96 /* HomeScene */ = {
 			isa = PBXGroup;
 			children = (
+				B16DB9BE235A3B5F0035ECDF /* OrdinaryTabelViewCell */,
+				B16DB9BD235A3B150035ECDF /* SliderCollectionView */,
 				CEF2D137235891FA005D2C96 /* HomeViewController.swift */,
 				CEF2D138235891FA005D2C96 /* HomeViewController.xib */,
-				CEF2D13B235892D5005D2C96 /* OrdinaryCellTableViewCell.swift */,
-				CEF2D13C235892D5005D2C96 /* OrdinaryCellTableViewCell.xib */,
-				CEF2D13F2358930A005D2C96 /* SliderTableViewCell.swift */,
-				CEF2D1402358930A005D2C96 /* SliderTableViewCell.xib */,
 			);
 			path = HomeScene;
 			sourceTree = "<group>";
@@ -210,6 +232,7 @@
 				CEF2D13A235891FA005D2C96 /* HomeViewController.xib in Resources */,
 				CEA80EAB2358A55B004C6C70 /* SearchViewController.xib in Resources */,
 				CEF2D13E235892D5005D2C96 /* OrdinaryCellTableViewCell.xib in Resources */,
+				B16DB9C2235A3C1B0035ECDF /* SliderCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +288,7 @@
 				CEF2D1282358732C005D2C96 /* AppDelegate.swift in Sources */,
 				CEA80EAA2358A55B004C6C70 /* SearchViewController.swift in Sources */,
 				CEF2D13D235892D5005D2C96 /* OrdinaryCellTableViewCell.swift in Sources */,
+				B16DB9C1235A3C1B0035ECDF /* SliderCollectionViewCell.swift in Sources */,
 				CEF2D1292358732C005D2C96 /* ViewController.swift in Sources */,
 				CEF2D139235891FA005D2C96 /* HomeViewController.swift in Sources */,
 				CEF2D1412358930A005D2C96 /* SliderTableViewCell.swift in Sources */,
