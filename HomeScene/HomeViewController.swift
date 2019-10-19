@@ -20,7 +20,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let nib = UINib(nibName: "OrdinaryCellTableViewCell", bundle: Bundle.main)
         homeTableView.register(nib, forCellReuseIdentifier: "OrdinaryCellTableViewCell")
      
-       
+        let nibSlider = UINib(nibName: "SliderTableViewCell", bundle: Bundle.main)
+        homeTableView.register(nibSlider, forCellReuseIdentifier: "SliderTableViewCell")
        
     }
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -31,23 +32,28 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = homeTableView!.dequeueReusableCell(withIdentifier: "OrdinaryCellTableViewCell", for: indexPath) as! OrdinaryCellTableViewCell
-        return cell
+        switch indexPath.row {
+        case 0:
+            let cell = homeTableView!.dequeueReusableCell(withIdentifier: "SliderTableViewCell", for: indexPath) as! SliderTableViewCell
+            return cell
+        default:
+            let cell = homeTableView!.dequeueReusableCell(withIdentifier: "OrdinaryCellTableViewCell", for: indexPath) as! OrdinaryCellTableViewCell
+            return cell
+        }
+      
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.navigationController!.pushViewController(DetailsViewController(), animated: false) 
     }
    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 0:
+            return CGFloat(integerLiteral: 517)
+        default:
+            return CGFloat(integerLiteral: 121)
+        }
     }
-    */
 
 }
