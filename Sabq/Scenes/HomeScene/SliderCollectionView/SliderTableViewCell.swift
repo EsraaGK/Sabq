@@ -18,6 +18,7 @@ class SliderTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollec
         // Initialization code
         sliderCollectionView.delegate = self
         sliderCollectionView.dataSource = self
+        
         let nib = UINib(nibName: "SliderCollectionViewCell", bundle: nil)
         sliderCollectionView.register(nib, forCellWithReuseIdentifier: "SliderCollectionViewCell" )
         

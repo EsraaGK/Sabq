@@ -10,11 +10,28 @@
 		498772A625C19474567EBB4C /* Pods_Sabq.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98EF09688DA941D3FFB027A /* Pods_Sabq.framework */; };
 		B16DB9C1235A3C1B0035ECDF /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16DB9BF235A3C1B0035ECDF /* SliderCollectionViewCell.swift */; };
 		B16DB9C2235A3C1B0035ECDF /* SliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B16DB9C0235A3C1B0035ECDF /* SliderCollectionViewCell.xib */; };
+		CE2BBE36235C60D100F4D19B /* HomeApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BBE35235C60D100F4D19B /* HomeApiResponse.swift */; };
+		CE2BBE3E235C7E5700F4D19B /* NetworkService+ActorsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BBE3C235C7E5700F4D19B /* NetworkService+ActorsService.swift */; };
+		CE2BBE3F235C7E5700F4D19B /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BBE3D235C7E5700F4D19B /* ProductService.swift */; };
+		CE2BBE44235C7E6600F4D19B /* NetworkDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BBE40235C7E6600F4D19B /* NetworkDefaults.swift */; };
+		CE2BBE45235C7E6600F4D19B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BBE41235C7E6600F4D19B /* NetworkError.swift */; };
+		CE2BBE46235C7E6600F4D19B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BBE42235C7E6600F4D19B /* NetworkManager.swift */; };
+		CE2BBE47235C7E6600F4D19B /* StaticHeaderPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BBE43235C7E6600F4D19B /* StaticHeaderPlugin.swift */; };
+		CE38EA5C235C920600229585 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA5B235C920600229585 /* Router.swift */; };
+		CE38EA5E235C98E000229585 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA5D235C98E000229585 /* HomeModel.swift */; };
+		CE38EA60235C991700229585 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA5F235C991700229585 /* HomePresenter.swift */; };
+		CE38EA62235C993B00229585 /* HomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA61235C993B00229585 /* HomeModule.swift */; };
+		CE38EA64235C9AC900229585 /* HomeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA63235C9AC900229585 /* HomeViewProtocol.swift */; };
+		CE38EA68235C9D9E00229585 /* HomeModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA67235C9D9E00229585 /* HomeModelProtocol.swift */; };
+		CE38EA6A235CBBD400229585 /* HomeAdapterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA69235CBBD400229585 /* HomeAdapterProtocol.swift */; };
+		CE38EA6C235CBC0300229585 /* HomeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA6B235CBC0300229585 /* HomeAdapter.swift */; };
+		CE38EA6F235CCD8500229585 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA6E235CCD8500229585 /* BaseViewController.swift */; };
+		CE38EA71235CCDC700229585 /* BasePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA70235CCDC700229585 /* BasePresenterProtocol.swift */; };
+		CE38EA73235CCF0400229585 /* HomePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA72235CCF0400229585 /* HomePresenterProtocol.swift */; };
 		CEA80EA52358A35E004C6C70 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA80EA32358A35E004C6C70 /* DetailsViewController.swift */; };
 		CEA80EA62358A35E004C6C70 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA80EA42358A35E004C6C70 /* DetailsViewController.xib */; };
 		CEA80EAA2358A55B004C6C70 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA80EA82358A55B004C6C70 /* SearchViewController.swift */; };
 		CEA80EAB2358A55B004C6C70 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA80EA92358A55B004C6C70 /* SearchViewController.xib */; };
-		CEF2D11C23587147005D2C96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF2D11A23587147005D2C96 /* Main.storyboard */; };
 		CEF2D11E23587148005D2C96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF2D11D23587148005D2C96 /* Assets.xcassets */; };
 		CEF2D12123587148005D2C96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF2D11F23587148005D2C96 /* LaunchScreen.storyboard */; };
 		CEF2D1282358732C005D2C96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2D11623587147005D2C96 /* AppDelegate.swift */; };
@@ -32,6 +49,24 @@
 		32856859724E71E1228D61A7 /* Pods-Sabq.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sabq.release.xcconfig"; path = "Target Support Files/Pods-Sabq/Pods-Sabq.release.xcconfig"; sourceTree = "<group>"; };
 		B16DB9BF235A3C1B0035ECDF /* SliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewCell.swift; sourceTree = "<group>"; };
 		B16DB9C0235A3C1B0035ECDF /* SliderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCollectionViewCell.xib; sourceTree = "<group>"; };
+		CE2BBE35235C60D100F4D19B /* HomeApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeApiResponse.swift; sourceTree = "<group>"; };
+		CE2BBE3C235C7E5700F4D19B /* NetworkService+ActorsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkService+ActorsService.swift"; sourceTree = "<group>"; };
+		CE2BBE3D235C7E5700F4D19B /* ProductService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		CE2BBE40235C7E6600F4D19B /* NetworkDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDefaults.swift; sourceTree = "<group>"; };
+		CE2BBE41235C7E6600F4D19B /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		CE2BBE42235C7E6600F4D19B /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CE2BBE43235C7E6600F4D19B /* StaticHeaderPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticHeaderPlugin.swift; sourceTree = "<group>"; };
+		CE38EA5B235C920600229585 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		CE38EA5D235C98E000229585 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		CE38EA5F235C991700229585 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		CE38EA61235C993B00229585 /* HomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModule.swift; sourceTree = "<group>"; };
+		CE38EA63235C9AC900229585 /* HomeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewProtocol.swift; sourceTree = "<group>"; };
+		CE38EA67235C9D9E00229585 /* HomeModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModelProtocol.swift; sourceTree = "<group>"; };
+		CE38EA69235CBBD400229585 /* HomeAdapterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAdapterProtocol.swift; sourceTree = "<group>"; };
+		CE38EA6B235CBC0300229585 /* HomeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAdapter.swift; sourceTree = "<group>"; };
+		CE38EA6E235CCD8500229585 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CE38EA70235CCDC700229585 /* BasePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenterProtocol.swift; sourceTree = "<group>"; };
+		CE38EA72235CCF0400229585 /* HomePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterProtocol.swift; sourceTree = "<group>"; };
 		CEA80EA32358A35E004C6C70 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		CEA80EA42358A35E004C6C70 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 		CEA80EA82358A55B004C6C70 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -39,7 +74,6 @@
 		CEF2D11323587147005D2C96 /* Sabq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sabq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF2D11623587147005D2C96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEF2D11823587147005D2C96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CEF2D11B23587147005D2C96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEF2D11D23587148005D2C96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEF2D12023587148005D2C96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEF2D12223587148005D2C96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +118,70 @@
 			path = OrdinaryTabelViewCell;
 			sourceTree = "<group>";
 		};
+		CE2BBE34235C60AA00F4D19B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				CE2BBE35235C60D100F4D19B /* HomeApiResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		CE2BBE39235C7D6000F4D19B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CE2BBE3B235C7E1C00F4D19B /* News */,
+				CE2BBE3A235C7D8300F4D19B /* Core */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CE2BBE3A235C7D8300F4D19B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CE2BBE40235C7E6600F4D19B /* NetworkDefaults.swift */,
+				CE2BBE41235C7E6600F4D19B /* NetworkError.swift */,
+				CE2BBE42235C7E6600F4D19B /* NetworkManager.swift */,
+				CE2BBE43235C7E6600F4D19B /* StaticHeaderPlugin.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CE2BBE3B235C7E1C00F4D19B /* News */ = {
+			isa = PBXGroup;
+			children = (
+				CE2BBE3C235C7E5700F4D19B /* NetworkService+ActorsService.swift */,
+				CE2BBE3D235C7E5700F4D19B /* ProductService.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		CE38EA5A235C90D300229585 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CE38EA5B235C920600229585 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CE38EA6D235CCD5C00229585 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CE38EA6E235CCD8500229585 /* BaseViewController.swift */,
+				CE38EA70235CCDC700229585 /* BasePresenterProtocol.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		CE38EA74235CE91C00229585 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CEF2D13223589117005D2C96 /* HomeScene */,
+				CEA80EA72358A51F004C6C70 /* SearchScrean */,
+				CEA80EA22358A333004C6C70 /* DetailsScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		CEA80EA22358A333004C6C70 /* DetailsScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,9 +203,6 @@
 		CEF2D10A23587147005D2C96 = {
 			isa = PBXGroup;
 			children = (
-				CEA80EA72358A51F004C6C70 /* SearchScrean */,
-				CEA80EA22358A333004C6C70 /* DetailsScene */,
-				CEF2D13223589117005D2C96 /* HomeScene */,
 				CEF2D11523587147005D2C96 /* Sabq */,
 				CEF2D11423587147005D2C96 /* Products */,
 				EA2E39A1E3FD5F217EEC0B27 /* Pods */,
@@ -126,9 +221,13 @@
 		CEF2D11523587147005D2C96 /* Sabq */ = {
 			isa = PBXGroup;
 			children = (
+				CE38EA6D235CCD5C00229585 /* Base */,
+				CE38EA5A235C90D300229585 /* Router */,
+				CE2BBE39235C7D6000F4D19B /* Network */,
+				CE2BBE34235C60AA00F4D19B /* Entity */,
+				CE38EA74235CE91C00229585 /* Scenes */,
 				CEF2D11623587147005D2C96 /* AppDelegate.swift */,
 				CEF2D11823587147005D2C96 /* ViewController.swift */,
-				CEF2D11A23587147005D2C96 /* Main.storyboard */,
 				CEF2D11D23587148005D2C96 /* Assets.xcassets */,
 				CEF2D11F23587148005D2C96 /* LaunchScreen.storyboard */,
 				CEF2D12223587148005D2C96 /* Info.plist */,
@@ -142,7 +241,15 @@
 				B16DB9BE235A3B5F0035ECDF /* OrdinaryTabelViewCell */,
 				B16DB9BD235A3B150035ECDF /* SliderCollectionView */,
 				CEF2D137235891FA005D2C96 /* HomeViewController.swift */,
+				CE38EA72235CCF0400229585 /* HomePresenterProtocol.swift */,
+				CE38EA6B235CBC0300229585 /* HomeAdapter.swift */,
 				CEF2D138235891FA005D2C96 /* HomeViewController.xib */,
+				CE38EA5D235C98E000229585 /* HomeModel.swift */,
+				CE38EA5F235C991700229585 /* HomePresenter.swift */,
+				CE38EA61235C993B00229585 /* HomeModule.swift */,
+				CE38EA63235C9AC900229585 /* HomeViewProtocol.swift */,
+				CE38EA67235C9D9E00229585 /* HomeModelProtocol.swift */,
+				CE38EA69235CBBD400229585 /* HomeAdapterProtocol.swift */,
 			);
 			path = HomeScene;
 			sourceTree = "<group>";
@@ -228,7 +335,6 @@
 				CEF2D12123587148005D2C96 /* LaunchScreen.storyboard in Resources */,
 				CEF2D11E23587148005D2C96 /* Assets.xcassets in Resources */,
 				CEF2D1422358930A005D2C96 /* SliderTableViewCell.xib in Resources */,
-				CEF2D11C23587147005D2C96 /* Main.storyboard in Resources */,
 				CEF2D13A235891FA005D2C96 /* HomeViewController.xib in Resources */,
 				CEA80EAB2358A55B004C6C70 /* SearchViewController.xib in Resources */,
 				CEF2D13E235892D5005D2C96 /* OrdinaryCellTableViewCell.xib in Resources */,
@@ -285,28 +391,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2BBE3E235C7E5700F4D19B /* NetworkService+ActorsService.swift in Sources */,
 				CEF2D1282358732C005D2C96 /* AppDelegate.swift in Sources */,
 				CEA80EAA2358A55B004C6C70 /* SearchViewController.swift in Sources */,
+				CE38EA5C235C920600229585 /* Router.swift in Sources */,
 				CEF2D13D235892D5005D2C96 /* OrdinaryCellTableViewCell.swift in Sources */,
+				CE38EA6F235CCD8500229585 /* BaseViewController.swift in Sources */,
 				B16DB9C1235A3C1B0035ECDF /* SliderCollectionViewCell.swift in Sources */,
 				CEF2D1292358732C005D2C96 /* ViewController.swift in Sources */,
 				CEF2D139235891FA005D2C96 /* HomeViewController.swift in Sources */,
+				CE38EA6A235CBBD400229585 /* HomeAdapterProtocol.swift in Sources */,
+				CE2BBE36235C60D100F4D19B /* HomeApiResponse.swift in Sources */,
+				CE38EA5E235C98E000229585 /* HomeModel.swift in Sources */,
+				CE2BBE3F235C7E5700F4D19B /* ProductService.swift in Sources */,
 				CEF2D1412358930A005D2C96 /* SliderTableViewCell.swift in Sources */,
+				CE2BBE46235C7E6600F4D19B /* NetworkManager.swift in Sources */,
+				CE38EA73235CCF0400229585 /* HomePresenterProtocol.swift in Sources */,
+				CE2BBE45235C7E6600F4D19B /* NetworkError.swift in Sources */,
+				CE2BBE44235C7E6600F4D19B /* NetworkDefaults.swift in Sources */,
+				CE38EA6C235CBC0300229585 /* HomeAdapter.swift in Sources */,
+				CE38EA68235C9D9E00229585 /* HomeModelProtocol.swift in Sources */,
+				CE38EA62235C993B00229585 /* HomeModule.swift in Sources */,
+				CE38EA71235CCDC700229585 /* BasePresenterProtocol.swift in Sources */,
+				CE38EA60235C991700229585 /* HomePresenter.swift in Sources */,
+				CE2BBE47235C7E6600F4D19B /* StaticHeaderPlugin.swift in Sources */,
 				CEA80EA52358A35E004C6C70 /* DetailsViewController.swift in Sources */,
+				CE38EA64235C9AC900229585 /* HomeViewProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CEF2D11A23587147005D2C96 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CEF2D11B23587147005D2C96 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CEF2D11F23587148005D2C96 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

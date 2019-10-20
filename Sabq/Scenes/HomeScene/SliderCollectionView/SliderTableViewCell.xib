@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,10 +19,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="516.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="SliderTableViewCell" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qM0-iB-oqu">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="SliderTableViewCell" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qM0-iB-oqu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="516.5"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="516.5" id="NEA-XA-a5Y"/>
+                        </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Kyh-V5-5Zh">
                             <size key="itemSize" width="375" height="516.5"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -31,6 +33,12 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="qM0-iB-oqu" secondAttribute="bottom" id="4qi-9h-pNa"/>
+                    <constraint firstItem="qM0-iB-oqu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="OIp-Vw-gmt"/>
+                    <constraint firstItem="qM0-iB-oqu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="SfE-2h-51i"/>
+                    <constraint firstAttribute="trailing" secondItem="qM0-iB-oqu" secondAttribute="trailing" id="ZWk-dN-7f0"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>

@@ -18,20 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let homeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
-           homeViewController.title = "SABQ"
-        let navController = UINavigationController(rootViewController: homeViewController)
-
         
-        let Search = SearchViewController()
-        Search.title = "SEARCH"
-        
-        let tabBar = UITabBarController()
-        tabBar.viewControllers = [navController, Search]
-        
-        window!.rootViewController = tabBar
+        window!.rootViewController = Router.getTabBar()
         window!.makeKeyAndVisible()
+        setupNetworking()
         return true
+    }
+    
+    func setupNetworking(){
+        NetworkManager.shared = NetworkManager(config: NetworkDefaults.defaults)
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
