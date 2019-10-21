@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="241"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pc-Rg-mhT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pc-Rg-mhT">
                                 <rect key="frame" x="23" y="262" width="329" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -37,7 +37,7 @@
                                 <rect key="frame" x="25" y="361" width="329" height="156"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="script" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3To-YM-o6C">
-                                        <rect key="frame" x="0.0" y="47" width="329" height="21"/>
+                                        <rect key="frame" x="0.0" y="2" width="329" height="66"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -74,12 +74,12 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="3To-YM-o6C" firstAttribute="top" secondItem="YT2-WD-h0L" secondAttribute="top" constant="47" id="0Dw-Uo-xZ6"/>
                                     <constraint firstItem="QPr-Wh-08c" firstAttribute="top" secondItem="3To-YM-o6C" secondAttribute="bottom" constant="31" id="5EL-T3-WdZ"/>
                                     <constraint firstItem="3To-YM-o6C" firstAttribute="leading" secondItem="YT2-WD-h0L" secondAttribute="leading" id="6Wk-Mz-8Bi"/>
                                     <constraint firstAttribute="trailing" secondItem="3To-YM-o6C" secondAttribute="trailing" id="73R-LL-OZ9"/>
                                     <constraint firstAttribute="bottom" secondItem="QPr-Wh-08c" secondAttribute="bottom" constant="36" id="XoT-tV-J75"/>
                                     <constraint firstItem="QPr-Wh-08c" firstAttribute="leading" secondItem="YT2-WD-h0L" secondAttribute="leading" constant="2" id="lNe-mg-75v"/>
+                                    <constraint firstItem="3To-YM-o6C" firstAttribute="top" secondItem="YT2-WD-h0L" secondAttribute="top" constant="2" id="lqm-PH-z9F"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -100,6 +100,14 @@
                 <constraint firstAttribute="trailing" secondItem="Bg3-jR-iPL" secondAttribute="trailing" id="WZA-Fc-XlP"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="descriptionLable" destination="3To-YM-o6C" id="Uww-uf-7sg"/>
+                <outlet property="imgNews" destination="zLr-ZB-9nV" id="WgI-6j-gvj"/>
+                <outlet property="timeLable" destination="FRl-iI-BuD" id="1Jq-qr-xOg"/>
+                <outlet property="titleLable" destination="1Pc-Rg-mhT" id="Umr-hd-3cY"/>
+                <outlet property="viewsImg" destination="D8D-aT-H3s" id="mFq-JE-Sbf"/>
+                <outlet property="viewsLable" destination="eYB-2l-cXA" id="4ld-Zd-aFR"/>
+            </connections>
             <point key="canvasLocation" x="57" y="20"/>
         </collectionViewCell>
     </objects>

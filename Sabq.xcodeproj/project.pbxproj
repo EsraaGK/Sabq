@@ -35,7 +35,6 @@
 		CEF2D11E23587148005D2C96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF2D11D23587148005D2C96 /* Assets.xcassets */; };
 		CEF2D12123587148005D2C96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF2D11F23587148005D2C96 /* LaunchScreen.storyboard */; };
 		CEF2D1282358732C005D2C96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2D11623587147005D2C96 /* AppDelegate.swift */; };
-		CEF2D1292358732C005D2C96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2D11823587147005D2C96 /* ViewController.swift */; };
 		CEF2D139235891FA005D2C96 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2D137235891FA005D2C96 /* HomeViewController.swift */; };
 		CEF2D13A235891FA005D2C96 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF2D138235891FA005D2C96 /* HomeViewController.xib */; };
 		CEF2D13D235892D5005D2C96 /* OrdinaryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2D13B235892D5005D2C96 /* OrdinaryCellTableViewCell.swift */; };
@@ -73,7 +72,6 @@
 		CEA80EA92358A55B004C6C70 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		CEF2D11323587147005D2C96 /* Sabq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sabq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF2D11623587147005D2C96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CEF2D11823587147005D2C96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CEF2D11D23587148005D2C96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEF2D12023587148005D2C96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEF2D12223587148005D2C96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,6 +114,17 @@
 				CEF2D13C235892D5005D2C96 /* OrdinaryCellTableViewCell.xib */,
 			);
 			path = OrdinaryTabelViewCell;
+			sourceTree = "<group>";
+		};
+		CE083136235DB53500172E50 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CE38EA72235CCF0400229585 /* HomePresenterProtocol.swift */,
+				CE38EA63235C9AC900229585 /* HomeViewProtocol.swift */,
+				CE38EA67235C9D9E00229585 /* HomeModelProtocol.swift */,
+				CE38EA69235CBBD400229585 /* HomeAdapterProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		CE2BBE34235C60AA00F4D19B /* Entity */ = {
@@ -227,7 +236,6 @@
 				CE2BBE34235C60AA00F4D19B /* Entity */,
 				CE38EA74235CE91C00229585 /* Scenes */,
 				CEF2D11623587147005D2C96 /* AppDelegate.swift */,
-				CEF2D11823587147005D2C96 /* ViewController.swift */,
 				CEF2D11D23587148005D2C96 /* Assets.xcassets */,
 				CEF2D11F23587148005D2C96 /* LaunchScreen.storyboard */,
 				CEF2D12223587148005D2C96 /* Info.plist */,
@@ -238,18 +246,15 @@
 		CEF2D13223589117005D2C96 /* HomeScene */ = {
 			isa = PBXGroup;
 			children = (
+				CE083136235DB53500172E50 /* Protocols */,
 				B16DB9BE235A3B5F0035ECDF /* OrdinaryTabelViewCell */,
 				B16DB9BD235A3B150035ECDF /* SliderCollectionView */,
 				CEF2D137235891FA005D2C96 /* HomeViewController.swift */,
-				CE38EA72235CCF0400229585 /* HomePresenterProtocol.swift */,
 				CE38EA6B235CBC0300229585 /* HomeAdapter.swift */,
 				CEF2D138235891FA005D2C96 /* HomeViewController.xib */,
 				CE38EA5D235C98E000229585 /* HomeModel.swift */,
 				CE38EA5F235C991700229585 /* HomePresenter.swift */,
 				CE38EA61235C993B00229585 /* HomeModule.swift */,
-				CE38EA63235C9AC900229585 /* HomeViewProtocol.swift */,
-				CE38EA67235C9D9E00229585 /* HomeModelProtocol.swift */,
-				CE38EA69235CBBD400229585 /* HomeAdapterProtocol.swift */,
 			);
 			path = HomeScene;
 			sourceTree = "<group>";
@@ -398,7 +403,6 @@
 				CEF2D13D235892D5005D2C96 /* OrdinaryCellTableViewCell.swift in Sources */,
 				CE38EA6F235CCD8500229585 /* BaseViewController.swift in Sources */,
 				B16DB9C1235A3C1B0035ECDF /* SliderCollectionViewCell.swift in Sources */,
-				CEF2D1292358732C005D2C96 /* ViewController.swift in Sources */,
 				CEF2D139235891FA005D2C96 /* HomeViewController.swift in Sources */,
 				CE38EA6A235CBBD400229585 /* HomeAdapterProtocol.swift in Sources */,
 				CE2BBE36235C60D100F4D19B /* HomeApiResponse.swift in Sources */,

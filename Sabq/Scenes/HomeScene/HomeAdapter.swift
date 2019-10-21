@@ -50,6 +50,7 @@ class HomeAdapter:NSObject, HomeAdapterProtocol, UITableViewDataSource{
     
     func add(items: [[Material]]) {
         list = items
+        reloadData!()
         print("FROM ADAPTER \(items[0][0].title!)")
     }
     
@@ -61,19 +62,28 @@ class HomeAdapter:NSObject, HomeAdapterProtocol, UITableViewDataSource{
     //___________________
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        if let myList = list {
+            switch section{
+            case 0: return 1  //slider
+            default: return myList[1].count  //news
+            }
+        }else{
+         return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.row {
+        switch indexPath.section {
         case 0:
             let cell = homeTable.dequeueReusableCell(withIdentifier: "SliderTableViewCell", for: indexPath) as! SliderTableViewCell
+            cell.configureCollection(list: list![0])
             return cell
         default:
             let cell = homeTable.dequeueReusableCell(withIdentifier: "OrdinaryCellTableViewCell", for: indexPath) as! OrdinaryCellTableViewCell
+            cell.configCell(obj: list![1][indexPath.row])
             return cell
         }
         

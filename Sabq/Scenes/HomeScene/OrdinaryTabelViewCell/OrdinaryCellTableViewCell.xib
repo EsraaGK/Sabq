@@ -99,6 +99,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="newsHeaderLable" destination="9cT-h8-T3d" id="rgC-ea-ImF"/>
+                <outlet property="newsImg" destination="ZNy-vD-Tb0" id="sTk-e2-2u5"/>
+                <outlet property="timeLable" destination="Z49-TX-Lub" id="ZyK-2Q-Bi0"/>
+                <outlet property="viewsImg" destination="eQU-io-ZMl" id="DbI-Sz-bfP"/>
+                <outlet property="viewsLable" destination="EYR-hU-JsB" id="mPO-n6-2lM"/>
+            </connections>
             <point key="canvasLocation" x="94.927536231884062" y="63.28125"/>
         </tableViewCell>
     </objects>

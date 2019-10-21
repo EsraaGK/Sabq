@@ -10,9 +10,27 @@ import UIKit
 
 class SliderCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var imgNews: UIImageView!
+    @IBOutlet weak var titleLable: UILabel!
+    @IBOutlet weak var descriptionLable: UILabel!
+    @IBOutlet weak var timeLable: UILabel!
+    @IBOutlet weak var viewsLable: UILabel!
+    @IBOutlet weak var viewsImg: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    func configCell(obj:Material){
+        titleLable.text = obj.title
+        descriptionLable.text = obj.descriptionString
+        imgNews.sd_setImage(with: URL(string: obj.coverPhoto!), placeholderImage: UIImage(named: "news-img_8"))
+        timeLable.text = obj.publishDate
+        viewsLable.text = String(obj.noOfViews!)
+        if obj.noOfViews! > 5000{
+            viewsImg.image = UIImage(named: "ic_views_icon_hot")
+        }else{
+            viewsImg.image = UIImage(named: "ic_views_icon")
+        }
     }
 
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class SliderTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate{
 
-    
+    var list:[Material]?
     
     @IBOutlet weak var sliderCollectionView: UICollectionView!
     override func awakeFromNib() {
@@ -31,13 +31,20 @@ class SliderTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-     return 5
+        if let myList=list{
+            return myList.count
+        }else{
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = sliderCollectionView.dequeueReusableCell(withReuseIdentifier: "SliderCollectionViewCell", for: indexPath) as! SliderCollectionViewCell
+        cell.configCell(obj: list![indexPath.row])
         return cell
     }
-    
+    func configureCollection(list:[Material]){
+        self.list=list
+    }
     
 }

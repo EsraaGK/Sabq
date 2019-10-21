@@ -44,7 +44,7 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
     }
    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.row {
+        switch indexPath.section {
         case 0:
             return CGFloat(integerLiteral: 517)
         default:
