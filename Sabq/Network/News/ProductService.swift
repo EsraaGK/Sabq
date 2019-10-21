@@ -13,6 +13,8 @@ import Moya
 
 enum  ActorsService {
     case HomepageLightVersion(page:Int)
+    case Videos
+    case Images
 }
 
 extension ActorsService: TargetType {
@@ -23,13 +25,21 @@ extension ActorsService: TargetType {
     var path: String {
         switch self {
         case .HomepageLightVersion:
-            return "/homepage-light-version"
+            return "/material/homepage-light-version"
+        case .Videos:
+            return "/studio/list-studio/"
+        case .Images:
+            return "/studio/list-studio/"
         }
     }
     
     var method: Moya.Method {
         switch self {
         case .HomepageLightVersion:
+            return .get
+        case .Videos:
+            return .get
+        case .Images:
             return .get
         }
     }
@@ -38,6 +48,10 @@ extension ActorsService: TargetType {
         switch self {
         case .HomepageLightVersion:
             return Data()
+        case .Videos:
+            return Data()
+        case .Images:
+             return Data()
         }
     }
     
@@ -47,6 +61,14 @@ extension ActorsService: TargetType {
 			return .requestParameters(
                 parameters: ["page":page],
 				encoding: URLEncoding.default)
+        case .Videos:
+            return .requestParameters(
+                parameters: ["type":"video"],
+                encoding: URLEncoding.default)
+        case .Images:
+            return .requestParameters(
+                parameters: ["type":"image"],
+                encoding: URLEncoding.default)
         }
     }
     

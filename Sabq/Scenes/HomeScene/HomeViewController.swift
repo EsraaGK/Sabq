@@ -25,7 +25,13 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
      
         let nibSlider = UINib(nibName: "SliderTableViewCell", bundle: Bundle.main)
         homeTableView.register(nibSlider, forCellReuseIdentifier: "SliderTableViewCell")
-       presenter.getNews(forPage: 1)
+        
+        let nibVideo = UINib(nibName: "VideoHomeTableViewCell", bundle: Bundle.main)
+        homeTableView.register(nibVideo, forCellReuseIdentifier: "VideoHomeTableViewCell")
+        
+        presenter.getNews(forPage: 1)
+        presenter.getVideos()
+        presenter.getImages()
     }
     
     override func loadDataFailed(with error: Error?) {
@@ -37,7 +43,14 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
         adapter.add(items: news )
     }
     
-    
+    func loadVideosSuccess(date: Any){
+        let videos =  (date as? [Material])!
+        adapter.add(item: videos, at: 5)
+    }
+    func loadImagesSuccess(date: Any){
+        let images =  (date as? [Material])!
+        adapter.add(item: images, at: 11)
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.navigationController!.pushViewController(DetailsViewController(), animated: false) 

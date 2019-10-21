@@ -11,5 +11,6 @@ protocol HomeViewProtocol {
     
     func loadDataFailed(with error: Error?)
     func loadDataSuccess(date: Any)
-    
+    func loadVideosSuccess(date: Any)
+    func loadImagesSuccess(date: Any)
 }

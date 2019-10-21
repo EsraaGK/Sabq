@@ -44,8 +44,10 @@ class HomeAdapter:NSObject, HomeAdapterProtocol, UITableViewDataSource{
         
     }
     
-    func add(item: [Material]) {
+    func add(item: [Material], at index: Int) {
         
+        list?.append(item)
+        reloadData!()
     }
     
     func add(items: [[Material]]) {
@@ -81,12 +83,25 @@ class HomeAdapter:NSObject, HomeAdapterProtocol, UITableViewDataSource{
             let cell = homeTable.dequeueReusableCell(withIdentifier: "SliderTableViewCell", for: indexPath) as! SliderTableViewCell
             cell.configureCollection(list: list![0])
             return cell
-        default:
-            let cell = homeTable.dequeueReusableCell(withIdentifier: "OrdinaryCellTableViewCell", for: indexPath) as! OrdinaryCellTableViewCell
-            cell.configCell(obj: list![1][indexPath.row])
-            return cell
+        default: // section 2
+            switch list?.count{
+            case 3:do{
+                let cell = homeTable.dequeueReusableCell(withIdentifier: "VideoHomeTableViewCell", for: indexPath) as! VideoHomeTableViewCell
+                cell.configureCollection(list: list![2])
+                return cell
+                }
+            default : do{
+                let cell = homeTable.dequeueReusableCell(withIdentifier: "OrdinaryCellTableViewCell", for: indexPath) as! OrdinaryCellTableViewCell
+                cell.configCell(obj: list![1][indexPath.row])
+                print("\(list?.count)")
+
+                
+                return cell
+                
+                }
+                
+            }
         }
-        
     }
     
     

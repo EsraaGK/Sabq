@@ -61,6 +61,17 @@ struct Material : Decodable {
     let commentsEnabled : Bool?
     let commentsMinCharacters : Int?
     let commentsMaxCharacters : Int?
+    
+    let comicsType : String?
+    let vid : String?
+    let videoCaption : String?
+    
+}
+
+struct StudioApiResponse : Decodable {
+    let materials : [String]?
+    let comics : [Material]?
+    let code : Int?
 }
 
 // MARK: - Attachement
@@ -86,4 +97,10 @@ struct Tags : Decodable {
 struct Images : Decodable {
     let url : String?
     let caption : String?
+}
+
+enum CellType{
+    case ordinary
+    case videos
+    case images
 }

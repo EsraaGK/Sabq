@@ -9,6 +9,7 @@
 import Foundation
 protocol HomeModelProtocol {
     func getNews(forPage page:Int , compelation: @escaping (Result<Any,Error>)->Void)
-    
+    func getImages( completion: @escaping(Result<Any, Error>)->Void)
+    func getVideos( completion: @escaping(Result<Any, Error>)->Void)
 }
 

@@ -33,4 +33,32 @@ class HomePresenter: BasePresenterProtocol{
         }
    }
     
+    func getVideos(){
+        model.getVideos { result in
+            
+            switch result{
+            case .success(let list):do {
+                let response = list as! StudioApiResponse
+                self.view.loadVideosSuccess(date: response.comics!)
+                
+                }
+            case .failure(_):print("help from ListActorModel")
+            }
+        }
+    }
+    
+    func getImages() {
+        model.getImages { result in
+            
+            switch result{
+            case .success(let list):do {
+                let response = list as! StudioApiResponse
+                self.view.loadImagesSuccess(date: response.comics!)
+                
+                }
+            case .failure(_):print("help from ListActorModel")
+            }
+        }
+    }
+    
 }

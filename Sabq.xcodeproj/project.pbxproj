@@ -32,6 +32,8 @@
 		CEA80EA62358A35E004C6C70 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA80EA42358A35E004C6C70 /* DetailsViewController.xib */; };
 		CEA80EAA2358A55B004C6C70 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA80EA82358A55B004C6C70 /* SearchViewController.swift */; };
 		CEA80EAB2358A55B004C6C70 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA80EA92358A55B004C6C70 /* SearchViewController.xib */; };
+		CEDA5959235DFDB1005932E7 /* VideoHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA5957235DFDB1005932E7 /* VideoHomeTableViewCell.swift */; };
+		CEDA595A235DFDB1005932E7 /* VideoHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDA5958235DFDB1005932E7 /* VideoHomeTableViewCell.xib */; };
 		CEF2D11E23587148005D2C96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF2D11D23587148005D2C96 /* Assets.xcassets */; };
 		CEF2D12123587148005D2C96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF2D11F23587148005D2C96 /* LaunchScreen.storyboard */; };
 		CEF2D1282358732C005D2C96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2D11623587147005D2C96 /* AppDelegate.swift */; };
@@ -70,6 +72,8 @@
 		CEA80EA42358A35E004C6C70 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 		CEA80EA82358A55B004C6C70 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CEA80EA92358A55B004C6C70 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		CEDA5957235DFDB1005932E7 /* VideoHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoHomeTableViewCell.swift; sourceTree = "<group>"; };
+		CEDA5958235DFDB1005932E7 /* VideoHomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoHomeTableViewCell.xib; sourceTree = "<group>"; };
 		CEF2D11323587147005D2C96 /* Sabq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sabq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF2D11623587147005D2C96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEF2D11D23587148005D2C96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -209,6 +213,15 @@
 			path = SearchScrean;
 			sourceTree = "<group>";
 		};
+		CEDA5956235DFCF7005932E7 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				CEDA5957235DFDB1005932E7 /* VideoHomeTableViewCell.swift */,
+				CEDA5958235DFDB1005932E7 /* VideoHomeTableViewCell.xib */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
 		CEF2D10A23587147005D2C96 = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +259,7 @@
 		CEF2D13223589117005D2C96 /* HomeScene */ = {
 			isa = PBXGroup;
 			children = (
+				CEDA5956235DFCF7005932E7 /* Videos */,
 				CE083136235DB53500172E50 /* Protocols */,
 				B16DB9BE235A3B5F0035ECDF /* OrdinaryTabelViewCell */,
 				B16DB9BD235A3B150035ECDF /* SliderCollectionView */,
@@ -336,6 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDA595A235DFDB1005932E7 /* VideoHomeTableViewCell.xib in Resources */,
 				CEA80EA62358A35E004C6C70 /* DetailsViewController.xib in Resources */,
 				CEF2D12123587148005D2C96 /* LaunchScreen.storyboard in Resources */,
 				CEF2D11E23587148005D2C96 /* Assets.xcassets in Resources */,
@@ -418,6 +433,7 @@
 				CE38EA62235C993B00229585 /* HomeModule.swift in Sources */,
 				CE38EA71235CCDC700229585 /* BasePresenterProtocol.swift in Sources */,
 				CE38EA60235C991700229585 /* HomePresenter.swift in Sources */,
+				CEDA5959235DFDB1005932E7 /* VideoHomeTableViewCell.swift in Sources */,
 				CE2BBE47235C7E6600F4D19B /* StaticHeaderPlugin.swift in Sources */,
 				CEA80EA52358A35E004C6C70 /* DetailsViewController.swift in Sources */,
 				CE38EA64235C9AC900229585 /* HomeViewProtocol.swift in Sources */,

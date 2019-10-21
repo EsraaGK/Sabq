@@ -19,7 +19,7 @@ protocol HomeAdapterProtocol {
     
     var showEmptyState: ((Bool) -> Void)? { get set}
     
-    func add(item: DataType)
+    func add(item: DataType, at index: Int)
     func add(items: [DataType])
     func update(item: DataType)
     func count() -> Int
