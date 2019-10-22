@@ -13,13 +13,34 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoHomeTableViewCell" id="KGk-i7-Jjw" customClass="VideoHomeTableViewCell" customModule="Sabq" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="348"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="347.5"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="d9y-OC-O4Y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="347.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QTF-NE-31U">
+                            <size key="itemSize" width="156" height="242"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="d9y-OC-O4Y" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6sl-sb-MUR"/>
+                    <constraint firstAttribute="bottom" secondItem="d9y-OC-O4Y" secondAttribute="bottom" id="ajT-4F-aaf"/>
+                    <constraint firstItem="d9y-OC-O4Y" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dAc-Jg-uG1"/>
+                    <constraint firstAttribute="trailing" secondItem="d9y-OC-O4Y" secondAttribute="trailing" id="yyN-dv-1h7"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="videosCollectionView" destination="d9y-OC-O4Y" id="P7x-p2-5IE"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

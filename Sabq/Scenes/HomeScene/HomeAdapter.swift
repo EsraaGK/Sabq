@@ -98,7 +98,7 @@ class HomeAdapter:NSObject, HomeAdapterProtocol, UITableViewDataSource{
             switch list![indexPath.row].cellType{
             case .videos:do{
                 let cell = homeTable.dequeueReusableCell(withIdentifier: "VideoHomeTableViewCell", for: indexPath) as! VideoHomeTableViewCell
-                cell.configureCollection(list: (list![indexPath.row] as! VideosModel).videosMaterials)
+                cell.configureVideoCollection(list: (list![indexPath.row] as! VideosModel).videosMaterials)
                 return cell
                 }
             case .images:do{

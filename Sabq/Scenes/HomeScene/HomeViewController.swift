@@ -71,7 +71,10 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
         case 0:
             return CGFloat(integerLiteral: 517)
         default:
-            return CGFloat(integerLiteral: 121)
+            switch indexPath.row{
+                case 5: return CGFloat(integerLiteral: 384)
+                default:  return CGFloat(integerLiteral: 121)
+            }
         }
     }
 
