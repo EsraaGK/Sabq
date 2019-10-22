@@ -29,9 +29,12 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
         let nibVideo = UINib(nibName: "VideoHomeTableViewCell", bundle: Bundle.main)
         homeTableView.register(nibVideo, forCellReuseIdentifier: "VideoHomeTableViewCell")
         
+        let nibImage = UINib(nibName: "ImagesTableViewCell", bundle: Bundle.main)
+        homeTableView.register(nibImage, forCellReuseIdentifier: "ImagesTableViewCell")
+        
         presenter.getNews(forPage: 1)
-        presenter.getVideos()
-        presenter.getImages()
+       
+       
     }
     
     override func loadDataFailed(with error: Error?) {
@@ -40,16 +43,23 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
     
     override func loadDataSuccess(date: Any) {
          let news =  (date as? [[Material]])!
-        adapter.add(items: news )
+        let tempSlider = SliderCellModel(material: news[0])
+        let tempOrdinary = news[1].map{X in return OrdinaryCellModel(material: X)}
+        adapter.addToSlider(item: tempSlider)
+        adapter.add(items: tempOrdinary)
+         presenter.getVideos()// coz videos response arrives before home response so it isn't injected in the array
     }
     
     func loadVideosSuccess(date: Any){
         let videos =  (date as? [Material])!
-        adapter.add(item: videos, at: 5)
+        let videosModel = VideosModel(materials: videos)
+        adapter.add(item: videosModel, at: 5)
+         presenter.getImages()
     }
     func loadImagesSuccess(date: Any){
         let images =  (date as? [Material])!
-        adapter.add(item: images, at: 11)
+        let imagesModel = ImagesModel(materials: images)
+        adapter.add(item: imagesModel, at: 11)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

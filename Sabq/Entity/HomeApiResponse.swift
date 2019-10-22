@@ -99,8 +99,3 @@ struct Images : Decodable {
     let caption : String?
 }
 
-enum CellType{
-    case ordinary
-    case videos
-    case images
-}

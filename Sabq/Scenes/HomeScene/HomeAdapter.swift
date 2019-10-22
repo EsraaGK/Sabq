@@ -10,14 +10,23 @@ import Foundation
 import UIKit
 
 class HomeAdapter:NSObject, HomeAdapterProtocol, UITableViewDataSource{
-    var list: [[Material]]?
+    var list: [CellTypeProtocol]?{
+        didSet{
+             reloadData!()
+        }
+    }
+    var sliderList:CellTypeProtocol?{
+        didSet{
+            reloadData!()
+        }
+    }
     
     var homeTable:UITableView
     
     init(tableView: UITableView) {
         homeTable = tableView
     }
-    typealias DataType = [Material]
+    typealias DataType = CellTypeProtocol
     //    associatedtype AdapterDelegate where AdapterDelegate:listAdapterDelegate
     
     var reloadData: (() -> Void)?
@@ -44,19 +53,21 @@ class HomeAdapter:NSObject, HomeAdapterProtocol, UITableViewDataSource{
         
     }
     
-    func add(item: [Material], at index: Int) {
+    func add(item: CellTypeProtocol, at index: Int) {
         
-        list?.append(item)
-        reloadData!()
+        list!.insert(item, at: index)
+      
     }
     
-    func add(items: [[Material]]) {
+    func add(items: [CellTypeProtocol]) {
         list = items
-        reloadData!()
-        print("FROM ADAPTER \(items[0][0].title!)")
     }
     
-    func update(item: [Material]) {
+    func addToSlider(item: CellTypeProtocol){
+        sliderList = item
+    }
+    
+    func update(item: CellTypeProtocol) {
         
     }
     
@@ -70,7 +81,7 @@ class HomeAdapter:NSObject, HomeAdapterProtocol, UITableViewDataSource{
         if let myList = list {
             switch section{
             case 0: return 1  //slider
-            default: return myList[1].count  //news
+            default: return (myList.count ) //news+videos+...
             }
         }else{
          return 0
@@ -81,21 +92,23 @@ class HomeAdapter:NSObject, HomeAdapterProtocol, UITableViewDataSource{
         switch indexPath.section {
         case 0:
             let cell = homeTable.dequeueReusableCell(withIdentifier: "SliderTableViewCell", for: indexPath) as! SliderTableViewCell
-            cell.configureCollection(list: list![0])
+            cell.configureCollection(list: (sliderList as! SliderCellModel).material)
             return cell
         default: // section 2
-            switch list?.count{
-            case 3:do{
+            switch list![indexPath.row].cellType{
+            case .videos:do{
                 let cell = homeTable.dequeueReusableCell(withIdentifier: "VideoHomeTableViewCell", for: indexPath) as! VideoHomeTableViewCell
-                cell.configureCollection(list: list![2])
+                cell.configureCollection(list: (list![indexPath.row] as! VideosModel).videosMaterials)
+                return cell
+                }
+            case .images:do{
+                let cell = homeTable.dequeueReusableCell(withIdentifier: "ImagesTableViewCell", for: indexPath) as! ImagesTableViewCell
+                cell.configureCollection(list: (list![indexPath.row] as! ImagesModel).imagesMaterials)
                 return cell
                 }
             default : do{
                 let cell = homeTable.dequeueReusableCell(withIdentifier: "OrdinaryCellTableViewCell", for: indexPath) as! OrdinaryCellTableViewCell
-                cell.configCell(obj: list![1][indexPath.row])
-                print("\(list?.count)")
-
-                
+                cell.configCell(obj: (list![indexPath.row] as! OrdinaryCellModel).material)
                 return cell
                 
                 }

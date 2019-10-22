@@ -28,6 +28,9 @@
 		CE38EA6F235CCD8500229585 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA6E235CCD8500229585 /* BaseViewController.swift */; };
 		CE38EA71235CCDC700229585 /* BasePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA70235CCDC700229585 /* BasePresenterProtocol.swift */; };
 		CE38EA73235CCF0400229585 /* HomePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA72235CCF0400229585 /* HomePresenterProtocol.swift */; };
+		CE3F1201235EF3C900C6595F /* CellTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F1200235EF3C900C6595F /* CellTypeModel.swift */; };
+		CE3F1205235F15B800C6595F /* ImagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F1203235F15B800C6595F /* ImagesTableViewCell.swift */; };
+		CE3F1206235F15B800C6595F /* ImagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3F1204235F15B800C6595F /* ImagesTableViewCell.xib */; };
 		CEA80EA52358A35E004C6C70 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA80EA32358A35E004C6C70 /* DetailsViewController.swift */; };
 		CEA80EA62358A35E004C6C70 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA80EA42358A35E004C6C70 /* DetailsViewController.xib */; };
 		CEA80EAA2358A55B004C6C70 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA80EA82358A55B004C6C70 /* SearchViewController.swift */; };
@@ -68,6 +71,9 @@
 		CE38EA6E235CCD8500229585 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CE38EA70235CCDC700229585 /* BasePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenterProtocol.swift; sourceTree = "<group>"; };
 		CE38EA72235CCF0400229585 /* HomePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterProtocol.swift; sourceTree = "<group>"; };
+		CE3F1200235EF3C900C6595F /* CellTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTypeModel.swift; sourceTree = "<group>"; };
+		CE3F1203235F15B800C6595F /* ImagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesTableViewCell.swift; sourceTree = "<group>"; };
+		CE3F1204235F15B800C6595F /* ImagesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImagesTableViewCell.xib; sourceTree = "<group>"; };
 		CEA80EA32358A35E004C6C70 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		CEA80EA42358A35E004C6C70 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 		CEA80EA82358A55B004C6C70 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				CE2BBE35235C60D100F4D19B /* HomeApiResponse.swift */,
+				CE3F1200235EF3C900C6595F /* CellTypeModel.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -193,6 +200,15 @@
 				CEA80EA22358A333004C6C70 /* DetailsScene */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CE3F1202235F157500C6595F /* ImagesCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE3F1203235F15B800C6595F /* ImagesTableViewCell.swift */,
+				CE3F1204235F15B800C6595F /* ImagesTableViewCell.xib */,
+			);
+			path = ImagesCell;
 			sourceTree = "<group>";
 		};
 		CEA80EA22358A333004C6C70 /* DetailsScene */ = {
@@ -259,6 +275,7 @@
 		CEF2D13223589117005D2C96 /* HomeScene */ = {
 			isa = PBXGroup;
 			children = (
+				CE3F1202235F157500C6595F /* ImagesCell */,
 				CEDA5956235DFCF7005932E7 /* Videos */,
 				CE083136235DB53500172E50 /* Protocols */,
 				B16DB9BE235A3B5F0035ECDF /* OrdinaryTabelViewCell */,
@@ -353,6 +370,7 @@
 				CEDA595A235DFDB1005932E7 /* VideoHomeTableViewCell.xib in Resources */,
 				CEA80EA62358A35E004C6C70 /* DetailsViewController.xib in Resources */,
 				CEF2D12123587148005D2C96 /* LaunchScreen.storyboard in Resources */,
+				CE3F1206235F15B800C6595F /* ImagesTableViewCell.xib in Resources */,
 				CEF2D11E23587148005D2C96 /* Assets.xcassets in Resources */,
 				CEF2D1422358930A005D2C96 /* SliderTableViewCell.xib in Resources */,
 				CEF2D13A235891FA005D2C96 /* HomeViewController.xib in Resources */,
@@ -420,6 +438,7 @@
 				B16DB9C1235A3C1B0035ECDF /* SliderCollectionViewCell.swift in Sources */,
 				CEF2D139235891FA005D2C96 /* HomeViewController.swift in Sources */,
 				CE38EA6A235CBBD400229585 /* HomeAdapterProtocol.swift in Sources */,
+				CE3F1205235F15B800C6595F /* ImagesTableViewCell.swift in Sources */,
 				CE2BBE36235C60D100F4D19B /* HomeApiResponse.swift in Sources */,
 				CE38EA5E235C98E000229585 /* HomeModel.swift in Sources */,
 				CE2BBE3F235C7E5700F4D19B /* ProductService.swift in Sources */,
@@ -435,6 +454,7 @@
 				CE38EA60235C991700229585 /* HomePresenter.swift in Sources */,
 				CEDA5959235DFDB1005932E7 /* VideoHomeTableViewCell.swift in Sources */,
 				CE2BBE47235C7E6600F4D19B /* StaticHeaderPlugin.swift in Sources */,
+				CE3F1201235EF3C900C6595F /* CellTypeModel.swift in Sources */,
 				CEA80EA52358A35E004C6C70 /* DetailsViewController.swift in Sources */,
 				CE38EA64235C9AC900229585 /* HomeViewProtocol.swift in Sources */,
 			);
