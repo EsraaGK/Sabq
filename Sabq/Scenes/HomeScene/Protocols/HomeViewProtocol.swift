@@ -13,4 +13,6 @@ protocol HomeViewProtocol {
     func loadDataSuccess(date: Any)
     func loadVideosSuccess(date: Any)
     func loadImagesSuccess(date: Any)
+    func loadArticlesSuccess(date: Any)
+   
 }

@@ -15,6 +15,7 @@ enum  ActorsService {
     case HomepageLightVersion(page:Int)
     case Videos
     case Images
+    case Articles
 }
 
 extension ActorsService: TargetType {
@@ -30,6 +31,8 @@ extension ActorsService: TargetType {
             return "/studio/list-studio/"
         case .Images:
             return "/studio/list-studio/"
+        case .Articles:
+            return "/material/articles"
         }
     }
     
@@ -40,6 +43,8 @@ extension ActorsService: TargetType {
         case .Videos:
             return .get
         case .Images:
+            return .get
+        case .Articles:
             return .get
         }
     }
@@ -52,6 +57,8 @@ extension ActorsService: TargetType {
             return Data()
         case .Images:
              return Data()
+        case .Articles:
+            return Data()
         }
     }
     
@@ -68,6 +75,10 @@ extension ActorsService: TargetType {
         case .Images:
             return .requestParameters(
                 parameters: ["type":"image"],
+                encoding: URLEncoding.default)
+        case .Articles:
+            return .requestParameters(
+                parameters: [:],
                 encoding: URLEncoding.default)
         }
     }

@@ -17,6 +17,7 @@ enum CellType{
     case ordinary
     case videos
     case images
+    case articles
 }
 
 class VideosModel :CellTypeProtocol{
@@ -35,6 +36,16 @@ class ImagesModel :CellTypeProtocol{
         imagesMaterials = materials
     }
 }
+
+class ArticlesModel :CellTypeProtocol{
+    var cellType: CellType = .articles
+    var articlesMaterials:[Material]
+    init( materials: [Material]) {
+        // self.cellType = cellType
+        articlesMaterials = materials
+    }
+}
+
 
 class OrdinaryCellModel: CellTypeProtocol{
     var cellType: CellType = .ordinary

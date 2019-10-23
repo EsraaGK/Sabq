@@ -8,6 +8,7 @@
 
 import Foundation
 class HomeModel: HomeModelProtocol{
+    
     let networkManager = NetworkManager()
     
     func getNews(forPage page: Int, compelation: @escaping (Result<Any, Error>) -> Void) {
@@ -35,9 +36,19 @@ class HomeModel: HomeModelProtocol{
         networkManager.getImages { (result:Result<StudioApiResponse, NetworkError>, code:StatusCode?) in
             switch result{
             case .success(let imagesApiResponse): completion(.success(imagesApiResponse))
-            case .failure(_):print("help from NewsModel")
+            case .failure(_): print("help from NewsModel")
             }
         }
         
     }
+    
+    func getArticles(completion: @escaping (Result<Any, Error>) -> Void) {
+        networkManager.getArticles { (result:Result<ArticleApiResponse, NetworkError>, code:StatusCode?) in
+            switch result{
+            case .success(let articleApiResponse): completion(.success(articleApiResponse))
+            case .failure(_): print("help from NewsModel")
+                }
+            }
+        }
+    
 }

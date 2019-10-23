@@ -106,6 +106,11 @@ class HomeAdapter:NSObject, HomeAdapterProtocol, UITableViewDataSource{
                 cell.configureCollection(list: (list![indexPath.row] as! ImagesModel).imagesMaterials)
                 return cell
                 }
+            case .articles:do{
+                let cell = homeTable.dequeueReusableCell(withIdentifier: "ArticlesTableViewCell", for: indexPath) as! ArticlesTableViewCell
+                cell.configureCollection(list: (list![indexPath.row] as! ArticlesModel).articlesMaterials)
+                return cell
+                }
             default : do{
                 let cell = homeTable.dequeueReusableCell(withIdentifier: "OrdinaryCellTableViewCell", for: indexPath) as! OrdinaryCellTableViewCell
                 cell.configCell(obj: (list![indexPath.row] as! OrdinaryCellModel).material)

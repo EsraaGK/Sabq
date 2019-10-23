@@ -61,4 +61,19 @@ class HomePresenter: BasePresenterProtocol{
         }
     }
     
+    
+    func getArticles() {
+        model.getArticles { result in
+            
+            switch result{
+            case .success(let list):do {
+                let response = list as! ArticleApiResponse
+                self.view.loadArticlesSuccess(date: response.materials)
+                
+                }
+            case .failure(_):print("help from ListActorModel")
+            }
+        }
+    }
+    
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate, HomeViewProtocol {
-
+   
     @IBOutlet weak var homeTableView: UITableView!
   lazy var adapter = HomeAdapter(tableView: homeTableView)
     
@@ -31,6 +31,9 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
         
         let nibImage = UINib(nibName: "ImagesTableViewCell", bundle: Bundle.main)
         homeTableView.register(nibImage, forCellReuseIdentifier: "ImagesTableViewCell")
+        
+        let nibArticle = UINib(nibName: "ArticlesTableViewCell", bundle: Bundle.main)
+        homeTableView.register(nibArticle, forCellReuseIdentifier: "ArticlesTableViewCell")
         
         presenter.getNews(forPage: 1)
        
@@ -60,7 +63,17 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
         let images =  (date as? [Material])!
         let imagesModel = ImagesModel(materials: images)
         adapter.add(item: imagesModel, at: 11)
+         presenter.getArticles()
     }
+    
+    func loadArticlesSuccess(date: Any) {
+        let articles =  (date as? [Material])!
+        let articlesModel = ArticlesModel(materials: articles)
+        adapter.add(item: articlesModel, at: 16)
+       
+    }
+    
+
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.navigationController!.pushViewController(DetailsViewController(), animated: false) 
@@ -72,10 +85,12 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
             return CGFloat(integerLiteral: 517)
         default:
             switch indexPath.row{
-                case 5: return CGFloat(integerLiteral: 384)
+                case 5: return CGFloat(integerLiteral: 384)//videos
+                case 11: return CGFloat(integerLiteral: 349)//images
+                case 16: return CGFloat(integerLiteral: 370)//articles
                 default:  return CGFloat(integerLiteral: 121)
             }
         }
     }
-
+   
 }

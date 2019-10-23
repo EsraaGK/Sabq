@@ -15,6 +15,11 @@ struct HomeApiResponse: Decodable{
     let code: Int
 }
 
+struct ArticleApiResponse: Decodable{
+    let materials: [Material]
+    let code: Int
+}
+
 // MARK: - Material
 
 struct Material : Decodable {
