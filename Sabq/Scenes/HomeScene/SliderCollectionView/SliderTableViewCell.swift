@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SliderTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate{
+class SliderTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
 
     var list:[Material]?
     
@@ -47,4 +47,10 @@ class SliderTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollec
         self.list=list
     }
     
+}
+
+extension SliderTableViewCell: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: UIScreen.main.bounds.width, height: collectionView.frame.height)
+    }
 }

@@ -22,7 +22,7 @@ class VideosCollectionViewCell: UICollectionViewCell {
     func configVideosCollectionCell(obj:Material){
         titleLable.text = obj.title
         videoImage.sd_setImage(with: URL(string: obj.coverPhoto!), placeholderImage: UIImage(named: "news-img_8"))
-        timeLable.text = obj.publishDate
+        timeLable.text = obj.publishDate?.convertStringToTimeAgo()
        
     }
 

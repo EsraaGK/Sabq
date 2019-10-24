@@ -19,13 +19,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="516.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="SliderTableViewCell" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qM0-iB-oqu">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="SliderTableViewCell" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qM0-iB-oqu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="516.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="516.5" id="NEA-XA-a5Y"/>
                         </constraints>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Kyh-V5-5Zh">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Kyh-V5-5Zh">
                             <size key="itemSize" width="375" height="516.5"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>

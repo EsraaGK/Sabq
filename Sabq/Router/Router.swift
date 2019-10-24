@@ -18,6 +18,7 @@ class Router {
     private func initializeTabBar()->UITabBarController{
         let Search = SearchViewController()
         Search.title = "SEARCH"
+        
         tabBar.viewControllers = [navController, Search]
         return tabBar
         

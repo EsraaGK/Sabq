@@ -9,6 +9,7 @@
 import UIKit
 import SDWebImage
 
+
 class OrdinaryCellTableViewCell: UITableViewCell {
 
     @IBOutlet weak var newsHeaderLable: UILabel!
@@ -33,8 +34,11 @@ class OrdinaryCellTableViewCell: UITableViewCell {
         
         newsHeaderLable.text = obj.title
         newsImg.sd_setImage(with: URL(string: obj.coverPhoto!), placeholderImage: UIImage(named: "news-img_8"))
-        timeLable.text = obj.publishDate
+        //let dateString = obj.publishDate
+        
+        timeLable.text = obj.publishDate?.convertStringToTimeAgo()
         viewsLable.text = String(obj.noOfViews!)
+        
         if obj.noOfViews! > 5000{
         viewsImg.image = UIImage(named: "ic_views_icon_hot")
         }else{
@@ -43,4 +47,7 @@ class OrdinaryCellTableViewCell: UITableViewCell {
         
     }
     
+    
 }
+
+
