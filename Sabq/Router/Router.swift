@@ -16,10 +16,12 @@ class Router {
     private let navController = UINavigationController(rootViewController: HomeModule.getHomeViewController())
     
     private func initializeTabBar()->UITabBarController{
-        let Search = SearchViewController()
-        Search.title = "SEARCH"
-        
-        tabBar.viewControllers = [navController, Search]
+        let search = SearchViewController()
+        let title = NSLocalizedString("Search", comment: "")
+        let  image = UIImage(named: "ic_newspaper_active")
+        let barItem = UITabBarItem(title: title, image: image, selectedImage: nil)
+        search.tabBarItem = barItem
+        tabBar.viewControllers = [navController, search]
         return tabBar
         
     }

@@ -14,7 +14,10 @@ class HomeModule {
     
     class func getHomeViewController()-> HomeViewController{
         let view = HomeViewController(nibName: "HomeViewController", bundle: nil)
-        view.title = "SABQ"
+        let title = NSLocalizedString("News", comment: "")
+        let image = UIImage(named: "ic_newspaper_active")
+        let barItem = UITabBarItem(title: title, image: image, selectedImage: nil)
+        view.tabBarItem = barItem
         
        view.navigationItem.titleView = UIImageView(image: UIImage(named: "img_logo"))
         
