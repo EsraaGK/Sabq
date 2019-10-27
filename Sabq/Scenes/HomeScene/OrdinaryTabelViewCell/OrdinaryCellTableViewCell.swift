@@ -17,6 +17,8 @@ class OrdinaryCellTableViewCell: UITableViewCell {
     @IBOutlet weak var timeLable: UILabel!
     @IBOutlet weak var viewsLable: UILabel!
     @IBOutlet weak var viewsImg: UIImageView!
+    @IBOutlet weak var markImg: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -31,7 +33,7 @@ class OrdinaryCellTableViewCell: UITableViewCell {
     }
     
     func configCell(obj : Material){
-        
+        hideSkeletonAnimatin()
         newsHeaderLable.text = obj.title
         newsImg.sd_setImage(with: URL(string: obj.coverPhoto!), placeholderImage: UIImage(named: "news-img_8"))
         //let dateString = obj.publishDate
@@ -47,7 +49,13 @@ class OrdinaryCellTableViewCell: UITableViewCell {
         
     }
     
-    
+    func hideSkeletonAnimatin(){
+
+        [newsHeaderLable, timeLable, viewsLable].forEach{$0?.hideSkeleton()}
+        [viewsImg, newsImg, markImg].forEach{$0?.hideSkeleton()}
+        
+    }
 }
+ 
 
 

@@ -6,7 +6,9 @@ target 'Sabq' do
   use_frameworks!
   pod 'SDWebImage', '~> 5.0'
   pod 'Moya', '~> 13.0'
+  pod 'SkeletonView'
   pod 'DateToolsSwift', :inhibit_warnings => true
+  
   # Pods for Sabq
 
 end

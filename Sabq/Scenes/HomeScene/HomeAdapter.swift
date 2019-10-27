@@ -8,8 +8,10 @@
 
 import Foundation
 import UIKit
+import SkeletonView
 
-class HomeAdapter:NSObject, HomeAdapterProtocol, UITableViewDataSource{
+class HomeAdapter:NSObject, HomeAdapterProtocol/*, UITableViewDataSource*/{
+    
     var list: [CellTypeProtocol]?{
         didSet{
              reloadData!()
@@ -91,28 +93,28 @@ class HomeAdapter:NSObject, HomeAdapterProtocol, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let cell = homeTable.dequeueReusableCell(withIdentifier: "SliderTableViewCell", for: indexPath) as! SliderTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SliderTableViewCell", for: indexPath) as! SliderTableViewCell
             cell.configureCollection(list: (sliderList as! SliderCellModel).material)
             return cell
         default: // section 2
             switch list![indexPath.row].cellType{
             case .videos:do{
-                let cell = homeTable.dequeueReusableCell(withIdentifier: "VideoHomeTableViewCell", for: indexPath) as! VideoHomeTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: "VideoHomeTableViewCell", for: indexPath) as! VideoHomeTableViewCell
                 cell.configureVideoCollection(list: (list![indexPath.row] as! VideosModel).videosMaterials)
                 return cell
                 }
             case .images:do{
-                let cell = homeTable.dequeueReusableCell(withIdentifier: "ImagesTableViewCell", for: indexPath) as! ImagesTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: "ImagesTableViewCell", for: indexPath) as! ImagesTableViewCell
                 cell.configureCollection(list: (list![indexPath.row] as! ImagesModel).imagesMaterials)
                 return cell
                 }
             case .articles:do{
-                let cell = homeTable.dequeueReusableCell(withIdentifier: "ArticlesTableViewCell", for: indexPath) as! ArticlesTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: "ArticlesTableViewCell", for: indexPath) as! ArticlesTableViewCell
                 cell.configureCollection(list: (list![indexPath.row] as! ArticlesModel).articlesMaterials)
                 return cell
                 }
             default : do{
-                let cell = homeTable.dequeueReusableCell(withIdentifier: "OrdinaryCellTableViewCell", for: indexPath) as! OrdinaryCellTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: "OrdinaryCellTableViewCell", for: indexPath) as! OrdinaryCellTableViewCell
                 cell.configCell(obj: (list![indexPath.row] as! OrdinaryCellModel).material)
                 return cell
                 
@@ -123,4 +125,26 @@ class HomeAdapter:NSObject, HomeAdapterProtocol, UITableViewDataSource{
     }
     
     
+}
+
+
+extension HomeAdapter: SkeletonTableViewDataSource{
+func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int{
+    
+    switch section {
+    case 0: return  1
+    default: return 3
+    }
+}
+func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier{
+
+    switch indexPath.section {
+    case 0: return  "SkeletonTableViewCell"
+    default: return "OrdinaryCellTableViewCell"
+    }
+ }
+    
+    func numSections(in collectionSkeletonView: UITableView) -> Int {
+        return 2
+    }
 }

@@ -7,17 +7,22 @@
 //
 
 import UIKit
+import SkeletonView
 
-class SliderTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
+class SliderTableViewCell: UITableViewCell,  UICollectionViewDelegate, UICollectionViewDataSource {
 
     var list:[Material]?
     
     @IBOutlet weak var sliderCollectionView: UICollectionView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+       // sliderCollectionView.showAnimatedSkeleton()
+        
         sliderCollectionView.delegate = self
-        sliderCollectionView.dataSource = self
+        sliderCollectionView.dataSource = self 
         
         let nib = UINib(nibName: "SliderCollectionViewCell", bundle: nil)
         sliderCollectionView.register(nib, forCellWithReuseIdentifier: "SliderCollectionViewCell" )
@@ -39,12 +44,15 @@ class SliderTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = sliderCollectionView.dequeueReusableCell(withReuseIdentifier: "SliderCollectionViewCell", for: indexPath) as! SliderCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderCollectionViewCell", for: indexPath) as! SliderCollectionViewCell
+        
+       // collectionView.hideSkeleton()
         cell.configCell(obj: list![indexPath.row])
         return cell
     }
     func configureCollection(list:[Material]){
         self.list=list
+        sliderCollectionView.reloadData()
     }
     
 }
@@ -54,3 +62,4 @@ extension SliderTableViewCell: UICollectionViewDelegateFlowLayout {
         return CGSize(width: UIScreen.main.bounds.width, height: collectionView.frame.height)
     }
 }
+

@@ -19,6 +19,8 @@
 		CE2BBE45235C7E6600F4D19B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BBE41235C7E6600F4D19B /* NetworkError.swift */; };
 		CE2BBE46235C7E6600F4D19B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BBE42235C7E6600F4D19B /* NetworkManager.swift */; };
 		CE2BBE47235C7E6600F4D19B /* StaticHeaderPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BBE43235C7E6600F4D19B /* StaticHeaderPlugin.swift */; };
+		CE36AFF22365B575007E5145 /* SkeletonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE36AFF02365B575007E5145 /* SkeletonTableViewCell.swift */; };
+		CE36AFF32365B575007E5145 /* SkeletonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE36AFF12365B575007E5145 /* SkeletonTableViewCell.xib */; };
 		CE38EA5C235C920600229585 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA5B235C920600229585 /* Router.swift */; };
 		CE38EA5E235C98E000229585 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA5D235C98E000229585 /* HomeModel.swift */; };
 		CE38EA60235C991700229585 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA5F235C991700229585 /* HomePresenter.swift */; };
@@ -73,6 +75,8 @@
 		CE2BBE41235C7E6600F4D19B /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		CE2BBE42235C7E6600F4D19B /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CE2BBE43235C7E6600F4D19B /* StaticHeaderPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticHeaderPlugin.swift; sourceTree = "<group>"; };
+		CE36AFF02365B575007E5145 /* SkeletonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonTableViewCell.swift; sourceTree = "<group>"; };
+		CE36AFF12365B575007E5145 /* SkeletonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkeletonTableViewCell.xib; sourceTree = "<group>"; };
 		CE38EA5B235C920600229585 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		CE38EA5D235C98E000229585 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		CE38EA5F235C991700229585 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 		B16DB9BD235A3B150035ECDF /* SliderCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				CE36AFEB2365B0D3007E5145 /* SkeletonViewCell */,
 				CEF2D13F2358930A005D2C96 /* SliderTableViewCell.swift */,
 				CEF2D1402358930A005D2C96 /* SliderTableViewCell.xib */,
 				B16DB9BF235A3C1B0035ECDF /* SliderCollectionViewCell.swift */,
@@ -202,6 +207,15 @@
 				CE2BBE3D235C7E5700F4D19B /* ProductService.swift */,
 			);
 			path = News;
+			sourceTree = "<group>";
+		};
+		CE36AFEB2365B0D3007E5145 /* SkeletonViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE36AFF02365B575007E5145 /* SkeletonTableViewCell.swift */,
+				CE36AFF12365B575007E5145 /* SkeletonTableViewCell.xib */,
+			);
+			path = SkeletonViewCell;
 			sourceTree = "<group>";
 		};
 		CE38EA5A235C90D300229585 /* Router */ = {
@@ -417,6 +431,7 @@
 			files = (
 				CEDA595A235DFDB1005932E7 /* VideoHomeTableViewCell.xib in Resources */,
 				CEA80EA62358A35E004C6C70 /* DetailsViewController.xib in Resources */,
+				CE36AFF32365B575007E5145 /* SkeletonTableViewCell.xib in Resources */,
 				CEF2D12123587148005D2C96 /* LaunchScreen.storyboard in Resources */,
 				CEEC7512236056ED004D13DE /* ArticlesTableViewCell.xib in Resources */,
 				CE3F1206235F15B800C6595F /* ImagesTableViewCell.xib in Resources */,
@@ -498,6 +513,7 @@
 				CE2BBE36235C60D100F4D19B /* HomeApiResponse.swift in Sources */,
 				CE226D082361BA990066FDBC /* Extentions.swift in Sources */,
 				CE38EA5E235C98E000229585 /* HomeModel.swift in Sources */,
+				CE36AFF22365B575007E5145 /* SkeletonTableViewCell.swift in Sources */,
 				CE2BBE3F235C7E5700F4D19B /* ProductService.swift in Sources */,
 				CEF2D1412358930A005D2C96 /* SliderTableViewCell.swift in Sources */,
 				CE2BBE46235C7E6600F4D19B /* NetworkManager.swift in Sources */,

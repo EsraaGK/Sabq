@@ -8,15 +8,24 @@
 
 import UIKit
 
+
 class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate, HomeViewProtocol {
    
     @IBOutlet weak var homeTableView: UITableView!
   lazy var adapter = HomeAdapter(tableView: homeTableView)
     
+    override func viewWillAppear(_ animated: Bool) {
+        //MARK: SkeltonView
+      //  homeTableView.isSkeletonable = true
+        homeTableView.showAnimatedSkeleton()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        adapter.reloadData = homeTableView.reloadData
         
+      //  homeTableView.visibleCells.forEach{$0.showAnimatedSkeleton()}
+        
+        adapter.reloadData = homeTableView.reloadData
+    
         homeTableView.delegate = self
         homeTableView.dataSource = adapter
         
@@ -34,7 +43,9 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
         
         let nibArticle = UINib(nibName: "ArticlesTableViewCell", bundle: Bundle.main)
         homeTableView.register(nibArticle, forCellReuseIdentifier: "ArticlesTableViewCell")
-        
+        //skelton view cell SkeletonTableViewCell
+        let nibSkeleton = UINib(nibName: "SkeletonTableViewCell", bundle: Bundle.main)
+              homeTableView.register(nibSkeleton, forCellReuseIdentifier: "SkeletonTableViewCell")
         presenter.getNews(forPage: 1)
        
        
@@ -45,6 +56,8 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
     }
     
     override func loadDataSuccess(date: Any) {
+        homeTableView.hideSkeleton()
+        
          let news =  (date as? [[Material]])!
         let tempSlider = SliderCellModel(material: news[0])
         let tempOrdinary = news[1].map{X in return OrdinaryCellModel(material: X)}

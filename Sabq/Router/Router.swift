@@ -18,7 +18,7 @@ class Router {
     private func initializeTabBar()->UITabBarController{
         let search = SearchViewController()
         let title = NSLocalizedString("Search", comment: "")
-        let  image = UIImage(named: "ic_newspaper_active")
+        let  image = UIImage(named: "ic_search")
         let barItem = UITabBarItem(title: title, image: image, selectedImage: nil)
         search.tabBarItem = barItem
         tabBar.viewControllers = [navController, search]

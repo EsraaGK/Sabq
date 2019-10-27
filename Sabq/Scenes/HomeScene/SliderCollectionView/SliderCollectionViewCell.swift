@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class SliderCollectionViewCell: UICollectionViewCell {
 
@@ -19,8 +20,14 @@ class SliderCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        // MARK: skeltonview
+//        [titleLable, descriptionLable, timeLable, viewsLable].forEach{$0?.showAnimatedSkeleton()}
+//        viewsImg.showAnimatedSkeleton()
+//
     }
     func configCell(obj:Material){
+       //hideSkeletonAnimatin()
+        
         titleLable.text = obj.title
         descriptionLable.text = obj.descriptionString
         imgNews.sd_setImage(with: URL(string: obj.coverPhoto!), placeholderImage: UIImage(named: "news-img_8"))
@@ -32,5 +39,8 @@ class SliderCollectionViewCell: UICollectionViewCell {
             viewsImg.image = UIImage(named: "ic_views_icon")
         }
     }
-
+    func hideSkeletonAnimatin(){
+        [titleLable, descriptionLable, timeLable, viewsLable].forEach{$0?.hideSkeleton()}
+        viewsImg.hideSkeleton()
+    }
 }
