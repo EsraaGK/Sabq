@@ -9,7 +9,6 @@
 import UIKit
 import SDWebImage
 
-
 class OrdinaryCellTableViewCell: UITableViewCell {
 
     @IBOutlet weak var newsHeaderLable: UILabel!
@@ -23,16 +22,13 @@ class OrdinaryCellTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
- 
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
-    func configCell(obj : Material){
+    func configCell(obj : Material) {
         hideSkeletonAnimatin()
         newsHeaderLable.text = obj.title
         newsImg.sd_setImage(with: URL(string: obj.coverPhoto!), placeholderImage: UIImage(named: "news-img_8"))
@@ -41,21 +37,18 @@ class OrdinaryCellTableViewCell: UITableViewCell {
         timeLable.text = obj.publishDate?.convertStringToTimeAgo()
         viewsLable.text = String(obj.noOfViews!)
         
-        if obj.noOfViews! > 5000{
+        if obj.noOfViews! > 5000 {
         viewsImg.image = UIImage(named: "ic_views_icon_hot")
-        }else{
+        } else {
         viewsImg.image = UIImage(named: "ic_views_icon")
         }
         
     }
     
-    func hideSkeletonAnimatin(){
+    func hideSkeletonAnimatin() {
 
-        [newsHeaderLable, timeLable, viewsLable].forEach{$0?.hideSkeleton()}
-        [viewsImg, newsImg, markImg].forEach{$0?.hideSkeleton()}
+        [newsHeaderLable, timeLable, viewsLable].forEach { $0?.hideSkeleton()}
+        [viewsImg, newsImg, markImg].forEach { $0?.hideSkeleton()}
         
     }
 }
- 
-
-

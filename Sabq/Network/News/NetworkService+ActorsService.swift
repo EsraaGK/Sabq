@@ -16,7 +16,7 @@ extension NetworkManager {
         _ statusCode: StatusCode?
         ) -> Void) {
         
-        provider.request(MultiTarget(ActorsService.HomepageLightVersion(page: pageNumber))) { (result) in
+        provider.request(MultiTarget(ActorsService.homepageLightVersion(page: pageNumber))) { (result) in
             switch result {
             case .success(let response):
                 if (200...299 ~= response.statusCode) {
@@ -51,7 +51,7 @@ extension NetworkManager {
         _ statusCode: StatusCode?
         ) -> Void) {
         
-        provider.request(MultiTarget(ActorsService.Videos)) { (result) in
+        provider.request(MultiTarget(ActorsService.videos)) { (result) in
             switch result {
             case .success(let response):
                 if (200...299 ~= response.statusCode) {
@@ -86,7 +86,7 @@ extension NetworkManager {
         _ statusCode: StatusCode?
         ) -> Void) {
         
-        provider.request(MultiTarget(ActorsService.Images)) { (result) in
+        provider.request(MultiTarget(ActorsService.images)) { (result) in
             switch result {
             case .success(let response):
                 if (200...299 ~= response.statusCode) {
@@ -115,14 +115,13 @@ extension NetworkManager {
         }
         
     }
-    
-    
+
     func getArticles(/*pageNumber:Int, */completion: @escaping (
         _ result: Swift.Result<ArticleApiResponse, NetworkError>,
         _ statusCode: StatusCode?
         ) -> Void) {
         
-        provider.request(MultiTarget(ActorsService.Articles)) { (result) in
+        provider.request(MultiTarget(ActorsService.articles)) { (result) in
             switch result {
             case .success(let response):
                 if (200...299 ~= response.statusCode) {

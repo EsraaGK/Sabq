@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 import DateToolsSwift
 
-extension String{
-    func convertStringToTimeAgo()-> String{
+extension String {
+    func convertStringToTimeAgo() -> String {
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm ss"
         
@@ -24,7 +24,7 @@ extension String{
         }
     }
     
-    func convertStringToMonthDate()-> String{
+    func convertStringToMonthDate() -> String {
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm ss"
         let tempDate =  dateFormatterGet.date(from: self)!
@@ -41,8 +41,6 @@ extension String{
 //        }
    }
 }
-
-
 extension UIImageView {
     
     func setRounded() {

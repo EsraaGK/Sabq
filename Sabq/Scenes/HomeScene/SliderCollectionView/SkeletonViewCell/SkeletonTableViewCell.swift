@@ -29,9 +29,9 @@ class SkeletonTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func hideSkeltonView(){
-        [viewsLbl, sincelable, script, title].forEach{$0?.hideSkeleton()}
-        [img, markImg, viewimg, time].forEach{$0?.hideSkeleton()}
+    func hideSkeltonView() {
+        [viewsLbl, sincelable, script, title].forEach { $0?.hideSkeleton()}
+        [img, markImg, viewimg, time].forEach { $0?.hideSkeleton()}
     }
    
 }

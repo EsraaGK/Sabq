@@ -8,16 +8,13 @@
 
 import UIKit
 
-
 class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate, HomeViewProtocol {
    
     @IBOutlet weak var homeTableView: UITableView!
   lazy var adapter = HomeAdapter(tableView: homeTableView)
     
     override func viewWillAppear(_ animated: Bool) {
-        //MARK: SkeltonView
-      //  homeTableView.isSkeletonable = true
-        homeTableView.showAnimatedSkeleton()
+      homeTableView.showAnimatedSkeleton()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,8 +44,6 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
         let nibSkeleton = UINib(nibName: "SkeletonTableViewCell", bundle: Bundle.main)
               homeTableView.register(nibSkeleton, forCellReuseIdentifier: "SkeletonTableViewCell")
         presenter.getNews(forPage: 1)
-       
-       
     }
     
     override func loadDataFailed(with error: Error?) {
@@ -60,19 +55,18 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
         
          let news =  (date as? [[Material]])!
         let tempSlider = SliderCellModel(material: news[0])
-        let tempOrdinary = news[1].map{X in return OrdinaryCellModel(material: X)}
+        let tempOrdinary = news[1].map {OrdinaryCellModel(material: $0)}
         adapter.addToSlider(item: tempSlider)
         adapter.add(items: tempOrdinary)
          presenter.getVideos()// coz videos response arrives before home response so it isn't injected in the array
     }
     
-    func loadVideosSuccess(date: Any){
-        let videos =  (date as? [Material])!
+    func loadVideosSuccess(date: Any) { let videos =  (date as? [Material])!
         let videosModel = VideosModel(materials: videos)
         adapter.add(item: videosModel, at: 5)
          presenter.getImages()
     }
-    func loadImagesSuccess(date: Any){
+    func loadImagesSuccess(date: Any) {
         let images =  (date as? [Material])!
         let imagesModel = ImagesModel(materials: images)
         adapter.add(item: imagesModel, at: 11)
@@ -86,8 +80,6 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
        
     }
     
-
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.navigationController!.pushViewController(DetailsViewController(), animated: false) 
     }
@@ -97,11 +89,11 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
         case 0:
             return CGFloat(integerLiteral: 517)
         default:
-            switch indexPath.row{
-                case 5: return CGFloat(integerLiteral: 384)//videos
-                case 11: return CGFloat(integerLiteral: 349)//images
-                case 16: return CGFloat(integerLiteral: 370)//articles
-                default:  return CGFloat(integerLiteral: 121)
+            switch indexPath.row {
+            case 5: return CGFloat(integerLiteral: 384)//videos
+            case 11: return CGFloat(integerLiteral: 349)//images
+            case 16: return CGFloat(integerLiteral: 370)//articles
+            default:  return CGFloat(integerLiteral: 121)
             }
         }
     }

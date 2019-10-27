@@ -12,10 +12,10 @@ import Moya
 //swiftlint:disable  force_unwrapping
 
 enum  ActorsService {
-    case HomepageLightVersion(page:Int)
-    case Videos
-    case Images
-    case Articles
+    case homepageLightVersion(page:Int)
+    case videos
+    case images
+    case articles
 }
 
 extension ActorsService: TargetType {
@@ -25,58 +25,58 @@ extension ActorsService: TargetType {
     
     var path: String {
         switch self {
-        case .HomepageLightVersion:
+        case .homepageLightVersion:
             return "/material/homepage-light-version"
-        case .Videos:
+        case .videos:
             return "/studio/list-studio/"
-        case .Images:
+        case .images:
             return "/studio/list-studio/"
-        case .Articles:
+        case .articles:
             return "/material/articles"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .HomepageLightVersion:
+        case .homepageLightVersion:
             return .get
-        case .Videos:
+        case .videos:
             return .get
-        case .Images:
+        case .images:
             return .get
-        case .Articles:
+        case .articles:
             return .get
         }
     }
     
     var sampleData: Data {
         switch self {
-        case .HomepageLightVersion:
+        case .homepageLightVersion:
             return Data()
-        case .Videos:
+        case .videos:
             return Data()
-        case .Images:
+        case .images:
              return Data()
-        case .Articles:
+        case .articles:
             return Data()
         }
     }
     
     var task: Task {        
         switch self {
-        case .HomepageLightVersion(let page) :
+        case .homepageLightVersion(let page) :
 			return .requestParameters(
                 parameters: ["page":page],
 				encoding: URLEncoding.default)
-        case .Videos:
+        case .videos:
             return .requestParameters(
                 parameters: ["type":"video"],
                 encoding: URLEncoding.default)
-        case .Images:
+        case .images:
             return .requestParameters(
                 parameters: ["type":"image"],
                 encoding: URLEncoding.default)
-        case .Articles:
+        case .articles:
             return .requestParameters(
                 parameters: [:],
                 encoding: URLEncoding.default)

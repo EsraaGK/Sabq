@@ -10,9 +10,8 @@ import Foundation
 import UIKit
 
 class HomeModule {
-
     
-    class func getHomeViewController()-> HomeViewController{
+    class func getHomeViewController() -> HomeViewController {
         let view = HomeViewController(nibName: "HomeViewController", bundle: nil)
         let title = NSLocalizedString("News", comment: "")
         let image = UIImage(named: "ic_newspaper_active")
@@ -21,20 +20,25 @@ class HomeModule {
         
        view.navigationItem.titleView = UIImageView(image: UIImage(named: "img_logo"))
         
-        let rightBarItem = UIBarButtonItem(image: UIImage(named: "notification-icon"), style: .done, target: self, action: #selector(HomeModule.logoutUser) )
+        let rightBarItem = UIBarButtonItem(image: UIImage(named: "notification-icon"),
+                                           style: .done,
+                                           target: self,
+                                           action: #selector(HomeModule.logoutUser) )
         view.navigationItem.rightBarButtonItem = rightBarItem
       
-        let leftBarItem = UIBarButtonItem(image: UIImage(named: "img_user")?.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(HomeModule.logoutUser) )
+        let leftBarItem = UIBarButtonItem(image: UIImage(named: "img_user")?.withRenderingMode(.alwaysOriginal),
+                                          style: .done,
+                                          target: self,
+                                          action: #selector(HomeModule.logoutUser) )
          view.navigationItem.leftBarButtonItem = leftBarItem
         
         let model = HomeModel()
-        let presenter = HomePresenter(View: view, Model: model)
+        let presenter = HomePresenter(view: view, model: model)
         view.setPresenter(presenter: presenter)
         return view
     }
     
-    @objc class func logoutUser(){
+    @objc class func logoutUser() {
         print("clicked")
     }
 }
-

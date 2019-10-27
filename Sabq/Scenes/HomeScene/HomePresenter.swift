@@ -7,42 +7,43 @@
 //
 
 import Foundation
-class HomePresenter: BasePresenterProtocol{
+class HomePresenter: BasePresenterProtocol {
     var view:HomeViewProtocol
     var model:HomeModelProtocol
     
-    init(View:HomeViewProtocol, Model:HomeModelProtocol){
-        self.view = View
-        self.model = Model
+    init(view:HomeViewProtocol, model:HomeModelProtocol) {
+        self.view = view
+        self.model = model
         
     }
     
-    func getNews(forPage PageNo:Int){
-        model.getNews(forPage: PageNo){ result/*:(Result<Any, Error>) */in
+    func getNews(forPage pageNo:Int) {
+        model.getNews(forPage: pageNo) { result/*:(Result<Any, Error>) */in
                 
-                switch result{
+                switch result {
                 case .success(let list):do {
-                    let response = list as! HomeApiResponse
-                    let array = [response.slider , response.materials]
+                    let response = list as? HomeApiResponse
+                    let array = [response!.slider , response!.materials]
                     self.view.loadDataSuccess(date: array)
                     
-                    print("the code is FROM HOME PRESENTER\(response.code)")
+                    print("the code is FROM HOME PRESENTER\(response!.code)")
                     }
-                case .failure(_):print("help from ListActorModel")
+                case .failure: print("help from ListActorModel")
                 }
         }
    }
     
-    func getVideos(){
+    func getVideos() {
         model.getVideos { result in
             
-            switch result{
+            switch result {
             case .success(let list):do {
-                let response = list as! StudioApiResponse
-                self.view.loadVideosSuccess(date: response.comics!)
+                 let response = list as? StudioApiResponse
+                guard let temp = response?.comics else {return}
+                self.view.loadVideosSuccess(date: temp)
                 
                 }
-            case .failure(_):print("help from ListActorModel")
+            case .failure: print("help from ListActorModel")
             }
         }
     }
@@ -50,28 +51,29 @@ class HomePresenter: BasePresenterProtocol{
     func getImages() {
         model.getImages { result in
             
-            switch result{
+            switch result {
             case .success(let list):do {
-                let response = list as! StudioApiResponse
-                self.view.loadImagesSuccess(date: response.comics!)
+                let response = list as? StudioApiResponse
+                guard let temp = response?.comics else {return}
+                self.view.loadImagesSuccess(date: temp)
                 
                 }
-            case .failure(_):print("help from ListActorModel")
+            case .failure: print("help from ListActorModel")
             }
         }
     }
     
-    
     func getArticles() {
         model.getArticles { result in
             
-            switch result{
+            switch result {
             case .success(let list):do {
-                let response = list as! ArticleApiResponse
-                self.view.loadArticlesSuccess(date: response.materials)
+                let response = list as? ArticleApiResponse
+                guard let temp = response?.materials else {return}
+                self.view.loadArticlesSuccess(date: temp)
                 
                 }
-            case .failure(_):print("help from ListActorModel")
+            case .failure: print("help from ListActorModel")
             }
         }
     }

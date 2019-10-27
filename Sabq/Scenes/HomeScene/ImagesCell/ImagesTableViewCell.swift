@@ -28,22 +28,23 @@ class ImagesTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollec
 
         // Configure the view for the selected state
     }
-    func configureCollection(list:[Material]){
+    func configureCollection(list:[Material]) {
         self.list=list
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let myList = list{
+        if let myList = list {
             return myList.count
-        }else{
+        } else {
             return 0
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = imagesCollectionView!.dequeueReusableCell(withReuseIdentifier: "ImageCollectionViewCell", for: indexPath) as! ImageCollectionViewCell
-        cell.configImagesCollectionCell(obj: list![indexPath.row])
-        return cell
+        let cell = imagesCollectionView!.dequeueReusableCell(
+            withReuseIdentifier: "ImageCollectionViewCell", for: indexPath) as? ImageCollectionViewCell
+        cell!.configImagesCollectionCell(obj: list![indexPath.row])
+        return cell!
     }
 
 }

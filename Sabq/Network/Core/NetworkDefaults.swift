@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NetworkDefaults{
+struct NetworkDefaults {
     var baseUrl: String = "https://sabq.org/api"
     var apiKey: String = "64136909d656d1d3201c552d4f3a6af3"
 	var language : String = "en-US"
@@ -25,6 +25,4 @@ struct NetworkDefaults{
     private init() {
     
     }
-    
 }
-

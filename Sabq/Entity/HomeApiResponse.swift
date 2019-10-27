@@ -9,13 +9,13 @@
 import Foundation
 
 // MARK: - Welcome
-struct HomeApiResponse: Decodable{
+struct HomeApiResponse: Decodable {
     let slider: [Material]
     let materials: [Material]
     let code: Int
 }
 
-struct ArticleApiResponse: Decodable{
+struct ArticleApiResponse: Decodable {
     let materials: [Material]
     let code: Int
 }
@@ -103,4 +103,3 @@ struct Images : Decodable {
     let url : String?
     let caption : String?
 }
-

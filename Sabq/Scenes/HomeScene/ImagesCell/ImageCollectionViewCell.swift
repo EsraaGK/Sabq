@@ -17,9 +17,8 @@ class ImageCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-   
     
-    func configImagesCollectionCell(obj:Material){
+    func configImagesCollectionCell(obj:Material) {
         titleLable.text = obj.title
         newsImage.sd_setImage(with: URL(string: obj.coverPhoto!), placeholderImage: UIImage(named: "news-img_8"))
         timeLable.text = obj.publishDate?.convertStringToMonthDate()

@@ -16,15 +16,13 @@ class ArticleCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-       
     }
-    func configArticleCollectionCell(obj:Material){
+    func configArticleCollectionCell(obj:Material) {
         titleLable.text = obj.title
         autherImage.sd_setImage(with: URL(string: obj.authorImg!), placeholderImage: UIImage(named: "news-img_8"))
         autherImage.setRounded()
         autherLable.text = obj.authorName
         
     }
-
+    
 }
-

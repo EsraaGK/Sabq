@@ -20,8 +20,6 @@ class ArticlesTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
         
         let nib = UINib(nibName: "ArticleCollectionViewCell", bundle: nil)
         articlesCollectionView.register(nib, forCellWithReuseIdentifier: "ArticleCollectionViewCell")
-        
-        
         ( articlesCollectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.scrollDirection = .horizontal
     }
 
@@ -31,23 +29,22 @@ class ArticlesTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
         // Configure the view for the selected state
     }
     
-    func configureCollection(list:[Material]){
+    func configureCollection(list:[Material]) {
         self.list=list
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let myList = list{
+        if let myList = list {
             return myList.count
-        }else{
+        } else {
             return 0
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = articlesCollectionView!.dequeueReusableCell(withReuseIdentifier: "ArticleCollectionViewCell", for: indexPath) as! ArticleCollectionViewCell
-        cell.configArticleCollectionCell(obj: list![indexPath.row])
-        return cell
+        let cell = articlesCollectionView!.dequeueReusableCell(
+            withReuseIdentifier: "ArticleCollectionViewCell", for: indexPath) as? ArticleCollectionViewCell
+        cell!.configArticleCollectionCell(obj: list![indexPath.row])
+        return cell!
     }
-
-
 }

@@ -25,22 +25,21 @@ class SliderCollectionViewCell: UICollectionViewCell {
 //        viewsImg.showAnimatedSkeleton()
 //
     }
-    func configCell(obj:Material){
-       //hideSkeletonAnimatin()
-        
+    func configCell(obj:Material) {
+    
         titleLable.text = obj.title
         descriptionLable.text = obj.descriptionString
         imgNews.sd_setImage(with: URL(string: obj.coverPhoto!), placeholderImage: UIImage(named: "news-img_8"))
         timeLable.text = obj.publishDate?.convertStringToTimeAgo()
         viewsLable.text = String(obj.noOfViews!)
-        if obj.noOfViews! > 5000{
+        if obj.noOfViews! > 5000 {
             viewsImg.image = UIImage(named: "ic_views_icon_hot")
-        }else{
+        } else {
             viewsImg.image = UIImage(named: "ic_views_icon")
         }
     }
-    func hideSkeletonAnimatin(){
-        [titleLable, descriptionLable, timeLable, viewsLable].forEach{$0?.hideSkeleton()}
+    func hideSkeletonAnimatin() {
+        [titleLable, descriptionLable, timeLable, viewsLable].forEach { $0?.hideSkeleton()}
         viewsImg.hideSkeleton()
     }
 }

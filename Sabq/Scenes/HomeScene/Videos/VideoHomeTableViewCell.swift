@@ -30,25 +30,24 @@ class VideoHomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColle
         // Configure the view for the selected state
     }
     
-    func configureVideoCollection(list:[Material]){
+    func configureVideoCollection(list:[Material]) {
         self.list=list
         
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let myList = list{
+        if let myList = list {
             return myList.count
-        }else{
+        } else {
             return 0
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = videosCollectionView!.dequeueReusableCell(withReuseIdentifier: "VideosCollectionViewCell", for: indexPath) as! VideosCollectionViewCell
-        cell.configVideosCollectionCell(obj: list![indexPath.row])
-        return cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideosCollectionViewCell", for: indexPath) as? VideosCollectionViewCell
+        cell!.configVideosCollectionCell(obj: list![indexPath.row])
+        return cell!
     }
-    
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return  1

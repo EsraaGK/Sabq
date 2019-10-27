@@ -29,28 +29,29 @@ class SliderTableViewCell: UITableViewCell,  UICollectionViewDelegate, UICollect
         
         ( sliderCollectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.scrollDirection = .horizontal
             }
-
-  
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let myList=list{
+        if let myList=list {
             return myList.count
-        }else{
+        } else {
             return 0
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderCollectionViewCell", for: indexPath) as! SliderCollectionViewCell
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderCollectionViewCell",
+                                                      for: indexPath) as? SliderCollectionViewCell
         
        // collectionView.hideSkeleton()
-        cell.configCell(obj: list![indexPath.row])
-        return cell
+        cell!.configCell(obj: list![indexPath.row])
+        return cell!
     }
-    func configureCollection(list:[Material]){
+    func configureCollection(list:[Material]) {
         self.list=list
         sliderCollectionView.reloadData()
     }
@@ -58,8 +59,9 @@ class SliderTableViewCell: UITableViewCell,  UICollectionViewDelegate, UICollect
 }
 
 extension SliderTableViewCell: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width, height: collectionView.frame.height)
     }
 }
-

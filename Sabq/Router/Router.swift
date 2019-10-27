@@ -10,12 +10,10 @@ import Foundation
 import UIKit
 
 class Router {
-   
-    
     private let tabBar = UITabBarController()
     private let navController = UINavigationController(rootViewController: HomeModule.getHomeViewController())
     
-    private func initializeTabBar()->UITabBarController{
+    private func initializeTabBar() -> UITabBarController {
         let search = SearchViewController()
         let title = NSLocalizedString("Search", comment: "")
         let  image = UIImage(named: "ic_search")
@@ -26,12 +24,8 @@ class Router {
         
     }
     
-    class func getTabBar()->UITabBarController{
+    class func getTabBar() -> UITabBarController {
         let myTabBar = Router()
         return myTabBar.initializeTabBar()
     }
-    
-    
-    
-
 }

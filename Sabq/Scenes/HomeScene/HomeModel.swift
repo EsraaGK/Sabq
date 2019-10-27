@@ -7,15 +7,15 @@
 //
 
 import Foundation
-class HomeModel: HomeModelProtocol{
+class HomeModel: HomeModelProtocol {
     
     let networkManager = NetworkManager()
     
     func getNews(forPage page: Int, compelation: @escaping (Result<Any, Error>) -> Void) {
-        networkManager.getNews(pageNumber: page){(result:Result<HomeApiResponse, NetworkError>,statusCode: StatusCode?)in
-            switch result{
+        networkManager.getNews(pageNumber: page) {(result:Result<HomeApiResponse, NetworkError>,_)in
+            switch result {
             case .success(let homeApiResponse):compelation(.success(homeApiResponse))
-            case .failure(_):print("help from NewsModel")
+            case .failure: print("help from NewsModel")
                 
             }
             
@@ -23,30 +23,30 @@ class HomeModel: HomeModelProtocol{
     }
     
     func getVideos( completion compelation: @escaping (Result<Any, Error>) -> Void) {
-        networkManager.getVideos { (result:Result<StudioApiResponse, NetworkError>, code:StatusCode?) in
-            switch result{
+        networkManager.getVideos { (result:Result<StudioApiResponse, NetworkError>, _) in
+            switch result {
             case .success(let videosApiResponse):compelation(.success(videosApiResponse))
-            case .failure(_):print("help from NewsModel")
+            case .failure: print("help from NewsModel")
             }
         
         }
     }
     
-    func getImages(completion: @escaping(Result<Any, Error>)->Void){
-        networkManager.getImages { (result:Result<StudioApiResponse, NetworkError>, code:StatusCode?) in
-            switch result{
+    func getImages(completion: @escaping(Result<Any, Error>) -> Void) {
+        networkManager.getImages { (result:Result<StudioApiResponse, NetworkError>,_) in
+            switch result {
             case .success(let imagesApiResponse): completion(.success(imagesApiResponse))
-            case .failure(_): print("help from NewsModel")
+            case .failure: print("help from NewsModel")
             }
         }
         
     }
     
     func getArticles(completion: @escaping (Result<Any, Error>) -> Void) {
-        networkManager.getArticles { (result:Result<ArticleApiResponse, NetworkError>, code:StatusCode?) in
-            switch result{
+        networkManager.getArticles { (result:Result<ArticleApiResponse, NetworkError>, _) in
+            switch result {
             case .success(let articleApiResponse): completion(.success(articleApiResponse))
-            case .failure(_): print("help from NewsModel")
+            case .failure: print("help from NewsModel")
                 }
             }
         }
