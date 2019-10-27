@@ -26,8 +26,8 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pc-Rg-mhT">
-                                <rect key="frame" x="20" y="273.5" width="335" height="21.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Title" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pc-Rg-mhT">
+                                <rect key="frame" x="23" y="281.5" width="329" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -35,56 +35,8 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_time" translatesAutoresizingMaskIntoConstraints="NO" id="QlU-JK-YEf">
-                                <rect key="frame" x="340" y="482" width="15" height="15"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="7Ok-lB-g48"/>
-                                    <constraint firstAttribute="width" constant="15" id="HxJ-mW-HVK"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="since" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRl-iI-BuD">
-                                <rect key="frame" x="298.5" y="479" width="36.5" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.71764705880000002" green="0.71764705880000002" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_save" translatesAutoresizingMaskIntoConstraints="NO" id="QPr-Wh-08c">
-                                <rect key="frame" x="20" y="473" width="19" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="19" id="QaE-Op-39f"/>
-                                    <constraint firstAttribute="height" constant="24" id="esH-Es-8Cw"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_views_icon_hot" translatesAutoresizingMaskIntoConstraints="NO" id="D8D-aT-H3s">
-                                <rect key="frame" x="262.5" y="482" width="11" height="15"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="cLy-R2-xkr"/>
-                                    <constraint firstAttribute="width" constant="11" id="vSe-Is-NkR"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="views" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYB-2l-cXA">
-                                <rect key="frame" x="219" y="479" width="38.5" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.71764705880000002" green="0.71764705880000002" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="script" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3To-YM-o6C">
-                                <rect key="frame" x="20" y="310" width="335" height="17"/>
+                                <rect key="frame" x="23" y="326" width="329" height="143"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -92,38 +44,94 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sMk-Lk-Efl" userLabel="DescriptionViewItems">
+                                <rect key="frame" x="0.0" y="484" width="375" height="25"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_time" translatesAutoresizingMaskIntoConstraints="NO" id="QlU-JK-YEf">
+                                        <rect key="frame" x="23" y="5" width="15" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="15" id="sZ4-Ul-INt"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="since" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRl-iI-BuD">
+                                        <rect key="frame" x="42" y="3.5" width="36.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.71764705880000002" green="0.71764705880000002" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_views_icon_hot" translatesAutoresizingMaskIntoConstraints="NO" id="D8D-aT-H3s">
+                                        <rect key="frame" x="112" y="5" width="11" height="15"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="views" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYB-2l-cXA">
+                                        <rect key="frame" x="129" y="3.5" width="38.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.71764705880000002" green="0.71764705880000002" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_save" translatesAutoresizingMaskIntoConstraints="NO" id="QPr-Wh-08c">
+                                        <rect key="frame" x="331" y="4" width="17" height="21"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="QPr-Wh-08c" secondAttribute="trailing" constant="27" id="5NT-xS-BsI"/>
+                                    <constraint firstItem="eYB-2l-cXA" firstAttribute="centerY" secondItem="sMk-Lk-Efl" secondAttribute="centerY" id="8B2-5m-lb9"/>
+                                    <constraint firstItem="D8D-aT-H3s" firstAttribute="centerY" secondItem="sMk-Lk-Efl" secondAttribute="centerY" id="BdE-bb-7Xc"/>
+                                    <constraint firstItem="FRl-iI-BuD" firstAttribute="leading" secondItem="QlU-JK-YEf" secondAttribute="trailing" constant="4" id="COk-tW-aVl"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="KVo-ae-Xml"/>
+                                    <constraint firstItem="QlU-JK-YEf" firstAttribute="centerY" secondItem="sMk-Lk-Efl" secondAttribute="centerY" id="TXo-G4-Gp8"/>
+                                    <constraint firstItem="FRl-iI-BuD" firstAttribute="centerY" secondItem="sMk-Lk-Efl" secondAttribute="centerY" id="aRE-oB-IIr"/>
+                                    <constraint firstItem="D8D-aT-H3s" firstAttribute="leading" secondItem="QlU-JK-YEf" secondAttribute="trailing" constant="74" id="aer-j3-kvu"/>
+                                    <constraint firstItem="QlU-JK-YEf" firstAttribute="leading" secondItem="sMk-Lk-Efl" secondAttribute="leading" constant="23" id="hqW-6j-d7s"/>
+                                    <constraint firstAttribute="bottom" secondItem="QPr-Wh-08c" secondAttribute="bottom" id="pVL-Cd-u2g"/>
+                                    <constraint firstItem="eYB-2l-cXA" firstAttribute="leading" secondItem="D8D-aT-H3s" secondAttribute="trailing" constant="6" id="qJp-DE-T39"/>
+                                    <constraint firstAttribute="height" constant="25" id="wEv-Dp-Hhu"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="D8D-aT-H3s" secondAttribute="bottom" constant="20" id="1YY-6C-WIs"/>
-                            <constraint firstItem="1Pc-Rg-mhT" firstAttribute="top" secondItem="zLr-ZB-9nV" secondAttribute="bottom" constant="15" id="5lU-MA-9u3"/>
-                            <constraint firstItem="D8D-aT-H3s" firstAttribute="leading" secondItem="eYB-2l-cXA" secondAttribute="trailing" constant="5" id="6fm-b3-5VJ"/>
-                            <constraint firstItem="zLr-ZB-9nV" firstAttribute="leading" secondItem="Bg3-jR-iPL" secondAttribute="leading" id="GCD-gz-WuW"/>
-                            <constraint firstAttribute="trailing" secondItem="zLr-ZB-9nV" secondAttribute="trailing" id="HU4-Tu-OpS"/>
-                            <constraint firstAttribute="trailing" secondItem="3To-YM-o6C" secondAttribute="trailing" constant="20" id="JcW-FC-Z4N"/>
-                            <constraint firstItem="zLr-ZB-9nV" firstAttribute="height" secondItem="Bg3-jR-iPL" secondAttribute="height" multiplier="1/2" id="Jte-yX-kwU"/>
-                            <constraint firstAttribute="trailing" secondItem="QlU-JK-YEf" secondAttribute="trailing" constant="20" id="MHR-Sx-a9f"/>
-                            <constraint firstItem="FRl-iI-BuD" firstAttribute="leading" secondItem="D8D-aT-H3s" secondAttribute="trailing" constant="25" id="P1h-nd-Mge"/>
-                            <constraint firstItem="QPr-Wh-08c" firstAttribute="leading" secondItem="Bg3-jR-iPL" secondAttribute="leading" constant="20" id="Vod-Xx-Jgx"/>
-                            <constraint firstItem="1Pc-Rg-mhT" firstAttribute="leading" secondItem="Bg3-jR-iPL" secondAttribute="leading" constant="20" id="Yj9-zP-yFn"/>
-                            <constraint firstItem="QlU-JK-YEf" firstAttribute="leading" secondItem="FRl-iI-BuD" secondAttribute="trailing" constant="5" id="ZYb-Ov-ncP"/>
-                            <constraint firstAttribute="trailing" secondItem="1Pc-Rg-mhT" secondAttribute="trailing" constant="20" id="aSI-YW-PMw"/>
-                            <constraint firstAttribute="bottom" secondItem="QlU-JK-YEf" secondAttribute="bottom" constant="20" id="gTy-bt-i0V"/>
-                            <constraint firstItem="3To-YM-o6C" firstAttribute="leading" secondItem="Bg3-jR-iPL" secondAttribute="leading" constant="20" id="iev-Ae-kvy"/>
-                            <constraint firstAttribute="bottom" secondItem="QPr-Wh-08c" secondAttribute="bottom" constant="20" id="kGL-b2-Q1V"/>
-                            <constraint firstAttribute="bottom" secondItem="FRl-iI-BuD" secondAttribute="bottom" constant="20" id="mIf-dl-wH9"/>
-                            <constraint firstItem="zLr-ZB-9nV" firstAttribute="top" secondItem="Bg3-jR-iPL" secondAttribute="top" id="rsz-LL-Le8"/>
-                            <constraint firstItem="3To-YM-o6C" firstAttribute="top" secondItem="1Pc-Rg-mhT" secondAttribute="bottom" constant="15" id="uP3-Ax-0Jl"/>
-                            <constraint firstAttribute="bottom" secondItem="eYB-2l-cXA" secondAttribute="bottom" constant="20" id="unJ-MZ-hcw"/>
+                            <constraint firstItem="1Pc-Rg-mhT" firstAttribute="top" secondItem="zLr-ZB-9nV" secondAttribute="bottom" constant="23" id="0iz-0F-sRT"/>
+                            <constraint firstAttribute="trailing" secondItem="3To-YM-o6C" secondAttribute="trailing" constant="23" id="8ES-07-dvg"/>
+                            <constraint firstAttribute="trailing" secondItem="sMk-Lk-Efl" secondAttribute="trailing" id="LD2-4b-zmS"/>
+                            <constraint firstAttribute="bottom" secondItem="sMk-Lk-Efl" secondAttribute="bottom" constant="8" id="LXK-V4-1je"/>
+                            <constraint firstItem="sMk-Lk-Efl" firstAttribute="top" secondItem="3To-YM-o6C" secondAttribute="bottom" constant="15" id="Qkh-fU-S9C"/>
+                            <constraint firstItem="zLr-ZB-9nV" firstAttribute="height" secondItem="Bg3-jR-iPL" secondAttribute="height" multiplier="1/2" id="Rns-VK-tJe"/>
+                            <constraint firstItem="1Pc-Rg-mhT" firstAttribute="leading" secondItem="Bg3-jR-iPL" secondAttribute="leading" constant="23" id="Tn1-eF-k0w"/>
+                            <constraint firstItem="zLr-ZB-9nV" firstAttribute="leading" secondItem="Bg3-jR-iPL" secondAttribute="leading" id="XDY-Lr-vj0"/>
+                            <constraint firstItem="zLr-ZB-9nV" firstAttribute="top" secondItem="Bg3-jR-iPL" secondAttribute="top" id="Z0f-uP-lMT"/>
+                            <constraint firstAttribute="trailing" secondItem="sMk-Lk-Efl" secondAttribute="trailing" id="dzg-Dm-Sof"/>
+                            <constraint firstItem="sMk-Lk-Efl" firstAttribute="leading" secondItem="Bg3-jR-iPL" secondAttribute="leading" id="eHl-Ps-ePe"/>
+                            <constraint firstItem="3To-YM-o6C" firstAttribute="top" secondItem="1Pc-Rg-mhT" secondAttribute="bottom" constant="23" id="f07-Z9-8Uv"/>
+                            <constraint firstAttribute="trailing" secondItem="zLr-ZB-9nV" secondAttribute="trailing" id="lAC-sQ-HFS"/>
+                            <constraint firstItem="sMk-Lk-Efl" firstAttribute="top" secondItem="3To-YM-o6C" secondAttribute="bottom" constant="15" id="nZW-Ma-AGa"/>
+                            <constraint firstItem="3To-YM-o6C" firstAttribute="leading" secondItem="Bg3-jR-iPL" secondAttribute="leading" constant="23" id="pVy-BE-h9o"/>
+                            <constraint firstItem="sMk-Lk-Efl" firstAttribute="leading" secondItem="Bg3-jR-iPL" secondAttribute="leading" id="r3C-H8-BHJ"/>
+                            <constraint firstAttribute="trailing" secondItem="1Pc-Rg-mhT" secondAttribute="trailing" constant="23" id="xi7-YH-8rS"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="Bg3-jR-iPL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="4h5-WF-Zrw"/>
-                <constraint firstAttribute="trailing" secondItem="Bg3-jR-iPL" secondAttribute="trailing" id="urZ-GE-vST"/>
-                <constraint firstAttribute="bottom" secondItem="Bg3-jR-iPL" secondAttribute="bottom" id="v0b-Lv-Dv1"/>
-                <constraint firstItem="Bg3-jR-iPL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xzm-cy-ioU"/>
+                <constraint firstAttribute="trailing" secondItem="Bg3-jR-iPL" secondAttribute="trailing" id="LNQ-Pd-rRW"/>
+                <constraint firstAttribute="bottom" secondItem="Bg3-jR-iPL" secondAttribute="bottom" id="XtK-oA-Y4u"/>
+                <constraint firstItem="Bg3-jR-iPL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="aqD-mx-t0U"/>
+                <constraint firstItem="Bg3-jR-iPL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fOz-8W-luS"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
@@ -134,7 +142,7 @@
                 <outlet property="viewsImg" destination="D8D-aT-H3s" id="mFq-JE-Sbf"/>
                 <outlet property="viewsLable" destination="eYB-2l-cXA" id="4ld-Zd-aFR"/>
             </connections>
-            <point key="canvasLocation" x="57" y="20"/>
+            <point key="canvasLocation" x="56.799999999999997" y="19.340329835082461"/>
         </collectionViewCell>
     </objects>
     <resources>
