@@ -81,7 +81,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_save" translatesAutoresizingMaskIntoConstraints="NO" id="QPr-Wh-08c">
-                                        <rect key="frame" x="331" y="4" width="17" height="21"/>
+                                        <rect key="frame" x="318" y="4" width="17" height="21"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                         </userDefinedRuntimeAttributes>
@@ -89,7 +89,7 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="QPr-Wh-08c" secondAttribute="trailing" constant="27" id="5NT-xS-BsI"/>
+                                    <constraint firstAttribute="trailing" secondItem="QPr-Wh-08c" secondAttribute="trailing" constant="40" id="5NT-xS-BsI"/>
                                     <constraint firstItem="eYB-2l-cXA" firstAttribute="centerY" secondItem="sMk-Lk-Efl" secondAttribute="centerY" id="8B2-5m-lb9"/>
                                     <constraint firstItem="D8D-aT-H3s" firstAttribute="centerY" secondItem="sMk-Lk-Efl" secondAttribute="centerY" id="BdE-bb-7Xc"/>
                                     <constraint firstItem="FRl-iI-BuD" firstAttribute="leading" secondItem="QlU-JK-YEf" secondAttribute="trailing" constant="4" id="COk-tW-aVl"/>

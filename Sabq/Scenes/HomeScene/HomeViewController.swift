@@ -12,14 +12,9 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
    
     @IBOutlet weak var homeTableView: UITableView!
   lazy var adapter = HomeAdapter(tableView: homeTableView)
-    
-    override func viewWillAppear(_ animated: Bool) {
-      homeTableView.showAnimatedSkeleton()
-    }
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-      //  homeTableView.visibleCells.forEach{$0.showAnimatedSkeleton()}
         
         adapter.reloadData = homeTableView.reloadData
     
@@ -42,7 +37,10 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
         homeTableView.register(nibArticle, forCellReuseIdentifier: "ArticlesTableViewCell")
         //skelton view cell SkeletonTableViewCell
         let nibSkeleton = UINib(nibName: "SkeletonTableViewCell", bundle: Bundle.main)
-              homeTableView.register(nibSkeleton, forCellReuseIdentifier: "SkeletonTableViewCell")
+        homeTableView.register(nibSkeleton, forCellReuseIdentifier: "SkeletonTableViewCell")
+        
+        homeTableView.showAnimatedSkeleton()
+        
         presenter.getNews(forPage: 1)
     }
     

@@ -17,6 +17,8 @@ class OrdinaryCellTableViewCell: UITableViewCell {
     @IBOutlet weak var viewsLable: UILabel!
     @IBOutlet weak var viewsImg: UIImageView!
     @IBOutlet weak var markImg: UIImageView!
+    @IBOutlet weak var timeImg: UIImageView!
+    @IBOutlet weak var detailsView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,8 +49,8 @@ class OrdinaryCellTableViewCell: UITableViewCell {
     
     func hideSkeletonAnimatin() {
 
-        [newsHeaderLable, timeLable, viewsLable].forEach { $0?.hideSkeleton()}
-        [viewsImg, newsImg, markImg].forEach { $0?.hideSkeleton()}
+        [newsHeaderLable].forEach { $0?.hideSkeleton()}
+        [detailsView].forEach { $0?.hideSkeleton()}
         
     }
 }
