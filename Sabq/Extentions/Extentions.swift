@@ -16,7 +16,8 @@ extension String {
         dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm ss"
         
         if let date = dateFormatterGet.date(from: self) {
-            let timeAgoString = date.earlierDate(date).shortTimeAgoSinceNow
+            let timeAgoString = date.earlierDate(date).timeAgoSinceNow
+            //shortTimeAgoSinceNow
             return timeAgoString
         } else {
             print("There was an error decoding the string")

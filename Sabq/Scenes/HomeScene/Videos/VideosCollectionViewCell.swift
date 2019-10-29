@@ -17,11 +17,13 @@ class VideosCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
     
     func configVideosCollectionCell(obj:Material) {
         titleLable.text = obj.title
-        videoImage.sd_setImage(with: URL(string: obj.coverPhoto!), placeholderImage: UIImage(named: "news-img_8"))
+        let imgPath = "https://img.youtube.com/vi/"+obj.vid!+"/1.jpg"
+        videoImage.sd_setImage(with: URL(string: imgPath), placeholderImage: UIImage(named: "news-img_8"))
         timeLable.text = obj.publishDate?.convertStringToTimeAgo()
        
     }

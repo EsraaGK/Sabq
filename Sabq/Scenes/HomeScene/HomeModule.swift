@@ -20,7 +20,7 @@ class HomeModule {
         
        view.navigationItem.titleView = UIImageView(image: UIImage(named: "img_logo"))
         
-        let rightBarItem = UIBarButtonItem(image: UIImage(named: "notification-icon"),
+        let rightBarItem = UIBarButtonItem(image: UIImage(named: "notification-icon")?.withRenderingMode(.alwaysOriginal),
                                            style: .done,
                                            target: self,
                                            action: #selector(HomeModule.logoutUser) )

@@ -40,8 +40,8 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z49-TX-Lub">
-                                <rect key="frame" x="19" y="2.5" width="52.5" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z49-TX-Lub">
+                                <rect key="frame" x="19" y="2.5" width="37.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.71764705882352942" green="0.71764705882352942" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -50,7 +50,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_views_icon" translatesAutoresizingMaskIntoConstraints="NO" id="eQU-io-ZMl">
-                                <rect key="frame" x="81" y="4" width="11" height="15"/>
+                                <rect key="frame" x="135" y="4" width="11" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="7Z0-Xf-EG3"/>
                                 </constraints>
@@ -59,7 +59,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYR-hU-JsB">
-                                <rect key="frame" x="98" y="2.5" width="37.5" height="18"/>
+                                <rect key="frame" x="152" y="2.5" width="37.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.71764705880000002" green="0.71764705880000002" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -80,13 +80,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="eQU-io-ZMl" firstAttribute="leading" secondItem="c3f-Ek-Spk" secondAttribute="trailing" constant="66" id="50M-D8-WcU"/>
+                            <constraint firstItem="eQU-io-ZMl" firstAttribute="leading" secondItem="c3f-Ek-Spk" secondAttribute="trailing" constant="120" id="50M-D8-WcU"/>
                             <constraint firstAttribute="bottom" secondItem="c3f-Ek-Spk" secondAttribute="bottom" constant="4" id="Kq1-ZB-dDi"/>
                             <constraint firstAttribute="trailing" secondItem="cXM-XD-WEh" secondAttribute="trailing" constant="28" id="TgK-XO-pGP"/>
                             <constraint firstItem="Z49-TX-Lub" firstAttribute="centerY" secondItem="pHF-rb-xsx" secondAttribute="centerY" id="VTu-QE-A6I"/>
                             <constraint firstItem="c3f-Ek-Spk" firstAttribute="leading" secondItem="pHF-rb-xsx" secondAttribute="leading" id="Wpy-4z-zI8"/>
                             <constraint firstItem="EYR-hU-JsB" firstAttribute="leading" secondItem="eQU-io-ZMl" secondAttribute="trailing" constant="6" id="bXI-8t-F0R"/>
-                            <constraint firstItem="c3f-Ek-Spk" firstAttribute="trailing" secondItem="Z49-TX-Lub" secondAttribute="trailing" constant="-56.5" id="bjW-6t-3VE"/>
                             <constraint firstItem="EYR-hU-JsB" firstAttribute="centerY" secondItem="pHF-rb-xsx" secondAttribute="centerY" id="rbB-bs-oAc"/>
                             <constraint firstItem="cXM-XD-WEh" firstAttribute="centerY" secondItem="pHF-rb-xsx" secondAttribute="centerY" id="sBS-sC-RM7"/>
                             <constraint firstItem="Z49-TX-Lub" firstAttribute="leading" secondItem="c3f-Ek-Spk" secondAttribute="trailing" constant="4" id="sfC-a6-jbV"/>

@@ -66,13 +66,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_views_icon_hot" translatesAutoresizingMaskIntoConstraints="NO" id="D8D-aT-H3s">
-                                        <rect key="frame" x="112" y="5" width="11" height="15"/>
+                                        <rect key="frame" x="158" y="5" width="11" height="15"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="views" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYB-2l-cXA">
-                                        <rect key="frame" x="129" y="3.5" width="38.5" height="18"/>
+                                        <rect key="frame" x="175" y="3.5" width="38.5" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.71764705880000002" green="0.71764705880000002" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -96,7 +96,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="KVo-ae-Xml"/>
                                     <constraint firstItem="QlU-JK-YEf" firstAttribute="centerY" secondItem="sMk-Lk-Efl" secondAttribute="centerY" id="TXo-G4-Gp8"/>
                                     <constraint firstItem="FRl-iI-BuD" firstAttribute="centerY" secondItem="sMk-Lk-Efl" secondAttribute="centerY" id="aRE-oB-IIr"/>
-                                    <constraint firstItem="D8D-aT-H3s" firstAttribute="leading" secondItem="QlU-JK-YEf" secondAttribute="trailing" constant="74" id="aer-j3-kvu"/>
+                                    <constraint firstItem="D8D-aT-H3s" firstAttribute="leading" secondItem="QlU-JK-YEf" secondAttribute="trailing" constant="120" id="aer-j3-kvu"/>
                                     <constraint firstItem="QlU-JK-YEf" firstAttribute="leading" secondItem="sMk-Lk-Efl" secondAttribute="leading" constant="23" id="hqW-6j-d7s"/>
                                     <constraint firstAttribute="bottom" secondItem="QPr-Wh-08c" secondAttribute="bottom" id="pVL-Cd-u2g"/>
                                     <constraint firstItem="eYB-2l-cXA" firstAttribute="leading" secondItem="D8D-aT-H3s" secondAttribute="trailing" constant="6" id="qJp-DE-T39"/>

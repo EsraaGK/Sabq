@@ -35,7 +35,7 @@
                         <color key="textColor" red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZdQ-5B-fJh">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZdQ-5B-fJh">
                         <rect key="frame" x="0.0" y="0.0" width="156" height="145"/>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_play_1" translatesAutoresizingMaskIntoConstraints="NO" id="ttn-hH-BoG">
@@ -55,8 +55,8 @@
                 <constraint firstItem="ZdQ-5B-fJh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZvT-30-4qq"/>
                 <constraint firstAttribute="trailing" secondItem="0So-V0-d8O" secondAttribute="trailing" constant="8" id="dJm-JH-jK5"/>
                 <constraint firstItem="Q0T-Ji-MId" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="7" id="e5s-oX-HVK"/>
-                <constraint firstItem="ttn-hH-BoG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="f0H-Ku-kn7"/>
-                <constraint firstAttribute="trailing" secondItem="ttn-hH-BoG" secondAttribute="trailing" id="gQi-Ar-sV9"/>
+                <constraint firstItem="ttn-hH-BoG" firstAttribute="top" secondItem="ZdQ-5B-fJh" secondAttribute="top" id="f0H-Ku-kn7"/>
+                <constraint firstItem="ZdQ-5B-fJh" firstAttribute="trailing" secondItem="ttn-hH-BoG" secondAttribute="trailing" id="gQi-Ar-sV9"/>
                 <constraint firstAttribute="bottom" secondItem="0So-V0-d8O" secondAttribute="bottom" constant="8" id="nME-TU-beW"/>
                 <constraint firstAttribute="bottom" secondItem="Q0T-Ji-MId" secondAttribute="bottom" constant="8" id="ukU-5T-SyK"/>
                 <constraint firstItem="ZdQ-5B-fJh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zPH-Rd-MKL"/>

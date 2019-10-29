@@ -17,16 +17,16 @@ class SliderCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var timeLable: UILabel!
     @IBOutlet weak var viewsLable: UILabel!
     @IBOutlet weak var viewsImg: UIImageView!
+    var pageNumber = 0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        // MARK: skeltonview
-//        [titleLable, descriptionLable, timeLable, viewsLable].forEach{$0?.showAnimatedSkeleton()}
-//        viewsImg.showAnimatedSkeleton()
-//
     }
-    func configCell(obj:Material) {
     
+    func configCell(obj:Material, number:Int) {
+        pageNumber = number
+        
         titleLable.text = obj.title
         descriptionLable.text = obj.descriptionString
         imgNews.sd_setImage(with: URL(string: obj.coverPhoto!), placeholderImage: UIImage(named: "news-img_8"))
@@ -41,5 +41,8 @@ class SliderCollectionViewCell: UICollectionViewCell {
     func hideSkeletonAnimatin() {
         [titleLable, descriptionLable, timeLable, viewsLable].forEach { $0?.hideSkeleton()}
         viewsImg.hideSkeleton()
+    }
+    func getPageControlNumber() -> Int {
+        return pageNumber
     }
 }

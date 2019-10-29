@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="517"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="SliderTableViewCell" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qM0-iB-oqu">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="SliderTableViewCell" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qM0-iB-oqu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="516.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -33,12 +33,23 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
                         </userDefinedRuntimeAttributes>
                     </collectionView>
+                    <pageControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="WHl-MD-heL">
+                        <rect key="frame" x="15" y="171" width="345" height="37"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="UoS-SQ-qHm"/>
+                        </constraints>
+                        <color key="pageIndicatorTintColor" red="0.66274509803921566" green="0.66274509803921566" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="currentPageIndicatorTintColor" red="0.29019607843137252" green="0.56470588235294117" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                    </pageControl>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="WHl-MD-heL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-30" id="3Ph-aR-qDj"/>
+                    <constraint firstItem="WHl-MD-heL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="4W0-T4-Ddb"/>
                     <constraint firstAttribute="bottom" secondItem="qM0-iB-oqu" secondAttribute="bottom" id="4qi-9h-pNa"/>
                     <constraint firstItem="qM0-iB-oqu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="OIp-Vw-gmt"/>
                     <constraint firstItem="qM0-iB-oqu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="SfE-2h-51i"/>
                     <constraint firstAttribute="trailing" secondItem="qM0-iB-oqu" secondAttribute="trailing" id="ZWk-dN-7f0"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="WHl-MD-heL" secondAttribute="trailing" id="k4E-1C-w3q"/>
                 </constraints>
                 <userDefinedRuntimeAttributes>
                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
@@ -49,6 +60,7 @@
                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="pageControl" destination="WHl-MD-heL" id="7f2-yU-yNv"/>
                 <outlet property="sliderCollectionView" destination="qM0-iB-oqu" id="TfX-mz-EDA"/>
             </connections>
             <point key="canvasLocation" x="140" y="117.39130434782609"/>
