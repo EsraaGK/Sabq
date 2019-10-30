@@ -36,6 +36,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nYL-QW-fiu">
+                                <rect key="frame" x="24" y="15" width="61" height="5"/>
+                                <color key="backgroundColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="lI6-pb-pcZ"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QiV-QG-x6F">
                                 <rect key="frame" x="260" y="12" width="36" height="16"/>
                                 <state key="normal" title="More"/>
@@ -43,13 +50,17 @@
                         </subviews>
                         <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="nYL-QW-fiu" firstAttribute="trailing" secondItem="QLE-73-5bl" secondAttribute="trailing" id="IwH-gB-e3P"/>
+                            <constraint firstItem="nYL-QW-fiu" firstAttribute="width" secondItem="QLE-73-5bl" secondAttribute="width" id="Qkt-99-VbM"/>
                             <constraint firstItem="QLE-73-5bl" firstAttribute="top" secondItem="6X3-Db-9Qe" secondAttribute="top" constant="12" id="SIo-eB-8zz"/>
                             <constraint firstAttribute="trailing" secondItem="QiV-QG-x6F" secondAttribute="trailing" constant="24" id="bUf-rp-oao"/>
+                            <constraint firstItem="QLE-73-5bl" firstAttribute="bottom" secondItem="nYL-QW-fiu" secondAttribute="bottom" constant="8" id="bbu-Mr-t3z"/>
                             <constraint firstAttribute="bottom" secondItem="QLE-73-5bl" secondAttribute="bottom" constant="12" id="eWS-fH-zsa"/>
                             <constraint firstAttribute="bottom" secondItem="QiV-QG-x6F" secondAttribute="bottom" constant="12" id="gRA-yX-9PJ"/>
                             <constraint firstAttribute="height" constant="40" id="laS-iF-T1H"/>
                             <constraint firstItem="QiV-QG-x6F" firstAttribute="top" secondItem="6X3-Db-9Qe" secondAttribute="top" constant="12" id="lox-u3-dR1"/>
                             <constraint firstItem="QLE-73-5bl" firstAttribute="leading" secondItem="6X3-Db-9Qe" secondAttribute="leading" constant="24" id="nJQ-wK-dlm"/>
+                            <constraint firstItem="nYL-QW-fiu" firstAttribute="leading" secondItem="QLE-73-5bl" secondAttribute="leading" id="wzZ-wa-KKl"/>
                         </constraints>
                     </view>
                 </subviews>

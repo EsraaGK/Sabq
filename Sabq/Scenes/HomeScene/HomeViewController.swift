@@ -10,7 +10,7 @@ import UIKit
 
 class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate, HomeViewProtocol {
    
-    @IBOutlet weak var homeTableView: UITableView!
+    @IBOutlet private weak var homeTableView: UITableView!
   lazy var adapter = HomeAdapter(tableView: homeTableView)
   
     override func viewDidLoad() {
@@ -51,35 +51,35 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
     override func loadDataSuccess(date: Any) {
         homeTableView.hideSkeleton()
         
-         let news =  (date as? [[Material]])!
+        guard let news = (date as? [[Material]]) else { return }
         let tempSlider = SliderCellModel(material: news[0])
-        let tempOrdinary = news[1].map {OrdinaryCellModel(material: $0)}
+        let tempOrdinary = news[1].map { OrdinaryCellModel(material: $0) }
         adapter.addToSlider(item: tempSlider)
         adapter.add(items: tempOrdinary)
          presenter.getVideos()// coz videos response arrives before home response so it isn't injected in the array
     }
     
-    func loadVideosSuccess(date: Any) { let videos =  (date as? [Material])!
+    func loadVideosSuccess(date: Any) { guard let videos = (date as? [Material]) else { return }
         let videosModel = VideosModel(materials: videos)
         adapter.add(item: videosModel, at: 5)
          presenter.getImages()
     }
     func loadImagesSuccess(date: Any) {
-        let images =  (date as? [Material])!
+       guard let images = (date as? [Material]) else { return }
         let imagesModel = ImagesModel(materials: images)
         adapter.add(item: imagesModel, at: 11)
          presenter.getArticles()
     }
     
     func loadArticlesSuccess(date: Any) {
-        let articles =  (date as? [Material])!
+       guard let articles = (date as? [Material]) else { return }
         let articlesModel = ArticlesModel(materials: articles)
         adapter.add(item: articlesModel, at: 16)
        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.navigationController!.pushViewController(DetailsViewController(), animated: false) 
+       // self.navigationController!.pushViewController(DetailsViewController(), animated: false)
     }
    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

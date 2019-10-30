@@ -13,11 +13,11 @@ protocol HomeAdapterProtocol {
     associatedtype DataType
     //    associatedtype AdapterDelegate where AdapterDelegate:listAdapterDelegate
     
-    var list: [DataType]? { get set}
+    var list: [DataType]? { get set }
    
-    var reloadData:(() -> Void)? { get set}
+    var reloadData:(() -> Void)? { get set }
     
-    var showEmptyState: ((Bool) -> Void)? { get set}
+    var showEmptyState: ((Bool) -> Void)? { get set }
     
     func add(item: DataType, at index: Int)
     func add(items: [DataType])

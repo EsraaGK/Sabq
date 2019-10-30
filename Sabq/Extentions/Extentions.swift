@@ -28,7 +28,7 @@ extension String {
     func convertStringToMonthDate() -> String {
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm ss"
-        let tempDate =  dateFormatterGet.date(from: self)!
+        guard let tempDate = dateFormatterGet.date(from: self) else { return "" }
         
         let desiredDate = DateFormatter()
         desiredDate.dateFormat = "dd MMMM yyyy"
@@ -45,7 +45,7 @@ extension String {
 extension UIImageView {
     
     func setRounded() {
-        let radius = self.frame.height/2
+        let radius = self.frame.height / 2
         self.layer.cornerRadius = radius
         self.layer.masksToBounds = true
     }

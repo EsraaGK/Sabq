@@ -11,7 +11,7 @@ import Moya
 
 extension NetworkManager {
     
-    func getNews(pageNumber:Int, completion: @escaping (
+    func getNews(pageNumber: Int, completion: @escaping (
         _ result: Swift.Result<HomeApiResponse, NetworkError>,
         _ statusCode: StatusCode?
         ) -> Void) {

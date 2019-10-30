@@ -10,9 +10,9 @@ import UIKit
 
 class VideosCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var videoImage: UIImageView!
-    @IBOutlet weak var titleLable: UILabel!
-    @IBOutlet weak var timeLable: UILabel!
+    @IBOutlet private weak var videoImage: UIImageView!
+    @IBOutlet private weak var titleLable: UILabel!
+    @IBOutlet private weak var timeLable: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,10 +20,11 @@ class VideosCollectionViewCell: UICollectionViewCell {
         
     }
     
-    func configVideosCollectionCell(obj:Material) {
+    func configVideosCollectionCell(obj: Material) {
         titleLable.text = obj.title
-        let imgPath = "https://img.youtube.com/vi/"+obj.vid!+"/1.jpg"
-        videoImage.sd_setImage(with: URL(string: imgPath), placeholderImage: UIImage(named: "news-img_8"))
+        guard let vId = obj.vid else { return }
+        let imgPath = "https://img.youtube.com/vi/"+vId+"/1.jpg"
+        videoImage.sd_setImage(with: URL(string: imgPath), placeholderImage: #imageLiteral(resourceName: "placeHolder"))
         timeLable.text = obj.publishDate?.convertStringToTimeAgo()
        
     }

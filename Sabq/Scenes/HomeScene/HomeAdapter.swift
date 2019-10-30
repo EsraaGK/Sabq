@@ -10,20 +10,20 @@ import Foundation
 import UIKit
 import SkeletonView
 
-class HomeAdapter:NSObject, HomeAdapterProtocol/*, UITableViewDataSource*/{
+class HomeAdapter: NSObject, HomeAdapterProtocol/*, UITableViewDataSource*/{
     
     var list: [CellTypeProtocol]? {
         didSet {
-            reloadData!()
+            reloadData?()
         }
     }
-    var sliderList:CellTypeProtocol? {
+    var sliderList: CellTypeProtocol? {
         didSet {
-            reloadData!()
+            reloadData?()
         }
     }
     
-    var homeTable:UITableView
+    var homeTable: UITableView
     
     init(tableView: UITableView) {
         homeTable = tableView
@@ -44,7 +44,7 @@ class HomeAdapter:NSObject, HomeAdapterProtocol/*, UITableViewDataSource*/{
     }
     
     func isLastIndex(index: IndexPath) -> Bool {
-        if  index.row == list!.count {
+        if  index.row == list?.count {
             return  true
         } else {
             return false
@@ -57,7 +57,7 @@ class HomeAdapter:NSObject, HomeAdapterProtocol/*, UITableViewDataSource*/{
     
     func add(item: CellTypeProtocol, at index: Int) {
         
-        list!.insert(item, at: index)
+        list?.insert(item, at: index)
         
     }
     
@@ -89,32 +89,37 @@ class HomeAdapter:NSObject, HomeAdapterProtocol/*, UITableViewDataSource*/{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let item = list?[indexPath.row] else { return UITableViewCell() }
         switch indexPath.section {
         case 0:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "SliderTableViewCell", for: indexPath) as? SliderTableViewCell,
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "SliderTableViewCell",
+                                                        for: indexPath) as? SliderTableViewCell,
                 let list = sliderList as? SliderCellModel {
                 cell.configureCollection(list: list.material)
                 return cell
             }
         default: // section 2
-            switch list![indexPath.row].cellType {
+            switch item.cellType {
             case .videos:do {
-                if let cell = tableView.dequeueReusableCell(withIdentifier: "VideoHomeTableViewCell", for: indexPath) as? VideoHomeTableViewCell,
-                    let list = list![indexPath.row] as? VideosModel {
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "VideoHomeTableViewCell",
+                                                            for: indexPath) as? VideoHomeTableViewCell,
+                    let list = item as? VideosModel {
                     cell.configureVideoCollection(list: list.videosMaterials)
                     return cell
                 }
                 }
             case .images:do {
-                if let cell = tableView.dequeueReusableCell(withIdentifier: "ImagesTableViewCell", for: indexPath) as? ImagesTableViewCell,
-                    let list = list![indexPath.row] as? ImagesModel {
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "ImagesTableViewCell",
+                                                            for: indexPath) as? ImagesTableViewCell,
+                    let list = item as? ImagesModel {
                     cell.configureCollection(list: list.imagesMaterials)
                     return cell
                 }
                 }
             case .articles:do {
-                if let cell = tableView.dequeueReusableCell(withIdentifier: "ArticlesTableViewCell", for: indexPath) as? ArticlesTableViewCell,
-                    let list = list![indexPath.row] as? ArticlesModel {
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "ArticlesTableViewCell",
+                                                            for: indexPath) as? ArticlesTableViewCell,
+                    let list = item as? ArticlesModel {
                     cell.configureCollection(list: list.articlesMaterials)
                     return cell
                 }
@@ -122,7 +127,7 @@ class HomeAdapter:NSObject, HomeAdapterProtocol/*, UITableViewDataSource*/{
             default : do {
                 if let cell = tableView.dequeueReusableCell(withIdentifier: "OrdinaryCellTableViewCell",
                                                             for: indexPath) as? OrdinaryCellTableViewCell,
-                    let list = list![indexPath.row] as? OrdinaryCellModel {
+                    let list = item as? OrdinaryCellModel {
                     cell.configCell(obj: list.material)
                     return cell
                 }

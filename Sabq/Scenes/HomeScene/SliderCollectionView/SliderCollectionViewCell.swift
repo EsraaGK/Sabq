@@ -11,38 +11,35 @@ import SkeletonView
 
 class SliderCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var imgNews: UIImageView!
-    @IBOutlet weak var titleLable: UILabel!
-    @IBOutlet weak var descriptionLable: UILabel!
-    @IBOutlet weak var timeLable: UILabel!
-    @IBOutlet weak var viewsLable: UILabel!
-    @IBOutlet weak var viewsImg: UIImageView!
-    var pageNumber = 0
+    @IBOutlet private weak var imgNews: UIImageView!
+    @IBOutlet private weak var titleLable: UILabel!
+    @IBOutlet private weak var descriptionLable: UILabel!
+    @IBOutlet private weak var timeLable: UILabel!
+    @IBOutlet private weak var viewsLable: UILabel!
+    @IBOutlet private weak var viewsImg: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    func configCell(obj:Material, number:Int) {
-        pageNumber = number
-        
+    func configCell(obj: Material) {
+    
         titleLable.text = obj.title
         descriptionLable.text = obj.descriptionString
-        imgNews.sd_setImage(with: URL(string: obj.coverPhoto!), placeholderImage: UIImage(named: "news-img_8"))
+        
         timeLable.text = obj.publishDate?.convertStringToTimeAgo()
-        viewsLable.text = String(obj.noOfViews!)
-        if obj.noOfViews! > 5000 {
-            viewsImg.image = UIImage(named: "ic_views_icon_hot")
-        } else {
-            viewsImg.image = UIImage(named: "ic_views_icon")
-        }
+        
+        guard let viewsNumber = obj.noOfViews else { return }
+        viewsLable.text = String(viewsNumber)
+        viewsImg.image = viewsNumber > 5000 ? #imageLiteral(resourceName: "ic_views_icon_hot") : #imageLiteral(resourceName: "ic_views_icon")
+    
+        guard let stringPath = obj.coverPhoto else { return }
+        imgNews.sd_setImage(with: URL(string: stringPath), placeholderImage: #imageLiteral(resourceName: "placeHolder"))
     }
     func hideSkeletonAnimatin() {
-        [titleLable, descriptionLable, timeLable, viewsLable].forEach { $0?.hideSkeleton()}
+        [titleLable, descriptionLable, timeLable, viewsLable].forEach { $0?.hideSkeleton() }
         viewsImg.hideSkeleton()
     }
-    func getPageControlNumber() -> Int {
-        return pageNumber
-    }
+    
 }

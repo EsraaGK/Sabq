@@ -10,16 +10,19 @@ import UIKit
 
 class ArticleCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var titleLable: UILabel!
-    @IBOutlet weak var autherLable: UILabel!
-    @IBOutlet weak var autherImage: UIImageView!
+    @IBOutlet private weak var titleLable: UILabel!
+    @IBOutlet private weak var autherLable: UILabel!
+    @IBOutlet private weak var autherImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    func configArticleCollectionCell(obj:Material) {
+    func configArticleCollectionCell(obj: Material) {
         titleLable.text = obj.title
-        autherImage.sd_setImage(with: URL(string: obj.authorImg!), placeholderImage: UIImage(named: "news-img_8"))
+        guard let stringPath = obj.authorImg else { return }
+        autherImage.sd_setImage(with: URL(string: stringPath), placeholderImage: #imageLiteral(resourceName: "news-img_8"))
+        //news-img_8
         autherImage.setRounded()
         autherLable.text = obj.authorName
         

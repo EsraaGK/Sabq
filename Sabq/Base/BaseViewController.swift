@@ -9,13 +9,13 @@
 import UIKit
 import Foundation
 
-class BaseViewController<Presenter:BasePresenterProtocol>: UIViewController {
+class BaseViewController<Presenter: BasePresenterProtocol>: UIViewController {
 
     // MARK: - Public Variables
     
     // MARK: - Private Variables
     
-    var presenter:Presenter!
+    var presenter: Presenter!
     
     // MARK: - Computed Variables
     

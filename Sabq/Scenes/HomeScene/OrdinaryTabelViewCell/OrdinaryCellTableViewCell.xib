@@ -105,11 +105,23 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_play_1" translatesAutoresizingMaskIntoConstraints="NO" id="nsb-Z0-fCO">
+                        <rect key="frame" x="17" y="12" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="WrW-HC-fsc"/>
+                            <constraint firstAttribute="height" constant="30" id="vQq-Kc-0VF"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="nsb-Z0-fCO" firstAttribute="top" secondItem="ZNy-vD-Tb0" secondAttribute="top" constant="2" id="23D-CG-IHo"/>
                     <constraint firstAttribute="bottom" secondItem="pHF-rb-xsx" secondAttribute="bottom" constant="12" id="5wz-aI-bbF"/>
                     <constraint firstItem="ZNy-vD-Tb0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="B6z-yr-tyg"/>
                     <constraint firstAttribute="trailing" secondItem="a6s-BS-Yhp" secondAttribute="trailing" constant="24" id="BBy-Ve-xkh"/>
+                    <constraint firstItem="nsb-Z0-fCO" firstAttribute="leading" secondItem="ZNy-vD-Tb0" secondAttribute="leading" constant="2" id="SIL-QQ-MRQ"/>
                     <constraint firstItem="pHF-rb-xsx" firstAttribute="leading" secondItem="ZNy-vD-Tb0" secondAttribute="trailing" constant="24" id="XTu-BU-c7E"/>
                     <constraint firstItem="ZNy-vD-Tb0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="abc-ja-YgE"/>
                     <constraint firstAttribute="bottom" secondItem="ZNy-vD-Tb0" secondAttribute="bottom" constant="11" id="gJb-dM-v4G"/>
@@ -133,6 +145,7 @@
                 <outlet property="newsImg" destination="ZNy-vD-Tb0" id="sTk-e2-2u5"/>
                 <outlet property="timeImg" destination="c3f-Ek-Spk" id="SYf-Ua-gBA"/>
                 <outlet property="timeLable" destination="Z49-TX-Lub" id="ZyK-2Q-Bi0"/>
+                <outlet property="videoImage" destination="nsb-Z0-fCO" id="24Q-l3-1cN"/>
                 <outlet property="viewsImg" destination="eQU-io-ZMl" id="DbI-Sz-bfP"/>
                 <outlet property="viewsLable" destination="EYR-hU-JsB" id="mPO-n6-2lM"/>
             </connections>
@@ -140,6 +153,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="ic_play_1" width="30" height="30"/>
         <image name="ic_save" width="17" height="21"/>
         <image name="ic_time" width="15" height="15"/>
         <image name="ic_views_icon" width="11" height="15"/>

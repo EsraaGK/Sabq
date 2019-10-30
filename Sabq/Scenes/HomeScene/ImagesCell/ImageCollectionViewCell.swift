@@ -10,9 +10,9 @@ import UIKit
 
 class ImageCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var newsImage: UIImageView!
-     @IBOutlet weak var timeLable: UILabel!
-    @IBOutlet weak var titleLable: UILabel!
+    @IBOutlet private weak var newsImage: UIImageView!
+    @IBOutlet private weak var timeLable: UILabel!
+    @IBOutlet private weak var titleLable: UILabel!
    
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,10 +20,11 @@ class ImageCollectionViewCell: UICollectionViewCell {
         configureGradientView()
     }
     
-    func configImagesCollectionCell(obj:Material) {
+    func configImagesCollectionCell(obj: Material) {
         titleLable.text = obj.title
-        newsImage.sd_setImage(with: URL(string: obj.coverPhoto!), placeholderImage: UIImage(named: "news-img_8"))
         timeLable.text = obj.publishDate?.convertStringToMonthDate()
+        guard let stringPath = obj.coverPhoto else { return }
+        newsImage.sd_setImage(with: URL(string: stringPath), placeholderImage: #imageLiteral(resourceName: "placeHolder"))
         
     }
     
@@ -32,7 +33,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
         gradientLayer.colors = [UIColor.clear.cgColor, UIColor.white.cgColor]
         gradientLayer.locations = [0, 1]
         gradientLayer.frame = newsImage.frame
-        gradientLayer.opacity = 0.4
+        gradientLayer.opacity = 0.2
         newsImage.layer.addSublayer(gradientLayer)
     }
 

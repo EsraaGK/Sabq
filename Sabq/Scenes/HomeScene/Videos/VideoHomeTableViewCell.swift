@@ -9,12 +9,12 @@
 import UIKit
 
 class VideoHomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
- 
-    var list :[Material]?
-    @IBOutlet weak var videosCollectionView: UICollectionView!
-    @IBOutlet weak var videosTitleLable: UILabel!
-    @IBOutlet weak var moreVideosButton: UIButton!
-    @IBOutlet weak var videosHeader: UIView!
+    
+    var list: [Material]?
+    @IBOutlet private weak var videosCollectionView: UICollectionView!
+    @IBOutlet private weak var videosTitleLable: UILabel!
+    @IBOutlet private weak var moreVideosButton: UIButton!
+    @IBOutlet private weak var videosHeader: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,15 +31,15 @@ class VideoHomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColle
         ( videosCollectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.scrollDirection = .horizontal
         
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
-    func configureVideoCollection(list:[Material]) {
-        self.list=list
+    func configureVideoCollection(list: [Material]) {
+        self.list = list
         
     }
     
@@ -52,10 +52,14 @@ class VideoHomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColle
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideosCollectionViewCell", for: indexPath) as? VideosCollectionViewCell
-        cell!.configVideosCollectionCell(obj: list![indexPath.row])
-        return cell!
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideosCollectionViewCell",
+                                                         for: indexPath) as? VideosCollectionViewCell,
+            let item = list?[indexPath.row] {
+        cell.configVideosCollectionCell(obj: item )
+            return cell
+        } else { return UICollectionViewCell() }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -63,21 +67,12 @@ class VideoHomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColle
     }
     
     func configureVideosHeader() {
-        let rect = CGRect(x:videosHeader.frame.minX,
+        let rect = CGRect(x: videosHeader.frame.minX,
                           y: videosHeader.frame.maxY + 18,
                           width: UIScreen.main.bounds.width,
-                          height: 5)
+                          height: 2)
         let horizontalLine = UIView(frame: rect)
-        horizontalLine.backgroundColor = UIColor(displayP3Red: 48/255, green: 48/255, blue: 48/255, alpha: 1)
+        horizontalLine.backgroundColor = #colorLiteral(red: 0.1882352941, green: 0.1882352941, blue: 0.1882352941, alpha: 1)
         videosHeader.addSubview(horizontalLine)
-        
-        let lableRect = CGRect(x:videosTitleLable.frame.minX - 28,
-                          y: videosTitleLable.frame.maxY + 12,
-                          width: videosTitleLable.frame.width ,
-                          height: 5)
-        let lableHorizontalLine = UIView(frame: lableRect)
-        lableHorizontalLine.backgroundColor = UIColor(displayP3Red: 74/255, green: 144/255, blue: 226/255, alpha: 1)
-        videosTitleLable.addSubview(lableHorizontalLine)
-        
     }
 }

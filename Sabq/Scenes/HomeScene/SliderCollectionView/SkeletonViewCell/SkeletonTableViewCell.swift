@@ -9,15 +9,14 @@
 import UIKit
 
 class SkeletonTableViewCell: UITableViewCell {
-    @IBOutlet weak var img: UIImageView!
-    
-    @IBOutlet weak var viewsLbl: UILabel!
-    @IBOutlet weak var markImg: UIImageView!
-    @IBOutlet weak var sincelable: UILabel!
-    @IBOutlet weak var viewimg: UIView!
-    @IBOutlet weak var script: UILabel!
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var time: UIImageView!
+    @IBOutlet private weak var img: UIImageView!
+    @IBOutlet private weak var viewsLbl: UILabel!
+    @IBOutlet private weak var markImg: UIImageView!
+    @IBOutlet private weak var sincelable: UILabel!
+    @IBOutlet private weak var viewimg: UIView!
+    @IBOutlet private weak var script: UILabel!
+    @IBOutlet private weak var title: UILabel!
+    @IBOutlet private weak var time: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code\
@@ -30,8 +29,8 @@ class SkeletonTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     func hideSkeltonView() {
-        [viewsLbl, sincelable, script, title].forEach { $0?.hideSkeleton()}
-        [img, markImg, viewimg, time].forEach { $0?.hideSkeleton()}
+        [viewsLbl, sincelable, script, title].forEach { $0?.hideSkeleton() }
+        [img, markImg, viewimg, time].forEach { $0?.hideSkeleton() }
     }
    
 }

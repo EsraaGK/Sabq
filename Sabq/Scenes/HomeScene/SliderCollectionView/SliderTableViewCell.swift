@@ -9,17 +9,17 @@
 import UIKit
 import SkeletonView
 
-class SliderTableViewCell: UITableViewCell,  UICollectionViewDelegate, UICollectionViewDataSource {
-
-    var list:[Material]?
+class SliderTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    var list: [Material]?
     
     @IBOutlet private weak var sliderCollectionView: UICollectionView!
     @IBOutlet private weak var pageControl: UIPageControl!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-       
+        
         sliderCollectionView.delegate = self
         sliderCollectionView.dataSource = self 
         sliderCollectionView.isPagingEnabled = true
@@ -28,9 +28,11 @@ class SliderTableViewCell: UITableViewCell,  UICollectionViewDelegate, UICollect
         sliderCollectionView.register(nib, forCellWithReuseIdentifier: "SliderCollectionViewCell" )
         
         ( sliderCollectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.scrollDirection = .horizontal
-            }
+    }
     
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView,
+                        willDisplay cell: UICollectionViewCell,
+                        forItemAt indexPath: IndexPath) {
         self.pageControl.currentPage = indexPath.row
     }
     
@@ -39,8 +41,8 @@ class SliderTableViewCell: UITableViewCell,  UICollectionViewDelegate, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let myList=list {
-           pageControl.numberOfPages = myList.count
+        if let myList = list {
+            pageControl.numberOfPages = myList.count
             return myList.count
         } else {
             pageControl.numberOfPages = 0
@@ -50,11 +52,16 @@ class SliderTableViewCell: UITableViewCell,  UICollectionViewDelegate, UICollect
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderCollectionViewCell",
-                                                      for: indexPath) as? SliderCollectionViewCell
-       // pageControl.currentPage = cell!.getPageControlNumber()
-        cell!.configCell(obj: list![indexPath.row], number: indexPath.row)
-        return cell!
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderCollectionViewCell",
+                                                         for: indexPath) as? SliderCollectionViewCell,
+            let item = list?[indexPath.row] {
+            
+            cell.configCell(obj: item)
+            return cell
+        } else {
+            return UICollectionViewCell()
+        }
+        
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -63,8 +70,8 @@ class SliderTableViewCell: UITableViewCell,  UICollectionViewDelegate, UICollect
             pageControl.currentPage = temp?.row ?? 0
         }
     }
-    func configureCollection(list:[Material]) {
-        self.list=list
+    func configureCollection(list: [Material]) {
+        self.list = list
         sliderCollectionView.reloadData()
     }
     

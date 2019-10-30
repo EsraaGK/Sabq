@@ -7,6 +7,6 @@
 //
 
 import Foundation
-protocol HomePresenterProtocol:BasePresenterProtocol {
+protocol HomePresenterProtocol: BasePresenterProtocol {
     
 }

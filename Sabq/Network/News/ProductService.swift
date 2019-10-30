@@ -12,7 +12,7 @@ import Moya
 //swiftlint:disable  force_unwrapping
 
 enum  ActorsService {
-    case homepageLightVersion(page:Int)
+    case homepageLightVersion(page: Int)
     case videos
     case images
     case articles
@@ -66,15 +66,15 @@ extension ActorsService: TargetType {
         switch self {
         case .homepageLightVersion(let page) :
 			return .requestParameters(
-                parameters: ["page":page],
+                parameters: ["page": page],
 				encoding: URLEncoding.default)
         case .videos:
             return .requestParameters(
-                parameters: ["type":"video"],
+                parameters: ["type": "video"],
                 encoding: URLEncoding.default)
         case .images:
             return .requestParameters(
-                parameters: ["type":"image"],
+                parameters: ["type": "image"],
                 encoding: URLEncoding.default)
         case .articles:
             return .requestParameters(

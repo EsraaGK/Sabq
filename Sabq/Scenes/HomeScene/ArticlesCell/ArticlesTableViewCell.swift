@@ -9,12 +9,17 @@
 import UIKit
 
 class ArticlesTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
-    var list:[Material]?
-    @IBOutlet weak var articlesCollectionView: UICollectionView!
+    var list: [Material]?
+    @IBOutlet private weak var articlesCollectionView: UICollectionView!
+    @IBOutlet private weak var moreButton: UIButton!
+    @IBOutlet private weak var articlesLable: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+        let title = NSLocalizedString("More", comment: "")
+        moreButton.setTitle(title, for: .normal)
+        articlesLable.text = NSLocalizedString("Articles", comment: "")
         articlesCollectionView.delegate = self
         articlesCollectionView.dataSource = self
         
@@ -29,8 +34,8 @@ class ArticlesTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
         // Configure the view for the selected state
     }
     
-    func configureCollection(list:[Material]) {
-        self.list=list
+    func configureCollection(list: [Material]) {
+        self.list = list
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -41,10 +46,12 @@ class ArticlesTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = articlesCollectionView!.dequeueReusableCell(
-            withReuseIdentifier: "ArticleCollectionViewCell", for: indexPath) as? ArticleCollectionViewCell
-        cell!.configArticleCollectionCell(obj: list![indexPath.row])
-        return cell!
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+       guard let cell = articlesCollectionView.dequeueReusableCell(
+        withReuseIdentifier: "ArticleCollectionViewCell", for: indexPath) as? ArticleCollectionViewCell,
+        let item = list?[indexPath.row] else { return UICollectionViewCell() }
+        cell.configArticleCollectionCell(obj: item)
+        return cell
     }
 }

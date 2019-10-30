@@ -9,7 +9,7 @@
 import Foundation
 
 protocol CellTypeProtocol {
-    var cellType: CellType { get}
+    var cellType: CellType { get }
 }
 
 enum CellType {
@@ -20,26 +20,26 @@ enum CellType {
     case articles
 }
 
-class VideosModel :CellTypeProtocol {
+class VideosModel: CellTypeProtocol {
     var cellType: CellType = .videos
-    var videosMaterials:[Material]
+    var videosMaterials: [Material]
     init( materials: [Material]) {
        // self.cellType = cellType
         videosMaterials = materials
     }
 }
-class ImagesModel :CellTypeProtocol {
+class ImagesModel: CellTypeProtocol {
     var cellType: CellType = .images
-    var imagesMaterials:[Material]
+    var imagesMaterials: [Material]
     init( materials: [Material]) {
         // self.cellType = cellType
         imagesMaterials = materials
     }
 }
 
-class ArticlesModel :CellTypeProtocol {
+class ArticlesModel: CellTypeProtocol {
     var cellType: CellType = .articles
-    var articlesMaterials:[Material]
+    var articlesMaterials: [Material]
     init( materials: [Material]) {
         // self.cellType = cellType
         articlesMaterials = materials
@@ -47,15 +47,15 @@ class ArticlesModel :CellTypeProtocol {
 }
 class OrdinaryCellModel: CellTypeProtocol {
     var cellType: CellType = .ordinary
-    var material :Material
-    init(material:Material) {
+    var material: Material
+    init(material: Material) {
         self.material = material
     }
 }
 class SliderCellModel: CellTypeProtocol {
     var cellType: CellType = .slider
-    var material :[Material]
-    init(material:[Material]) {
+    var material: [Material]
+    init(material: [Material]) {
         self.material = material
     }
 }

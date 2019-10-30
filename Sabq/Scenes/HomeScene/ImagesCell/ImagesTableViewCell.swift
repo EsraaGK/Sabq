@@ -10,8 +10,8 @@ import UIKit
 
 class ImagesTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    var list:[Material]?
-    @IBOutlet weak var imagesCollectionView: UICollectionView!
+    var list: [Material]?
+    @IBOutlet private weak var imagesCollectionView: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -28,8 +28,8 @@ class ImagesTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollec
 
         // Configure the view for the selected state
     }
-    func configureCollection(list:[Material]) {
-        self.list=list
+    func configureCollection(list: [Material]) {
+        self.list = list
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -40,11 +40,16 @@ class ImagesTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollec
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = imagesCollectionView!.dequeueReusableCell(
-            withReuseIdentifier: "ImageCollectionViewCell", for: indexPath) as? ImageCollectionViewCell
-        cell!.configImagesCollectionCell(obj: list![indexPath.row])
-        return cell!
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+       if let cell = imagesCollectionView.dequeueReusableCell(
+            withReuseIdentifier: "ImageCollectionViewCell",
+            for: indexPath) as? ImageCollectionViewCell, let item = list?[indexPath.row] {
+        cell.configImagesCollectionCell(obj: item)
+        return cell
+       } else {
+        return ImageCollectionViewCell()
+        }
     }
 
 }
