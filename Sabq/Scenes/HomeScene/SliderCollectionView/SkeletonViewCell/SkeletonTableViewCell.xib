@@ -17,6 +17,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="517"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMk-9e-UKJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="517"/>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="85t-hr-Qrb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="517"/>
                         <subviews>
@@ -38,7 +41,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="script" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3A-0b-pGQ">
                                 <rect key="frame" x="20" y="313" width="374" height="137"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
                                 <color key="highlightedColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
@@ -87,7 +90,6 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Q3O-TR-mbg" secondAttribute="trailing" constant="40" id="70H-nV-lor"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="7Tu-og-xLc"/>
@@ -107,7 +109,6 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Lp5-Tn-PMq" firstAttribute="height" secondItem="85t-hr-Qrb" secondAttribute="height" multiplier="1/2" id="05e-5n-SEK"/>
                             <constraint firstItem="YHY-qd-3ZS" firstAttribute="top" secondItem="r3A-0b-pGQ" secondAttribute="bottom" constant="18" id="1uI-MI-Olf"/>
@@ -131,10 +132,14 @@
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="JMk-9e-UKJ" secondAttribute="trailing" id="6Ed-pV-gHc"/>
+                    <constraint firstAttribute="bottom" secondItem="JMk-9e-UKJ" secondAttribute="bottom" id="co2-Ax-ZGb"/>
                     <constraint firstItem="85t-hr-Qrb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dcP-CS-JfO"/>
+                    <constraint firstItem="JMk-9e-UKJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="oyQ-Jp-vvA"/>
                     <constraint firstItem="85t-hr-Qrb" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="pgF-t5-CiJ"/>
                     <constraint firstAttribute="trailing" secondItem="85t-hr-Qrb" secondAttribute="trailing" id="sgG-ch-ube"/>
                     <constraint firstAttribute="bottom" secondItem="85t-hr-Qrb" secondAttribute="bottom" id="ve8-ne-Nvf"/>
+                    <constraint firstItem="JMk-9e-UKJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wPY-97-axF"/>
                     <constraint firstItem="85t-hr-Qrb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wqD-rQ-ght"/>
                 </constraints>
             </tableViewCellContentView>

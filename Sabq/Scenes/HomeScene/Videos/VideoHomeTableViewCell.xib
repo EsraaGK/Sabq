@@ -19,7 +19,7 @@
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="d9y-OC-O4Y">
                         <rect key="frame" x="0.0" y="40" width="320" height="308"/>
-                        <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QTF-NE-31U">
                             <size key="itemSize" width="156" height="242"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -37,7 +37,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nYL-QW-fiu">
-                                <rect key="frame" x="24" y="15" width="61" height="5"/>
+                                <rect key="frame" x="24" y="33" width="61" height="5"/>
                                 <color key="backgroundColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="5" id="lI6-pb-pcZ"/>
@@ -48,29 +48,37 @@
                                 <state key="normal" title="More"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="nYL-QW-fiu" firstAttribute="trailing" secondItem="QLE-73-5bl" secondAttribute="trailing" id="IwH-gB-e3P"/>
                             <constraint firstItem="nYL-QW-fiu" firstAttribute="width" secondItem="QLE-73-5bl" secondAttribute="width" id="Qkt-99-VbM"/>
                             <constraint firstItem="QLE-73-5bl" firstAttribute="top" secondItem="6X3-Db-9Qe" secondAttribute="top" constant="12" id="SIo-eB-8zz"/>
                             <constraint firstAttribute="trailing" secondItem="QiV-QG-x6F" secondAttribute="trailing" constant="24" id="bUf-rp-oao"/>
-                            <constraint firstItem="QLE-73-5bl" firstAttribute="bottom" secondItem="nYL-QW-fiu" secondAttribute="bottom" constant="8" id="bbu-Mr-t3z"/>
                             <constraint firstAttribute="bottom" secondItem="QLE-73-5bl" secondAttribute="bottom" constant="12" id="eWS-fH-zsa"/>
                             <constraint firstAttribute="bottom" secondItem="QiV-QG-x6F" secondAttribute="bottom" constant="12" id="gRA-yX-9PJ"/>
                             <constraint firstAttribute="height" constant="40" id="laS-iF-T1H"/>
                             <constraint firstItem="QiV-QG-x6F" firstAttribute="top" secondItem="6X3-Db-9Qe" secondAttribute="top" constant="12" id="lox-u3-dR1"/>
                             <constraint firstItem="QLE-73-5bl" firstAttribute="leading" secondItem="6X3-Db-9Qe" secondAttribute="leading" constant="24" id="nJQ-wK-dlm"/>
+                            <constraint firstAttribute="bottom" secondItem="nYL-QW-fiu" secondAttribute="bottom" constant="2" id="vGT-qu-tZ5"/>
                             <constraint firstItem="nYL-QW-fiu" firstAttribute="leading" secondItem="QLE-73-5bl" secondAttribute="leading" id="wzZ-wa-KKl"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qjg-Ow-MyN">
+                        <rect key="frame" x="0.0" y="38" width="320" height="2"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="9xN-fr-uxT"/>
+                        </constraints>
+                    </view>
                 </subviews>
-                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                 <constraints>
+                    <constraint firstItem="Qjg-Ow-MyN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="0Ok-UE-DsQ"/>
                     <constraint firstItem="d9y-OC-O4Y" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Dbn-le-0jW"/>
                     <constraint firstAttribute="trailing" secondItem="6X3-Db-9Qe" secondAttribute="trailing" id="Mq3-9d-uJu"/>
                     <constraint firstItem="d9y-OC-O4Y" firstAttribute="top" secondItem="6X3-Db-9Qe" secondAttribute="bottom" id="PPI-Z6-lqw"/>
+                    <constraint firstItem="Qjg-Ow-MyN" firstAttribute="bottom" secondItem="6X3-Db-9Qe" secondAttribute="bottom" id="QwV-4d-c0a"/>
                     <constraint firstAttribute="bottom" secondItem="6X3-Db-9Qe" secondAttribute="bottom" constant="308" id="aJq-ri-ofA"/>
                     <constraint firstAttribute="trailing" secondItem="d9y-OC-O4Y" secondAttribute="trailing" id="hBF-Ta-frh"/>
+                    <constraint firstAttribute="trailing" secondItem="Qjg-Ow-MyN" secondAttribute="trailing" id="lzb-hE-UvT"/>
                     <constraint firstAttribute="bottom" secondItem="d9y-OC-O4Y" secondAttribute="bottom" id="tCr-DQ-AJQ"/>
                     <constraint firstItem="6X3-Db-9Qe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="vRy-uR-Etq"/>
                     <constraint firstItem="6X3-Db-9Qe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="vv9-Dy-ayu"/>

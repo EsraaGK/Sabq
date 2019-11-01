@@ -17,6 +17,7 @@ class ArticleCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.backgroundColor = UIColor.articlesCardBackGroundColor
     }
     func configArticleCollectionCell(obj: Material) {
         titleLable.text = obj.title

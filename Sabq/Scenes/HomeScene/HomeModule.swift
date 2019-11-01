@@ -26,13 +26,13 @@ class HomeModule {
                                            target: self,
                                            action: #selector(HomeModule.logoutUser) )
         view.navigationItem.rightBarButtonItem = rightBarItem
-      
+        
         let leftBarItem = UIBarButtonItem(image: #imageLiteral(resourceName: "img_user").withRenderingMode(.alwaysOriginal),
                                           style: .done,
                                           target: self,
                                           action: #selector(HomeModule.logoutUser) )
          view.navigationItem.leftBarButtonItem = leftBarItem
-        
+    
         let model = HomeModel()
         let presenter = HomePresenter(view: view, model: model)
         view.setPresenter(presenter: presenter)

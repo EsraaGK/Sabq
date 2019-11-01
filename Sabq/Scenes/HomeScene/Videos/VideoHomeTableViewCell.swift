@@ -21,7 +21,7 @@ class VideoHomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColle
         // Initialization code
         videosTitleLable.text = NSLocalizedString("Videos", comment: "")
         moreVideosButton.setTitle(NSLocalizedString("More", comment: ""), for: .normal)
-        configureVideosHeader()
+        
         
         videosCollectionView.delegate = self
         videosCollectionView.dataSource = self
@@ -30,6 +30,8 @@ class VideoHomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColle
         videosCollectionView.register(videoNib, forCellWithReuseIdentifier: "VideosCollectionViewCell")
         ( videosCollectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.scrollDirection = .horizontal
         
+        self.backgroundColor = UIColor.collectionBackgroundColor
+        videosCollectionView.backgroundColor = UIColor.collectionBackgroundColor
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -57,7 +59,7 @@ class VideoHomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColle
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideosCollectionViewCell",
                                                          for: indexPath) as? VideosCollectionViewCell,
             let item = list?[indexPath.row] {
-        cell.configVideosCollectionCell(obj: item )
+            cell.configVideosCollectionCell(obj: item )
             return cell
         } else { return UICollectionViewCell() }
     }
@@ -66,13 +68,5 @@ class VideoHomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColle
         return  1
     }
     
-    func configureVideosHeader() {
-        let rect = CGRect(x: videosHeader.frame.minX,
-                          y: videosHeader.frame.maxY + 18,
-                          width: UIScreen.main.bounds.width,
-                          height: 2)
-        let horizontalLine = UIView(frame: rect)
-        horizontalLine.backgroundColor = #colorLiteral(red: 0.1882352941, green: 0.1882352941, blue: 0.1882352941, alpha: 1)
-        videosHeader.addSubview(horizontalLine)
-    }
+    
 }

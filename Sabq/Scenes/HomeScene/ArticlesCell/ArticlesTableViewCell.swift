@@ -26,6 +26,9 @@ class ArticlesTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
         let nib = UINib(nibName: "ArticleCollectionViewCell", bundle: nil)
         articlesCollectionView.register(nib, forCellWithReuseIdentifier: "ArticleCollectionViewCell")
         ( articlesCollectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.scrollDirection = .horizontal
+        
+       self.backgroundColor = UIColor.collectionBackgroundColor
+       articlesCollectionView.backgroundColor = UIColor.collectionBackgroundColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

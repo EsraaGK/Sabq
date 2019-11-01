@@ -28,6 +28,8 @@ class SliderTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollecti
         sliderCollectionView.register(nib, forCellWithReuseIdentifier: "SliderCollectionViewCell" )
         
         ( sliderCollectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.scrollDirection = .horizontal
+        
+        sliderCollectionView.backgroundColor = UIColor.homeBackGroundColor
     }
     
     func collectionView(_ collectionView: UICollectionView,

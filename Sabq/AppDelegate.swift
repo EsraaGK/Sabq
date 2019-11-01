@@ -25,4 +25,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setupNetworking() {
         NetworkManager.shared = NetworkManager(config: NetworkDefaults.defaults)
     }
+    
 }

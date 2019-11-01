@@ -21,6 +21,9 @@ class ImagesTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollec
         let nib = UINib(nibName: "ImageCollectionViewCell", bundle: nil)
         imagesCollectionView.register(nib, forCellWithReuseIdentifier: "ImageCollectionViewCell")
         ( imagesCollectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.scrollDirection = .horizontal
+        
+        imagesCollectionView.backgroundColor = UIColor.homeBackGroundColor
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

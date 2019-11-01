@@ -78,7 +78,6 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="eQU-io-ZMl" firstAttribute="leading" secondItem="c3f-Ek-Spk" secondAttribute="trailing" constant="120" id="50M-D8-WcU"/>
                             <constraint firstAttribute="bottom" secondItem="c3f-Ek-Spk" secondAttribute="bottom" constant="4" id="Kq1-ZB-dDi"/>

@@ -21,6 +21,8 @@ class SliderCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        titleLable.textColor = UIColor.titleLableColor
+        descriptionLable.textColor = UIColor.descriptionLableColor
     }
     
     func configCell(obj: Material) {

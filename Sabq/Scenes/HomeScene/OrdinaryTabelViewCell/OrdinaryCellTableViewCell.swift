@@ -24,6 +24,8 @@ class OrdinaryCellTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.backgroundColor = UIColor.homeBackGroundColor
+
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -53,4 +55,11 @@ class OrdinaryCellTableViewCell: UITableViewCell {
         [detailsView].forEach { $0?.hideSkeleton() }
         
     }
+}
+extension OrdinaryCellTableViewCell {
+    static var identifier: String {
+        return String(describing: self)
+    }
+
+    static var nib = UINib(nibName: identifier, bundle: Bundle.main)
 }

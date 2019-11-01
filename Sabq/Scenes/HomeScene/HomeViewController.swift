@@ -16,13 +16,15 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        homeTableView.backgroundColor = UIColor.homeBackGroundColor
+        
         adapter.reloadData = homeTableView.reloadData
     
         homeTableView.delegate = self
         homeTableView.dataSource = adapter
         
-        let nib = UINib(nibName: "OrdinaryCellTableViewCell", bundle: Bundle.main)
-        homeTableView.register(nib, forCellReuseIdentifier: "OrdinaryCellTableViewCell")
+        homeTableView.register(OrdinaryCellTableViewCell.nib,
+                               forCellReuseIdentifier: OrdinaryCellTableViewCell.identifier)
      
         let nibSlider = UINib(nibName: "SliderTableViewCell", bundle: Bundle.main)
         homeTableView.register(nibSlider, forCellReuseIdentifier: "SliderTableViewCell")
@@ -38,6 +40,8 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
         //skelton view cell SkeletonTableViewCell
         let nibSkeleton = UINib(nibName: "SkeletonTableViewCell", bundle: Bundle.main)
         homeTableView.register(nibSkeleton, forCellReuseIdentifier: "SkeletonTableViewCell")
+        
+    //    homeTableView.backgroundColor = UIColor.homeBackGroundColor
         
         homeTableView.showAnimatedSkeleton()
         
