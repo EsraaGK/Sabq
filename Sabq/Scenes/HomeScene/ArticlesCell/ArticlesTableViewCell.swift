@@ -23,8 +23,9 @@ class ArticlesTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
         articlesCollectionView.delegate = self
         articlesCollectionView.dataSource = self
         
-        let nib = UINib(nibName: "ArticleCollectionViewCell", bundle: nil)
-        articlesCollectionView.register(nib, forCellWithReuseIdentifier: "ArticleCollectionViewCell")
+        articlesCollectionView.register(ArticleCollectionViewCell.nib,
+                                        forCellWithReuseIdentifier: ArticleCollectionViewCell.identifier)
+
         ( articlesCollectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.scrollDirection = .horizontal
         
        self.backgroundColor = UIColor.collectionBackgroundColor
@@ -57,4 +58,12 @@ class ArticlesTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
         cell.configArticleCollectionCell(obj: item)
         return cell
     }
+}
+
+extension ArticlesTableViewCell {
+    static var identifier: String {
+        return String(describing: self)
+    }
+
+    static var nib = UINib(nibName: identifier, bundle: Bundle.main)
 }

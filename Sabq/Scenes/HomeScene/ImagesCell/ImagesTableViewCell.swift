@@ -18,17 +18,18 @@ class ImagesTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollec
         imagesCollectionView.dataSource = self
         imagesCollectionView.delegate = self
         
-        let nib = UINib(nibName: "ImageCollectionViewCell", bundle: nil)
-        imagesCollectionView.register(nib, forCellWithReuseIdentifier: "ImageCollectionViewCell")
+        imagesCollectionView.register(ImageCollectionViewCell.nib,
+                                      forCellWithReuseIdentifier: ImageCollectionViewCell.identifier)
+        
         ( imagesCollectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.scrollDirection = .horizontal
         
         imagesCollectionView.backgroundColor = UIColor.homeBackGroundColor
-
+        
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     func configureCollection(list: [Material]) {
@@ -45,14 +46,22 @@ class ImagesTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       if let cell = imagesCollectionView.dequeueReusableCell(
-            withReuseIdentifier: "ImageCollectionViewCell",
+        if let cell = imagesCollectionView.dequeueReusableCell(
+            withReuseIdentifier: ImageCollectionViewCell.identifier,
             for: indexPath) as? ImageCollectionViewCell, let item = list?[indexPath.row] {
-        cell.configImagesCollectionCell(obj: item)
-        return cell
-       } else {
-        return ImageCollectionViewCell()
+            cell.configImagesCollectionCell(obj: item)
+            return cell
+        } else {
+            return ImageCollectionViewCell()
         }
     }
+    
+}
 
+extension ImagesTableViewCell {
+    static var identifier: String {
+        return String(describing: self)
+    }
+    
+    static var nib = UINib(nibName: identifier, bundle: Bundle.main)
 }

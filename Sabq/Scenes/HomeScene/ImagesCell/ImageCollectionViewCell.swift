@@ -38,3 +38,11 @@ class ImageCollectionViewCell: UICollectionViewCell {
     }
 
 }
+
+extension ImageCollectionViewCell {
+    static var identifier: String {
+        return String(describing: self)
+    }
+
+    static var nib = UINib(nibName: identifier, bundle: Bundle.main)
+}

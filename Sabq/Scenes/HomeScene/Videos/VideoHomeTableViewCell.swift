@@ -21,13 +21,13 @@ class VideoHomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColle
         // Initialization code
         videosTitleLable.text = NSLocalizedString("Videos", comment: "")
         moreVideosButton.setTitle(NSLocalizedString("More", comment: ""), for: .normal)
-        
-        
+
         videosCollectionView.delegate = self
         videosCollectionView.dataSource = self
         
-        let videoNib = UINib(nibName: "VideosCollectionViewCell", bundle: nil)
-        videosCollectionView.register(videoNib, forCellWithReuseIdentifier: "VideosCollectionViewCell")
+        videosCollectionView.register(VideosCollectionViewCell.nib,
+                                      forCellWithReuseIdentifier: VideosCollectionViewCell.identifier)
+        
         ( videosCollectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.scrollDirection = .horizontal
         
         self.backgroundColor = UIColor.collectionBackgroundColor
@@ -56,7 +56,7 @@ class VideoHomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColle
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideosCollectionViewCell",
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VideosCollectionViewCell.identifier,
                                                          for: indexPath) as? VideosCollectionViewCell,
             let item = list?[indexPath.row] {
             cell.configVideosCollectionCell(obj: item )
@@ -67,6 +67,12 @@ class VideoHomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColle
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return  1
     }
-    
-    
+}
+
+extension VideoHomeTableViewCell {
+    static var identifier: String {
+        return String(describing: self)
+    }
+
+    static var nib = UINib(nibName: identifier, bundle: Bundle.main)
 }

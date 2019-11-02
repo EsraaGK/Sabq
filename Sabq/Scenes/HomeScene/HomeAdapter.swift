@@ -92,7 +92,7 @@ class HomeAdapter: NSObject, HomeAdapterProtocol/*, UITableViewDataSource*/{
         guard let item = list?[indexPath.row] else { return UITableViewCell() }
         switch indexPath.section {
         case 0:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "SliderTableViewCell",
+            if let cell = tableView.dequeueReusableCell(withIdentifier: SliderTableViewCell.identifier,
                                                         for: indexPath) as? SliderTableViewCell,
                 let list = sliderList as? SliderCellModel {
                 cell.configureCollection(list: list.material)
@@ -101,7 +101,7 @@ class HomeAdapter: NSObject, HomeAdapterProtocol/*, UITableViewDataSource*/{
         default: // section 2
             switch item.cellType {
             case .videos:do {
-                if let cell = tableView.dequeueReusableCell(withIdentifier: "VideoHomeTableViewCell",
+                if let cell = tableView.dequeueReusableCell(withIdentifier: VideoHomeTableViewCell.identifier,
                                                             for: indexPath) as? VideoHomeTableViewCell,
                     let list = item as? VideosModel {
                     cell.configureVideoCollection(list: list.videosMaterials)
@@ -109,7 +109,7 @@ class HomeAdapter: NSObject, HomeAdapterProtocol/*, UITableViewDataSource*/{
                 }
                 }
             case .images:do {
-                if let cell = tableView.dequeueReusableCell(withIdentifier: "ImagesTableViewCell",
+                if let cell = tableView.dequeueReusableCell(withIdentifier: ImagesTableViewCell.identifier,
                                                             for: indexPath) as? ImagesTableViewCell,
                     let list = item as? ImagesModel {
                     cell.configureCollection(list: list.imagesMaterials)
@@ -117,7 +117,7 @@ class HomeAdapter: NSObject, HomeAdapterProtocol/*, UITableViewDataSource*/{
                 }
                 }
             case .articles:do {
-                if let cell = tableView.dequeueReusableCell(withIdentifier: "ArticlesTableViewCell",
+                if let cell = tableView.dequeueReusableCell(withIdentifier: ArticlesTableViewCell.identifier,
                                                             for: indexPath) as? ArticlesTableViewCell,
                     let list = item as? ArticlesModel {
                     cell.configureCollection(list: list.articlesMaterials)
@@ -125,7 +125,7 @@ class HomeAdapter: NSObject, HomeAdapterProtocol/*, UITableViewDataSource*/{
                 }
                 }
             default : do {
-                if let cell = tableView.dequeueReusableCell(withIdentifier: "OrdinaryCellTableViewCell",
+                if let cell = tableView.dequeueReusableCell(withIdentifier: OrdinaryCellTableViewCell.identifier,
                                                             for: indexPath) as? OrdinaryCellTableViewCell,
                     let list = item as? OrdinaryCellModel {
                     cell.configCell(obj: list.material)
@@ -151,8 +151,8 @@ extension HomeAdapter: SkeletonTableViewDataSource {
                                 cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
         
         switch indexPath.section {
-        case 0: return  "SkeletonTableViewCell"
-        default: return "OrdinaryCellTableViewCell"
+        case 0: return  SkeletonTableViewCell.identifier
+        default: return OrdinaryCellTableViewCell.identifier
         }
     }
     

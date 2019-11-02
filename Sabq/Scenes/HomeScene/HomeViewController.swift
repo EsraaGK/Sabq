@@ -25,23 +25,21 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
         
         homeTableView.register(OrdinaryCellTableViewCell.nib,
                                forCellReuseIdentifier: OrdinaryCellTableViewCell.identifier)
-     
-        let nibSlider = UINib(nibName: "SliderTableViewCell", bundle: Bundle.main)
-        homeTableView.register(nibSlider, forCellReuseIdentifier: "SliderTableViewCell")
+             
+        homeTableView.register(SliderTableViewCell.nib,
+                               forCellReuseIdentifier: SliderTableViewCell.identifier)
         
-        let nibVideo = UINib(nibName: "VideoHomeTableViewCell", bundle: Bundle.main)
-        homeTableView.register(nibVideo, forCellReuseIdentifier: "VideoHomeTableViewCell")
+        homeTableView.register(VideoHomeTableViewCell.nib,
+                               forCellReuseIdentifier: VideoHomeTableViewCell.identifier)
         
-        let nibImage = UINib(nibName: "ImagesTableViewCell", bundle: Bundle.main)
-        homeTableView.register(nibImage, forCellReuseIdentifier: "ImagesTableViewCell")
+        homeTableView.register(ImagesTableViewCell.nib,
+                               forCellReuseIdentifier: ImagesTableViewCell.identifier)
         
-        let nibArticle = UINib(nibName: "ArticlesTableViewCell", bundle: Bundle.main)
-        homeTableView.register(nibArticle, forCellReuseIdentifier: "ArticlesTableViewCell")
+        homeTableView.register(ArticlesTableViewCell.nib, forCellReuseIdentifier: ArticlesTableViewCell.identifier)
+        
         //skelton view cell SkeletonTableViewCell
-        let nibSkeleton = UINib(nibName: "SkeletonTableViewCell", bundle: Bundle.main)
-        homeTableView.register(nibSkeleton, forCellReuseIdentifier: "SkeletonTableViewCell")
-        
-    //    homeTableView.backgroundColor = UIColor.homeBackGroundColor
+        homeTableView.register(SkeletonTableViewCell.nib,
+                               forCellReuseIdentifier: SkeletonTableViewCell.identifier)
         
         homeTableView.showAnimatedSkeleton()
         

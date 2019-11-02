@@ -24,8 +24,8 @@ class SliderTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollecti
         sliderCollectionView.dataSource = self 
         sliderCollectionView.isPagingEnabled = true
         
-        let nib = UINib(nibName: "SliderCollectionViewCell", bundle: nil)
-        sliderCollectionView.register(nib, forCellWithReuseIdentifier: "SliderCollectionViewCell" )
+        sliderCollectionView.register(SliderCollectionViewCell.nib,
+                                      forCellWithReuseIdentifier: SliderCollectionViewCell.identifier )
         
         ( sliderCollectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.scrollDirection = .horizontal
         
@@ -54,7 +54,7 @@ class SliderTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderCollectionViewCell",
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SliderCollectionViewCell.identifier,
                                                          for: indexPath) as? SliderCollectionViewCell,
             let item = list?[indexPath.row] {
             
@@ -85,4 +85,12 @@ extension SliderTableViewCell: UICollectionViewDelegateFlowLayout {
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width, height: collectionView.frame.height)
     }
+}
+
+extension SliderTableViewCell {
+    static var identifier: String {
+        return String(describing: self)
+    }
+
+    static var nib = UINib(nibName: identifier, bundle: Bundle.main)
 }

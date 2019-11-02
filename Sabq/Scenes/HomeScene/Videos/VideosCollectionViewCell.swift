@@ -30,3 +30,10 @@ class VideosCollectionViewCell: UICollectionViewCell {
     }
 
 }
+extension VideosCollectionViewCell {
+    static var identifier: String {
+        return String(describing: self)
+    }
+
+    static var nib = UINib(nibName: identifier, bundle: Bundle.main)
+}

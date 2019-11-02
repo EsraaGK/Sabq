@@ -32,5 +32,11 @@ class SkeletonTableViewCell: UITableViewCell {
         [viewsLbl, sincelable, script, title].forEach { $0?.hideSkeleton() }
         [img, markImg, viewimg, time].forEach { $0?.hideSkeleton() }
     }
-   
+}
+extension SkeletonTableViewCell {
+    static var identifier: String {
+        return String(describing: self)
+    }
+
+    static var nib = UINib(nibName: identifier, bundle: Bundle.main)
 }

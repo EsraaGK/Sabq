@@ -45,3 +45,10 @@ class SliderCollectionViewCell: UICollectionViewCell {
     }
     
 }
+extension SliderCollectionViewCell {
+    static var identifier: String {
+        return String(describing: self)
+    }
+
+    static var nib = UINib(nibName: identifier, bundle: Bundle.main)
+}
