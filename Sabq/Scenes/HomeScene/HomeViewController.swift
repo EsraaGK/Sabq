@@ -16,6 +16,20 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Do any additional setup after loading the view, typically from a nib.
+//
+//              for family: String in UIFont.familyNames
+//              {
+//                  print(family)
+//                  for names: String in UIFont.fontNames(forFamilyName: family)
+//                  {
+//                      print("== \(names)")
+//                  }
+//              }
+//        BBCNassim-EX
+//        == BBCNassim-EX-Regular
+//        == BBCNassim-EX-Bold
+        
         homeTableView.backgroundColor = UIColor.homeBackGroundColor
         
         adapter.reloadData = homeTableView.reloadData
@@ -84,18 +98,18 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
        // self.navigationController!.pushViewController(DetailsViewController(), animated: false)
     }
    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.section {
-        case 0:
-            return CGFloat(integerLiteral: 517)
-        default:
-            switch indexPath.row {
-            case 5: return CGFloat(integerLiteral: 384)//videos
-            case 11: return CGFloat(integerLiteral: 349)//images
-            case 16: return CGFloat(integerLiteral: 370)//articles
-            default:  return CGFloat(integerLiteral: 121)
-            }
-        }
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        switch indexPath.section {
+//        case 0:
+//            return CGFloat(integerLiteral: 517)
+//        default:
+//            switch indexPath.row {
+//            case 5: return CGFloat(integerLiteral: 384)//videos
+//            case 11: return CGFloat(integerLiteral: 349)//images
+//            case 16: return CGFloat(integerLiteral: 370)//articles
+//            default:  return CGFloat(integerLiteral: 121)
+//            }
+//        }
+//    }
    
 }

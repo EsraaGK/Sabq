@@ -35,6 +35,8 @@
 		CE3F1201235EF3C900C6595F /* CellTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F1200235EF3C900C6595F /* CellTypeModel.swift */; };
 		CE3F1205235F15B800C6595F /* ImagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F1203235F15B800C6595F /* ImagesTableViewCell.swift */; };
 		CE3F1206235F15B800C6595F /* ImagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3F1204235F15B800C6595F /* ImagesTableViewCell.xib */; };
+		CE4F2967236ECF0600D2818E /* 4_27.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE4F2965236ECF0600D2818E /* 4_27.otf */; };
+		CE4F2968236ECF0600D2818E /* 4_28.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE4F2966236ECF0600D2818E /* 4_28.otf */; };
 		CEA80EA52358A35E004C6C70 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA80EA32358A35E004C6C70 /* DetailsViewController.swift */; };
 		CEA80EA62358A35E004C6C70 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA80EA42358A35E004C6C70 /* DetailsViewController.xib */; };
 		CEA80EAA2358A55B004C6C70 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA80EA82358A55B004C6C70 /* SearchViewController.swift */; };
@@ -91,6 +93,8 @@
 		CE3F1200235EF3C900C6595F /* CellTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTypeModel.swift; sourceTree = "<group>"; };
 		CE3F1203235F15B800C6595F /* ImagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesTableViewCell.swift; sourceTree = "<group>"; };
 		CE3F1204235F15B800C6595F /* ImagesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImagesTableViewCell.xib; sourceTree = "<group>"; };
+		CE4F2965236ECF0600D2818E /* 4_27.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4_27.otf; sourceTree = "<group>"; };
+		CE4F2966236ECF0600D2818E /* 4_28.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4_28.otf; sourceTree = "<group>"; };
 		CEA80EA32358A35E004C6C70 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		CEA80EA42358A35E004C6C70 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 		CEA80EA82358A55B004C6C70 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -256,6 +260,15 @@
 			path = ImagesCell;
 			sourceTree = "<group>";
 		};
+		CE4F2964236ECE4E00D2818E /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				CE4F2965236ECF0600D2818E /* 4_27.otf */,
+				CE4F2966236ECF0600D2818E /* 4_28.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		CEA80EA22358A333004C6C70 /* DetailsScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +330,7 @@
 		CEF2D11523587147005D2C96 /* Sabq */ = {
 			isa = PBXGroup;
 			children = (
+				CE4F2964236ECE4E00D2818E /* Font */,
 				CE226D062361B7D00066FDBC /* Extentions */,
 				CE38EA6D235CCD5C00229585 /* Base */,
 				CE38EA5A235C90D300229585 /* Router */,
@@ -432,6 +446,7 @@
 			files = (
 				CEDA595A235DFDB1005932E7 /* VideoHomeTableViewCell.xib in Resources */,
 				CEA80EA62358A35E004C6C70 /* DetailsViewController.xib in Resources */,
+				CE4F2968236ECF0600D2818E /* 4_28.otf in Resources */,
 				CE36AFF32365B575007E5145 /* SkeletonTableViewCell.xib in Resources */,
 				CEF2D12123587148005D2C96 /* LaunchScreen.storyboard in Resources */,
 				CEEC7512236056ED004D13DE /* ArticlesTableViewCell.xib in Resources */,
@@ -443,6 +458,7 @@
 				CEF2D13E235892D5005D2C96 /* OrdinaryCellTableViewCell.xib in Resources */,
 				CE083A8D23639BA300017F2A /* Localizable.strings in Resources */,
 				CEF8E38C235F5E000003E53E /* VideosCollectionViewCell.xib in Resources */,
+				CE4F2967236ECF0600D2818E /* 4_27.otf in Resources */,
 				CEEC7516236057B5004D13DE /* ArticleCollectionViewCell.xib in Resources */,
 				CEEC750D23604A4A004D13DE /* ImageCollectionViewCell.xib in Resources */,
 				B16DB9C2235A3C1B0035ECDF /* SliderCollectionViewCell.xib in Resources */,
