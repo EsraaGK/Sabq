@@ -21,15 +21,23 @@ class Router {
         search.tabBarItem = barItem
         tabBar.viewControllers = [navController, search]
         
-        if #available(iOS 13.0, *) {
-            let apperance = UITabBarAppearance()
-            apperance.backgroundColor = UIColor.homeBackGroundColor
-            tabBar.tabBar.standardAppearance.backgroundColor = apperance.backgroundColor
+        if #available(iOS 11.0, *) {
+            tabBar.tabBar.barTintColor = UIColor(named: "TabbarBGColor")
+            
         } else {
             // Fallback on earlier versions
-            tabBar.tabBar.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            
         }
+                
+//        if #available(iOS 13.0, *) {
+//            let apperance = UITabBarAppearance()
+//            apperance.backgroundColor = UIColor.homeBackGroundColor
+//            tabBar.tabBar.standardAppearance.backgroundColor = UIColor(named: "TabbarBGColor")
+//            //apperance.backgroundColor
+//        } else {
+//            // Fallback on earlier versions
+//            tabBar.tabBar.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+//
+//        }
         //         tabBar.tabBar.isTranslucent = false
         //        tabBar.tabBar.backgroundColor = UIColor.homeBackGroundColor
         return tabBar

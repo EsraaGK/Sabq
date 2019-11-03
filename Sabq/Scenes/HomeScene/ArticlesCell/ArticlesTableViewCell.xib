@@ -15,20 +15,23 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ArticlesTableViewCell" customModule="Sabq" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="370"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="376" id="KGk-i7-Jjw" customClass="ArticlesTableViewCell" customModule="Sabq" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="376"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="370"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="380" height="376"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYt-EJ-5Tg">
-                        <rect key="frame" x="0.0" y="60" width="375" height="310"/>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zYt-EJ-5Tg">
+                        <rect key="frame" x="0.0" y="60" width="380" height="360"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </view>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="33c-yk-zGQ">
-                        <rect key="frame" x="0.0" y="60" width="375" height="310"/>
+                        <rect key="frame" x="0.0" y="60" width="380" height="312"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="312" id="T4G-gZ-f3W"/>
+                        </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="shZ-q4-5E9">
                             <size key="itemSize" width="219" height="213"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -37,10 +40,10 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gG-X5-3ab" userLabel="headerView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                        <rect key="frame" x="0.0" y="0.0" width="380" height="60"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOJ-Sd-JOu">
-                                <rect key="frame" x="0.0" y="58" width="375" height="2"/>
+                                <rect key="frame" x="0.0" y="58" width="380" height="2"/>
                                 <color key="backgroundColor" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="3aV-NA-Jca"/>
@@ -60,7 +63,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmb-9M-FiZ">
-                                <rect key="frame" x="317" y="12" width="34" height="36"/>
+                                <rect key="frame" x="322" y="12" width="34" height="36"/>
                                 <fontDescription key="fontDescription" name="BBCNassim-EX-Bold" family="BBCNassim-EX" pointSize="17"/>
                                 <state key="normal" title="More"/>
                             </button>
@@ -86,11 +89,10 @@
                 <constraints>
                     <constraint firstItem="9gG-X5-3ab" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3nh-zf-yuo"/>
                     <constraint firstItem="9gG-X5-3ab" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="68C-d3-oI0"/>
-                    <constraint firstAttribute="bottom" secondItem="zYt-EJ-5Tg" secondAttribute="bottom" id="9tm-Qo-gAF"/>
                     <constraint firstItem="zYt-EJ-5Tg" firstAttribute="top" secondItem="9gG-X5-3ab" secondAttribute="bottom" id="CCv-9K-90j"/>
                     <constraint firstItem="33c-yk-zGQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Fd3-Ml-ac7"/>
-                    <constraint firstItem="zYt-EJ-5Tg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="G8N-4D-PgK"/>
                     <constraint firstAttribute="trailing" secondItem="9gG-X5-3ab" secondAttribute="trailing" id="Ifp-a0-nmu"/>
+                    <constraint firstItem="zYt-EJ-5Tg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="etl-1P-Y0a"/>
                     <constraint firstAttribute="trailing" secondItem="33c-yk-zGQ" secondAttribute="trailing" id="gzp-7g-FJG"/>
                     <constraint firstItem="33c-yk-zGQ" firstAttribute="top" secondItem="9gG-X5-3ab" secondAttribute="bottom" id="h4N-uh-8gP"/>
                     <constraint firstAttribute="trailing" secondItem="zYt-EJ-5Tg" secondAttribute="trailing" id="ubg-mz-umZ"/>
@@ -103,7 +105,7 @@
                 <outlet property="articlesLable" destination="dt6-s7-5FP" id="hPP-vo-VXv"/>
                 <outlet property="moreButton" destination="vmb-9M-FiZ" id="OfU-tb-M3e"/>
             </connections>
-            <point key="canvasLocation" x="139.85507246376812" y="82.366071428571431"/>
+            <point key="canvasLocation" x="136.23188405797103" y="84.375"/>
         </tableViewCell>
     </objects>
 </document>

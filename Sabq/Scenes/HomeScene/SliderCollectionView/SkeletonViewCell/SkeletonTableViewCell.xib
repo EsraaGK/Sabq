@@ -19,6 +19,9 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMk-9e-UKJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="517"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="517" id="sDb-mZ-5Os"/>
+                        </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="85t-hr-Qrb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="517"/>
@@ -132,7 +135,7 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="JMk-9e-UKJ" secondAttribute="trailing" id="6Ed-pV-gHc"/>
+                    <constraint firstAttribute="trailing" secondItem="JMk-9e-UKJ" secondAttribute="trailing" id="HGu-9H-crR"/>
                     <constraint firstAttribute="bottom" secondItem="JMk-9e-UKJ" secondAttribute="bottom" id="co2-Ax-ZGb"/>
                     <constraint firstItem="85t-hr-Qrb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dcP-CS-JfO"/>
                     <constraint firstItem="JMk-9e-UKJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="oyQ-Jp-vvA"/>
