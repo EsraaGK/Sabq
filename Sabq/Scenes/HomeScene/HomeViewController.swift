@@ -7,39 +7,26 @@
 //
 
 import UIKit
+import SkeletonView
 
 class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate, HomeViewProtocol {
-   
+    
     @IBOutlet private weak var homeTableView: UITableView!
-  lazy var adapter = HomeAdapter(tableView: homeTableView)
-  
+    lazy var adapter = HomeAdapter(tableView: homeTableView)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view, typically from a nib.
-//
-//              for family: String in UIFont.familyNames
-//              {
-//                  print(family)
-//                  for names: String in UIFont.fontNames(forFamilyName: family)
-//                  {
-//                      print("== \(names)")
-//                  }
-//              }
-//        BBCNassim-EX
-//        == BBCNassim-EX-Regular
-//        == BBCNassim-EX-Bold
         
         homeTableView.backgroundColor = UIColor.homeBackGroundColor
         
         adapter.reloadData = homeTableView.reloadData
-    
+        
         homeTableView.delegate = self
         homeTableView.dataSource = adapter
         
         homeTableView.register(OrdinaryCellTableViewCell.nib,
                                forCellReuseIdentifier: OrdinaryCellTableViewCell.identifier)
-             
+        
         homeTableView.register(SliderTableViewCell.nib,
                                forCellReuseIdentifier: SliderTableViewCell.identifier)
         
@@ -55,8 +42,10 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
         homeTableView.register(SkeletonTableViewCell.nib,
                                forCellReuseIdentifier: SkeletonTableViewCell.identifier)
         
+        let animation = SkeletonAnimationBuilder().makeSlidingAnimation(withDirection: .leftRight)
+        let gradient = SkeletonGradient(baseColor: UIColor.skeltonViewBaseColor)
+        view.showAnimatedGradientSkeleton(usingGradient: gradient, animation: animation)
         homeTableView.showAnimatedSkeleton()
-        
         presenter.getNews(forPage: 1)
     }
     
@@ -72,44 +61,44 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
         let tempOrdinary = news[1].map { OrdinaryCellModel(material: $0) }
         adapter.addToSlider(item: tempSlider)
         adapter.add(items: tempOrdinary)
-         presenter.getVideos()// coz videos response arrives before home response so it isn't injected in the array
+        presenter.getVideos()// coz videos response arrives before home response so it isn't injected in the array
     }
     
     func loadVideosSuccess(date: Any) { guard let videos = (date as? [Material]) else { return }
         let videosModel = VideosModel(materials: videos)
         adapter.add(item: videosModel, at: 5)
-         presenter.getImages()
+        presenter.getImages()
     }
     func loadImagesSuccess(date: Any) {
-       guard let images = (date as? [Material]) else { return }
+        guard let images = (date as? [Material]) else { return }
         let imagesModel = ImagesModel(materials: images)
         adapter.add(item: imagesModel, at: 11)
-         presenter.getArticles()
+        presenter.getArticles()
     }
     
     func loadArticlesSuccess(date: Any) {
-       guard let articles = (date as? [Material]) else { return }
+        guard let articles = (date as? [Material]) else { return }
         let articlesModel = ArticlesModel(materials: articles)
         adapter.add(item: articlesModel, at: 16)
-       
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       // self.navigationController!.pushViewController(DetailsViewController(), animated: false)
+        // self.navigationController!.pushViewController(DetailsViewController(), animated: false)
     }
-   
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        switch indexPath.section {
-//        case 0:
-//            return CGFloat(integerLiteral: 517)
-//        default:
-//            switch indexPath.row {
-//            case 5: return CGFloat(integerLiteral: 384)//videos
-//            case 11: return CGFloat(integerLiteral: 349)//images
-//            case 16: return CGFloat(integerLiteral: 370)//articles
-//            default:  return CGFloat(integerLiteral: 121)
-//            }
-//        }
-//    }
-   
+    
+    //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    //        switch indexPath.section {
+    //        case 0:
+    //            return CGFloat(integerLiteral: 517)
+    //        default:
+    //            switch indexPath.row {
+    //            case 5: return CGFloat(integerLiteral: 384)//videos
+    //            case 11: return CGFloat(integerLiteral: 349)//images
+    //            case 16: return CGFloat(integerLiteral: 370)//articles
+    //            default:  return CGFloat(integerLiteral: 121)
+    //            }
+    //        }
+    //    }
+    
 }

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Foundation
+import SkeletonView
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +20,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = Router.getTabBar()
         window?.makeKeyAndVisible()
+        
+      //  if #available(iOS 13, *) {
+         //   let traitCollection = UITraitCollection()
+         //   if traitCollection.userInterfaceStyle == .dark {
+                SkeletonAppearance.default.tintColor = .concrete
+       
+//            } else {
+//                // use defaults
+//                print("skipped")
+//            }
+//        }
         setupNetworking()
         return true
     }

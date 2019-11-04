@@ -30,14 +30,15 @@ class SliderTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollecti
         ( sliderCollectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.scrollDirection = .horizontal
         
         sliderCollectionView.backgroundColor = UIColor.homeBackGroundColor
+        pageControl.backgroundColor = UIColor.homeBackGroundColor
     }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        willDisplay cell: UICollectionViewCell,
-                        forItemAt indexPath: IndexPath) {
-        self.pageControl.currentPage = indexPath.row
-    }
-    
+//    
+//    func collectionView(_ collectionView: UICollectionView,
+//                        willDisplay cell: UICollectionViewCell,
+//                        forItemAt indexPath: IndexPath) {
+//        self.pageControl.currentPage = indexPath.row
+//    }
+//    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }

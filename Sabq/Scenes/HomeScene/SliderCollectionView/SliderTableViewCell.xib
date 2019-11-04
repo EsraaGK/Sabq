@@ -13,17 +13,17 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SliderTableViewCell" customModule="Sabq" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="517"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="517"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="SliderTableViewCell" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qM0-iB-oqu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="516.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="480"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="516.5" id="NEA-XA-a5Y"/>
+                            <constraint firstAttribute="height" constant="480" id="VqZ-c2-HLv"/>
                         </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Kyh-V5-5Zh">
-                            <size key="itemSize" width="375" height="516.5"/>
+                            <size key="itemSize" width="375" height="480"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -32,23 +32,23 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
                         </userDefinedRuntimeAttributes>
                     </collectionView>
-                    <pageControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="WHl-MD-heL">
-                        <rect key="frame" x="15" y="171" width="345" height="37"/>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="WHl-MD-heL">
+                        <rect key="frame" x="0.0" y="480" width="375" height="37"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="20" id="UoS-SQ-qHm"/>
+                            <constraint firstAttribute="height" constant="37" id="vaY-Xl-GCH"/>
                         </constraints>
                         <color key="pageIndicatorTintColor" red="0.66274509803921566" green="0.66274509803921566" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="currentPageIndicatorTintColor" red="0.29019607843137252" green="0.56470588235294117" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                     </pageControl>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="WHl-MD-heL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-30" id="3Ph-aR-qDj"/>
-                    <constraint firstItem="WHl-MD-heL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="4W0-T4-Ddb"/>
-                    <constraint firstAttribute="bottom" secondItem="qM0-iB-oqu" secondAttribute="bottom" id="4qi-9h-pNa"/>
+                    <constraint firstItem="WHl-MD-heL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="4Df-a3-3aN"/>
+                    <constraint firstAttribute="trailing" secondItem="WHl-MD-heL" secondAttribute="trailing" id="Kot-Qf-Kna"/>
                     <constraint firstItem="qM0-iB-oqu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="OIp-Vw-gmt"/>
                     <constraint firstItem="qM0-iB-oqu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="SfE-2h-51i"/>
+                    <constraint firstAttribute="bottom" secondItem="WHl-MD-heL" secondAttribute="bottom" id="YeM-0a-WBG"/>
                     <constraint firstAttribute="trailing" secondItem="qM0-iB-oqu" secondAttribute="trailing" id="ZWk-dN-7f0"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="WHl-MD-heL" secondAttribute="trailing" id="k4E-1C-w3q"/>
+                    <constraint firstItem="WHl-MD-heL" firstAttribute="top" secondItem="qM0-iB-oqu" secondAttribute="bottom" id="h6H-6j-IFR"/>
                 </constraints>
                 <userDefinedRuntimeAttributes>
                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>

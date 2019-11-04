@@ -23,7 +23,7 @@ class Router {
         
         if #available(iOS 11.0, *) {
             tabBar.tabBar.barTintColor = UIColor(named: "TabbarBGColor")
-            
+            tabBar.tabBar.isTranslucent = false
         } else {
             // Fallback on earlier versions
         }

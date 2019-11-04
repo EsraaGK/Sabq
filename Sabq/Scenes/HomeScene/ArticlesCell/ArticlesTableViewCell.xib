@@ -22,10 +22,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="380" height="376"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zYt-EJ-5Tg">
-                        <rect key="frame" x="0.0" y="60" width="380" height="360"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    </view>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="33c-yk-zGQ">
                         <rect key="frame" x="0.0" y="60" width="380" height="312"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -89,13 +85,10 @@
                 <constraints>
                     <constraint firstItem="9gG-X5-3ab" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3nh-zf-yuo"/>
                     <constraint firstItem="9gG-X5-3ab" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="68C-d3-oI0"/>
-                    <constraint firstItem="zYt-EJ-5Tg" firstAttribute="top" secondItem="9gG-X5-3ab" secondAttribute="bottom" id="CCv-9K-90j"/>
                     <constraint firstItem="33c-yk-zGQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Fd3-Ml-ac7"/>
                     <constraint firstAttribute="trailing" secondItem="9gG-X5-3ab" secondAttribute="trailing" id="Ifp-a0-nmu"/>
-                    <constraint firstItem="zYt-EJ-5Tg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="etl-1P-Y0a"/>
                     <constraint firstAttribute="trailing" secondItem="33c-yk-zGQ" secondAttribute="trailing" id="gzp-7g-FJG"/>
                     <constraint firstItem="33c-yk-zGQ" firstAttribute="top" secondItem="9gG-X5-3ab" secondAttribute="bottom" id="h4N-uh-8gP"/>
-                    <constraint firstAttribute="trailing" secondItem="zYt-EJ-5Tg" secondAttribute="trailing" id="ubg-mz-umZ"/>
                     <constraint firstAttribute="bottom" secondItem="33c-yk-zGQ" secondAttribute="bottom" id="wXH-53-moU"/>
                 </constraints>
             </tableViewCellContentView>

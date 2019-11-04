@@ -43,8 +43,8 @@ class ArticlesTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let myList = list {
-            return myList.count
+        if let _ = list {
+            return 5
         } else {
             return 0
         }

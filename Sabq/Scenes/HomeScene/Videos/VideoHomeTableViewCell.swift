@@ -46,8 +46,9 @@ class VideoHomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let myList = list {
-            return myList.count
+        if let _ = list {
+            return 5
+                //myList.count
             
         } else {
             return 0
