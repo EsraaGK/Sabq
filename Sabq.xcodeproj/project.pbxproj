@@ -12,6 +12,10 @@
 		B16DB9C2235A3C1B0035ECDF /* SliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B16DB9C0235A3C1B0035ECDF /* SliderCollectionViewCell.xib */; };
 		CE083A8D23639BA300017F2A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE083A8F23639BA300017F2A /* Localizable.strings */; };
 		CE226D082361BA990066FDBC /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE226D072361BA990066FDBC /* Extentions.swift */; };
+		CE27025D23756DC600E3DF14 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE27025C23756DC600E3DF14 /* credentials.plist */; };
+		CE270261237571EA00E3DF14 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27025F237571EA00E3DF14 /* LoginScreenViewController.swift */; };
+		CE270262237571EA00E3DF14 /* LoginScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE270260237571EA00E3DF14 /* LoginScreenViewController.xib */; };
+		CE27026423757C8100E3DF14 /* GoogleSignIn + AppDelegate Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27026323757C8100E3DF14 /* GoogleSignIn + AppDelegate Extension.swift */; };
 		CE2BBE36235C60D100F4D19B /* HomeApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BBE35235C60D100F4D19B /* HomeApiResponse.swift */; };
 		CE2BBE3E235C7E5700F4D19B /* NetworkService+ActorsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BBE3C235C7E5700F4D19B /* NetworkService+ActorsService.swift */; };
 		CE2BBE3F235C7E5700F4D19B /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BBE3D235C7E5700F4D19B /* ProductService.swift */; };
@@ -71,6 +75,10 @@
 		CE083A88236390CF00017F2A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CE083A8E23639BA300017F2A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE226D072361BA990066FDBC /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		CE27025C23756DC600E3DF14 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
+		CE27025F237571EA00E3DF14 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
+		CE270260237571EA00E3DF14 /* LoginScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginScreenViewController.xib; sourceTree = "<group>"; };
+		CE27026323757C8100E3DF14 /* GoogleSignIn + AppDelegate Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoogleSignIn + AppDelegate Extension.swift"; sourceTree = "<group>"; };
 		CE2BBE35235C60D100F4D19B /* HomeApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeApiResponse.swift; sourceTree = "<group>"; };
 		CE2BBE3C235C7E5700F4D19B /* NetworkService+ActorsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkService+ActorsService.swift"; sourceTree = "<group>"; };
 		CE2BBE3D235C7E5700F4D19B /* ProductService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
@@ -178,6 +186,15 @@
 			path = Extentions;
 			sourceTree = "<group>";
 		};
+		CE27025E23756DF200E3DF14 /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CE27025F237571EA00E3DF14 /* LoginScreenViewController.swift */,
+				CE270260237571EA00E3DF14 /* LoginScreenViewController.xib */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
 		CE2BBE34235C60AA00F4D19B /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +262,7 @@
 		CE38EA74235CE91C00229585 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CE27025E23756DF200E3DF14 /* LoginScreen */,
 				CEF2D13223589117005D2C96 /* HomeScene */,
 				CEA80EA72358A51F004C6C70 /* SearchScrean */,
 				CEA80EA22358A333004C6C70 /* DetailsScene */,
@@ -341,6 +359,8 @@
 				CE2BBE34235C60AA00F4D19B /* Entity */,
 				CE38EA74235CE91C00229585 /* Scenes */,
 				CEF2D11623587147005D2C96 /* AppDelegate.swift */,
+				CE27026323757C8100E3DF14 /* GoogleSignIn + AppDelegate Extension.swift */,
+				CE27025C23756DC600E3DF14 /* credentials.plist */,
 				CEF2D11D23587148005D2C96 /* Assets.xcassets */,
 				CEF2D11F23587148005D2C96 /* LaunchScreen.storyboard */,
 				CEF2D12223587148005D2C96 /* Info.plist */,
@@ -398,6 +418,7 @@
 				CEF2D11123587147005D2C96 /* Resources */,
 				71403DAC546258176B839865 /* [CP] Embed Pods Frameworks */,
 				CE24C97523661841004FA678 /* ShellScript */,
+				9E8C75CED5B85549821934BB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -454,12 +475,14 @@
 				CEF2D12123587148005D2C96 /* LaunchScreen.storyboard in Resources */,
 				CEEC7512236056ED004D13DE /* ArticlesTableViewCell.xib in Resources */,
 				CE3F1206235F15B800C6595F /* ImagesTableViewCell.xib in Resources */,
+				CE27025D23756DC600E3DF14 /* credentials.plist in Resources */,
 				CEF2D11E23587148005D2C96 /* Assets.xcassets in Resources */,
 				CEF2D1422358930A005D2C96 /* SliderTableViewCell.xib in Resources */,
 				CEF2D13A235891FA005D2C96 /* HomeViewController.xib in Resources */,
 				CEA80EAB2358A55B004C6C70 /* SearchViewController.xib in Resources */,
 				CEF2D13E235892D5005D2C96 /* OrdinaryCellTableViewCell.xib in Resources */,
 				CE083A8D23639BA300017F2A /* Localizable.strings in Resources */,
+				CE270262237571EA00E3DF14 /* LoginScreenViewController.xib in Resources */,
 				CEF8E38C235F5E000003E53E /* VideosCollectionViewCell.xib in Resources */,
 				CE4F2967236ECF0600D2818E /* 4_27.otf in Resources */,
 				CEEC7516236057B5004D13DE /* ArticleCollectionViewCell.xib in Resources */,
@@ -486,6 +509,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sabq/Pods-Sabq-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E8C75CED5B85549821934BB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sabq/Pods-Sabq-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sabq/Pods-Sabq-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sabq/Pods-Sabq-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BA0FC390900FCEA294F7F99C /* [CP] Check Pods Manifest.lock */ = {
@@ -536,6 +576,7 @@
 			files = (
 				CEF8E38B235F5E000003E53E /* VideosCollectionViewCell.swift in Sources */,
 				CE2BBE3E235C7E5700F4D19B /* NetworkService+ActorsService.swift in Sources */,
+				CE270261237571EA00E3DF14 /* LoginScreenViewController.swift in Sources */,
 				CEF2D1282358732C005D2C96 /* AppDelegate.swift in Sources */,
 				CEA80EAA2358A55B004C6C70 /* SearchViewController.swift in Sources */,
 				CE38EA5C235C920600229585 /* Router.swift in Sources */,
@@ -553,6 +594,7 @@
 				CE36AFF22365B575007E5145 /* SkeletonTableViewCell.swift in Sources */,
 				CE2BBE3F235C7E5700F4D19B /* ProductService.swift in Sources */,
 				CEF2D1412358930A005D2C96 /* SliderTableViewCell.swift in Sources */,
+				CE27026423757C8100E3DF14 /* GoogleSignIn + AppDelegate Extension.swift in Sources */,
 				CE2BBE46235C7E6600F4D19B /* NetworkManager.swift in Sources */,
 				CE38EA73235CCF0400229585 /* HomePresenterProtocol.swift in Sources */,
 				CE2BBE45235C7E6600F4D19B /* NetworkError.swift in Sources */,

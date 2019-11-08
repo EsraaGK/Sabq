@@ -14,11 +14,18 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
     @IBOutlet private weak var homeTableView: UITableView!
     lazy var adapter = HomeAdapter(tableView: homeTableView)
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // Hide the navigation bar on the this view controller
+     
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         homeTableView.backgroundColor = UIColor.homeBackGroundColor
-        
+       
         adapter.reloadData = homeTableView.reloadData
         
         homeTableView.delegate = self
@@ -86,19 +93,28 @@ class HomeViewController: BaseViewController<HomePresenter>, UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // self.navigationController!.pushViewController(DetailsViewController(), animated: false)
     }
-    
-    //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    //        switch indexPath.section {
-    //        case 0:
-    //            return CGFloat(integerLiteral: 517)
-    //        default:
-    //            switch indexPath.row {
-    //            case 5: return CGFloat(integerLiteral: 384)//videos
-    //            case 11: return CGFloat(integerLiteral: 349)//images
-    //            case 16: return CGFloat(integerLiteral: 370)//articles
-    //            default:  return CGFloat(integerLiteral: 121)
-    //            }
-    //        }
-    //    }
-    
+//    func setTabBarControllerNavigationBar() {
+//    self.tabBarController?.navigationItem.hidesBackButton = true
+//           self.tabBarController?.navigationItem.titleView = UIImageView(image: #imageLiteral(resourceName: "img_logo"))
+//
+//               let rightBarItem = UIBarButtonItem(image: #imageLiteral(resourceName: "notification-icon").withRenderingMode(.alwaysOriginal),
+//                                                  style: .done,
+//                                                  target: self,
+//                                                  action: #selector(HomeModule.logoutUser) )
+//               self.tabBarController?.navigationItem.rightBarButtonItem = rightBarItem
+//
+//               let leftBarItem = UIBarButtonItem(image: #imageLiteral(resourceName: "img_user").withRenderingMode(.alwaysOriginal),
+//                                                 style: .done,
+//                                                 target: self,
+//                                                 action: #selector(HomeModule.logoutUser) )
+//                self.tabBarController?.navigationItem.leftBarButtonItem = leftBarItem
+//
+//        if #available(iOS 11.0, *) {
+//            //self.navigationBar.tintColor = .red
+//                //UIColor(named: "TabbarBGColor")
+//           //  self.tabBarController?.moreNavigationController.isTranslucent = false
+//               } else {
+//                   // Fallback on earlier versions
+//               }
+//    }
 }

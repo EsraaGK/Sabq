@@ -8,6 +8,7 @@ target 'Sabq' do
   pod 'Moya', '~> 13.0'
   pod 'SkeletonView'
   pod 'DateToolsSwift', :inhibit_warnings => true
+  pod 'GoogleSignIn'
   
   # Pods for Sabq
 

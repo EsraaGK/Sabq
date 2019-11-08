@@ -46,13 +46,14 @@ class VideoHomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let _ = list {
-            return 5
-                //myList.count
-            
-        } else {
-            return 0
-        }
+//        if let _ = list {
+//            return 5
+//                //myList.count
+//
+//        } else {
+//            return 0
+//        }
+        return list != nil ? 5 : 0
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -76,4 +77,6 @@ extension VideoHomeTableViewCell {
     }
 
     static var nib = UINib(nibName: identifier, bundle: Bundle.main)
+
 }
+
