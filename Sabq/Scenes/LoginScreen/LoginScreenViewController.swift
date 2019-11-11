@@ -7,11 +7,27 @@
 //
 
 import UIKit
-import GoogleSignIn
+import FittedSheets
 
+enum PasswordTextFieldStatus {
+    case letters
+    case dots
+}
 class LoginScreenViewController: UIViewController {
+    @IBOutlet private weak var passwordTextField: UITextField!
+    var passwordStatus = PasswordTextFieldStatus.dots
+    @IBAction func hideOrShowPassword(_ sender: UIButton) {
+        switch passwordStatus {
+        case .dots:
+            passwordTextField.isSecureTextEntry = false
+            passwordStatus = .letters
+        default:
+             passwordTextField.isSecureTextEntry = true
+                       passwordStatus = .dots
+        }
+        
+    }
     
-    @IBOutlet private weak var signInButton: GIDSignInButton!
     override func viewWillAppear(_ animated: Bool) {
           super.viewWillAppear(animated)
 
@@ -20,10 +36,39 @@ class LoginScreenViewController: UIViewController {
       }
     override func viewDidLoad() {
         super.viewDidLoad()
-        GIDSignIn.sharedInstance()?.presentingViewController = self
-        
-        // Automatically sign in the user.
-        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
-    
+        passwordTextField.isSecureTextEntry = true
+    }
+    @IBAction func socialLogin(_ sender: UIButton) {
+       let controller = SocialLoginViewController()
+
+       let sheetController = SheetViewController(controller: controller,
+                                                 sizes: [.fixed(200),
+                                                         .fixed(200),
+                                                         .halfScreen,
+                                                         .fullScreen])
+
+       // Adjust how the bottom safe area is handled on iPhone X screens
+       sheetController.blurBottomSafeArea = false
+       sheetController.adjustForBottomSafeArea = true
+
+       // Turn off rounded corners
+       sheetController.topCornersRadius = 0
+
+       // Make corners more round
+       sheetController.topCornersRadius = 15
+
+       // Disable the dismiss on background tap functionality
+       sheetController.dismissOnBackgroundTap = true
+
+       // Extend the background behind the pull bar instead of having it transparent
+       sheetController.extendBackgroundBehindHandle = true
+
+       // Change the overlay color
+       //sheetController.overlayColor = UIColor.red
+
+       // Change the handle color
+        sheetController.handleColor = UIColor.blue
+
+       self.present(sheetController, animated: true, completion: nil)
     }
 }

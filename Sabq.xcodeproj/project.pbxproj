@@ -42,6 +42,8 @@
 		CE4F2967236ECF0600D2818E /* 4_27.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE4F2965236ECF0600D2818E /* 4_27.otf */; };
 		CE4F2968236ECF0600D2818E /* 4_28.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE4F2966236ECF0600D2818E /* 4_28.otf */; };
 		CE7F526C236F23510007CF74 /* ColorExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F526B236F23510007CF74 /* ColorExtentions.swift */; };
+		CE80E5F82379B10E00F76156 /* SocialLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80E5F62379B10E00F76156 /* SocialLoginViewController.swift */; };
+		CE80E5F92379B10E00F76156 /* SocialLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE80E5F72379B10E00F76156 /* SocialLoginViewController.xib */; };
 		CEA80EA52358A35E004C6C70 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA80EA32358A35E004C6C70 /* DetailsViewController.swift */; };
 		CEA80EA62358A35E004C6C70 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA80EA42358A35E004C6C70 /* DetailsViewController.xib */; };
 		CEA80EAA2358A55B004C6C70 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA80EA82358A55B004C6C70 /* SearchViewController.swift */; };
@@ -105,6 +107,8 @@
 		CE4F2965236ECF0600D2818E /* 4_27.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4_27.otf; sourceTree = "<group>"; };
 		CE4F2966236ECF0600D2818E /* 4_28.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4_28.otf; sourceTree = "<group>"; };
 		CE7F526B236F23510007CF74 /* ColorExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtentions.swift; sourceTree = "<group>"; };
+		CE80E5F62379B10E00F76156 /* SocialLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginViewController.swift; sourceTree = "<group>"; };
+		CE80E5F72379B10E00F76156 /* SocialLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocialLoginViewController.xib; sourceTree = "<group>"; };
 		CEA80EA32358A35E004C6C70 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		CEA80EA42358A35E004C6C70 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 		CEA80EA82358A55B004C6C70 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +195,8 @@
 			children = (
 				CE27025F237571EA00E3DF14 /* LoginScreenViewController.swift */,
 				CE270260237571EA00E3DF14 /* LoginScreenViewController.xib */,
+				CE80E5F62379B10E00F76156 /* SocialLoginViewController.swift */,
+				CE80E5F72379B10E00F76156 /* SocialLoginViewController.xib */,
 			);
 			path = LoginScreen;
 			sourceTree = "<group>";
@@ -479,6 +485,7 @@
 				CEF2D11E23587148005D2C96 /* Assets.xcassets in Resources */,
 				CEF2D1422358930A005D2C96 /* SliderTableViewCell.xib in Resources */,
 				CEF2D13A235891FA005D2C96 /* HomeViewController.xib in Resources */,
+				CE80E5F92379B10E00F76156 /* SocialLoginViewController.xib in Resources */,
 				CEA80EAB2358A55B004C6C70 /* SearchViewController.xib in Resources */,
 				CEF2D13E235892D5005D2C96 /* OrdinaryCellTableViewCell.xib in Resources */,
 				CE083A8D23639BA300017F2A /* Localizable.strings in Resources */,
@@ -575,6 +582,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF8E38B235F5E000003E53E /* VideosCollectionViewCell.swift in Sources */,
+				CE80E5F82379B10E00F76156 /* SocialLoginViewController.swift in Sources */,
 				CE2BBE3E235C7E5700F4D19B /* NetworkService+ActorsService.swift in Sources */,
 				CE270261237571EA00E3DF14 /* LoginScreenViewController.swift in Sources */,
 				CEF2D1282358732C005D2C96 /* AppDelegate.swift in Sources */,
@@ -769,7 +777,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.EGK.Sabq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -788,7 +796,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.EGK.Sabq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
