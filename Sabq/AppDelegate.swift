@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
         // Perform any operations on signed in user here.
         mainNavigationController.pushViewController(Router.getTabBar(), animated: false )
-              print(user.profile.name)
+            //  print(user.profile.name)
     }
     
     @available(iOS 9.0, *)

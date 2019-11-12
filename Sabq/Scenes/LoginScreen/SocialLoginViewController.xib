@@ -7,10 +7,17 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="4_28.otf">
+            <string>BBCNassim-EX-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SocialLoginViewController" customModule="Sabq" customModuleProvider="target">
             <connections>
-                <outlet property="signInButton" destination="Ov6-Qs-d4J" id="eTI-1C-Ggi"/>
+                <outlet property="googleLoginLable" destination="a82-ot-qM1" id="IA7-PA-GHO"/>
+                <outlet property="loginView" destination="bXz-1D-1p4" id="RSo-In-RWG"/>
+                <outlet property="logoView" destination="BYX-23-r4k" id="wLA-CK-Qri"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,22 +27,50 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bXz-1D-1p4">
-                    <rect key="frame" x="40" y="761" width="334" height="60"/>
+                    <rect key="frame" x="40" y="777" width="334" height="44"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ov6-Qs-d4J" customClass="GIDSignInButton">
-                            <rect key="frame" x="0.0" y="0.0" width="334" height="60"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Login with Google" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a82-ot-qM1">
+                            <rect key="frame" x="74" y="0.0" width="260" height="44"/>
+                            <fontDescription key="fontDescription" name="BBCNassim-EX-Bold" family="BBCNassim-EX" pointSize="20"/>
+                            <color key="textColor" red="0.40784313725490196" green="0.40784313725490196" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BYX-23-r4k">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_google" translatesAutoresizingMaskIntoConstraints="NO" id="DfC-3Y-ejg">
+                                    <rect key="frame" x="12.5" y="9.5" width="25" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="25" id="Ir2-2Q-6aU"/>
+                                        <constraint firstAttribute="height" constant="25" id="LO8-lC-0yU"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="7je-WM-eQs"/>
+                                <constraint firstAttribute="width" constant="50" id="CJT-bS-fzw"/>
+                                <constraint firstItem="DfC-3Y-ejg" firstAttribute="centerY" secondItem="BYX-23-r4k" secondAttribute="centerY" id="cZu-DS-ynx"/>
+                                <constraint firstItem="DfC-3Y-ejg" firstAttribute="centerX" secondItem="BYX-23-r4k" secondAttribute="centerX" id="xxc-hv-ZOn"/>
+                            </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <gestureRecognizers/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="Ov6-Qs-d4J" secondAttribute="trailing" id="MCh-Fi-9XK"/>
-                        <constraint firstItem="Ov6-Qs-d4J" firstAttribute="top" secondItem="bXz-1D-1p4" secondAttribute="top" id="V6r-6m-cHy"/>
-                        <constraint firstAttribute="height" constant="60" id="eW2-aU-06j" userLabel="height = 60"/>
-                        <constraint firstAttribute="bottom" secondItem="Ov6-Qs-d4J" secondAttribute="bottom" id="ite-JK-kZS"/>
-                        <constraint firstItem="Ov6-Qs-d4J" firstAttribute="height" secondItem="bXz-1D-1p4" secondAttribute="height" id="snZ-HM-Bam"/>
-                        <constraint firstItem="Ov6-Qs-d4J" firstAttribute="leading" secondItem="bXz-1D-1p4" secondAttribute="leading" id="za3-hA-35Z"/>
+                        <constraint firstItem="a82-ot-qM1" firstAttribute="top" secondItem="bXz-1D-1p4" secondAttribute="top" id="DYc-e1-XiL"/>
+                        <constraint firstItem="BYX-23-r4k" firstAttribute="leading" secondItem="bXz-1D-1p4" secondAttribute="leading" id="SbE-ks-Vbj"/>
+                        <constraint firstItem="BYX-23-r4k" firstAttribute="top" secondItem="bXz-1D-1p4" secondAttribute="top" id="YWU-PZ-nLJ"/>
+                        <constraint firstAttribute="height" constant="44" id="eW2-aU-06j" userLabel="height = 60"/>
+                        <constraint firstAttribute="bottom" secondItem="a82-ot-qM1" secondAttribute="bottom" id="lvK-D2-xss"/>
+                        <constraint firstItem="a82-ot-qM1" firstAttribute="leading" secondItem="BYX-23-r4k" secondAttribute="trailing" constant="24" id="oQn-Zp-PcR"/>
+                        <constraint firstAttribute="trailing" secondItem="a82-ot-qM1" secondAttribute="trailing" id="vGb-pf-d72"/>
+                        <constraint firstAttribute="bottom" secondItem="BYX-23-r4k" secondAttribute="bottom" id="zao-ok-4yh"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="S39-kw-a70" appends="YES" id="aAO-WW-pMX"/>
+                    </connections>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -45,7 +80,15 @@
                 <constraint firstItem="bXz-1D-1p4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="hlD-NH-lJ7"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="89"/>
+            <point key="canvasLocation" x="137.68115942028987" y="88.392857142857139"/>
         </view>
+        <tapGestureRecognizer id="S39-kw-a70">
+            <connections>
+                <action selector="googleLogInView:" destination="-1" id="SgJ-me-KsM"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
+    <resources>
+        <image name="ic_google" width="25" height="25"/>
+    </resources>
 </document>

@@ -38,8 +38,8 @@ class Router {
     }
     
     class func getTabBar() -> UITabBarController {
-        let myTabBar = Router()
-        return myTabBar.initializeTabBar()
+        let router = Router()
+        return router.initializeTabBar()
     }
     func getNavController() -> UINavigationController {
         return self.mainNavigationController
