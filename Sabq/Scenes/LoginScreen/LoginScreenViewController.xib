@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,6 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginScreenViewController" customModule="Sabq" customModuleProvider="target">
             <connections>
+                <outlet property="appleView" destination="a17-IT-Dac" id="wzC-yh-IIE"/>
                 <outlet property="passwordTextField" destination="a6d-Wn-b8b" id="VVi-If-Ktt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -37,7 +39,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VIP-N8-ECL" userLabel="name password view">
                             <rect key="frame" x="0.0" y="113" width="346" height="249"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uFn-uK-Bdd">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uFn-uK-Bdd">
                                     <rect key="frame" x="0.0" y="0.0" width="346" height="54"/>
                                     <color key="backgroundColor" red="0.94901960784313721" green="0.96078431372549022" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
@@ -46,7 +48,7 @@
                                     <fontDescription key="fontDescription" name="BBCNassim-EX-Regular" family="BBCNassim-EX" pointSize="20"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a6d-Wn-b8b">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a6d-Wn-b8b">
                                     <rect key="frame" x="0.0" y="72" width="346" height="54"/>
                                     <color key="backgroundColor" red="0.94901960784313721" green="0.96078431372549022" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" name="BBCNassim-EX-Regular" family="BBCNassim-EX" pointSize="20"/>
@@ -82,7 +84,6 @@
                                     <state key="normal" title="forget password "/>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstItem="Or7-Yh-iA8" firstAttribute="top" secondItem="a6d-Wn-b8b" secondAttribute="bottom" constant="18" id="6gM-Ci-LFn"/>
                                 <constraint firstItem="uFn-uK-Bdd" firstAttribute="height" secondItem="a6d-Wn-b8b" secondAttribute="height" id="7Qa-TD-AsO"/>
@@ -126,7 +127,6 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstItem="SEw-ke-Bzq" firstAttribute="centerY" secondItem="Om3-Ye-E9z" secondAttribute="centerY" id="0a4-aV-5ZR"/>
                                 <constraint firstItem="oM0-vI-3DE" firstAttribute="leading" secondItem="SEw-ke-Bzq" secondAttribute="trailing" constant="20" id="2Jx-z3-lsK"/>
@@ -142,33 +142,32 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zty-kr-u2g" userLabel="social login ">
                             <rect key="frame" x="0.0" y="432" width="346" height="108"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kz-cu-Y7W" userLabel="sign in with apple">
-                                    <rect key="frame" x="0.0" y="0.0" width="346" height="44"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="44" id="EuZ-ES-emX"/>
-                                    </constraints>
-                                    <state key="normal" backgroundImage="Controls_Buttons_Apple_ID_Sign_in_with_Apple_White">
-                                        <color key="titleColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </state>
-                                </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVn-z1-nRs">
                                     <rect key="frame" x="0.0" y="64" width="346" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="4od-Wh-4he"/>
+                                    </constraints>
                                     <state key="normal" backgroundImage="Controls"/>
                                     <connections>
                                         <action selector="socialLogin:" destination="-1" eventType="touchUpInside" id="aZr-8F-6pR"/>
                                     </connections>
                                 </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a17-IT-Dac">
+                                    <rect key="frame" x="0.0" y="0.0" width="346" height="44"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="ONq-Lq-oAQ"/>
+                                    </constraints>
+                                </view>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstItem="NVn-z1-nRs" firstAttribute="leading" secondItem="Zty-kr-u2g" secondAttribute="leading" id="1hj-lV-fKN"/>
-                                <constraint firstAttribute="trailing" secondItem="0kz-cu-Y7W" secondAttribute="trailing" id="FIG-Uy-Jqt"/>
                                 <constraint firstAttribute="bottom" secondItem="NVn-z1-nRs" secondAttribute="bottom" id="IRu-BA-SlI"/>
                                 <constraint firstAttribute="trailing" secondItem="NVn-z1-nRs" secondAttribute="trailing" id="JiA-S5-dfZ"/>
-                                <constraint firstItem="0kz-cu-Y7W" firstAttribute="leading" secondItem="Zty-kr-u2g" secondAttribute="leading" id="XfW-Ii-5Gi"/>
-                                <constraint firstItem="NVn-z1-nRs" firstAttribute="top" secondItem="0kz-cu-Y7W" secondAttribute="bottom" constant="20" id="cH4-Kp-v0K"/>
-                                <constraint firstItem="0kz-cu-Y7W" firstAttribute="height" secondItem="NVn-z1-nRs" secondAttribute="height" id="uwQ-TQ-ByX"/>
-                                <constraint firstItem="0kz-cu-Y7W" firstAttribute="top" secondItem="Zty-kr-u2g" secondAttribute="top" id="w2I-xA-oFC"/>
+                                <constraint firstItem="a17-IT-Dac" firstAttribute="top" secondItem="Zty-kr-u2g" secondAttribute="top" id="WTD-Ah-qHe"/>
+                                <constraint firstItem="NVn-z1-nRs" firstAttribute="trailing" secondItem="a17-IT-Dac" secondAttribute="trailing" id="bAq-0R-YY5"/>
+                                <constraint firstItem="NVn-z1-nRs" firstAttribute="top" secondItem="a17-IT-Dac" secondAttribute="bottom" constant="20" id="jlj-Ct-S04"/>
+                                <constraint firstItem="NVn-z1-nRs" firstAttribute="leading" secondItem="a17-IT-Dac" secondAttribute="leading" id="pcO-iW-ntL"/>
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTv-8J-I0E">
@@ -176,7 +175,6 @@
                             <state key="normal" title="You are not registered? Register now"/>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="Zty-kr-u2g" secondAttribute="trailing" id="4ya-rX-mw8"/>
                         <constraint firstAttribute="trailing" secondItem="dTv-8J-I0E" secondAttribute="trailing" id="CUy-aG-XJJ"/>
@@ -196,7 +194,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" name="Color"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2Ul-s6-6Qq" secondAttribute="bottom" constant="34" id="FDF-cD-mBm"/>
                 <constraint firstItem="2Ul-s6-6Qq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="NTG-3M-fxl"/>
@@ -204,13 +202,15 @@
                 <constraint firstItem="2Ul-s6-6Qq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="34" id="ero-gh-osI"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="137.68115942028987" y="90.401785714285708"/>
+            <point key="canvasLocation" x="-488" y="85"/>
         </view>
     </objects>
     <resources>
         <image name="Controls" width="300" height="44"/>
-        <image name="Controls_Buttons_Apple_ID_Sign_in_with_Apple_White" width="300" height="44"/>
         <image name="ic_eye" width="25" height="19"/>
         <image name="img_logo" width="44" height="27"/>
+        <namedColor name="Color">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

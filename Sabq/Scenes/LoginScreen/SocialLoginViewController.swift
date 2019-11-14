@@ -11,7 +11,7 @@ import GoogleSignIn
 class SocialLoginViewController: UIViewController {
     @IBOutlet private weak var loginView: UIView!
     @IBOutlet private weak var googleLoginLable: UILabel!
-    @IBOutlet weak var logoView: UIView!
+    @IBOutlet private weak var logoView: UIView!
     @IBOutlet private weak var signInButton: GIDSignInButton!
     override func viewDidLoad() {
         super.viewDidLoad()

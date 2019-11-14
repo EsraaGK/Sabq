@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -47,7 +48,6 @@
                                     </constraints>
                                 </imageView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="7je-WM-eQs"/>
                                 <constraint firstAttribute="width" constant="50" id="CJT-bS-fzw"/>
@@ -56,7 +56,6 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <gestureRecognizers/>
                     <constraints>
                         <constraint firstItem="a82-ot-qM1" firstAttribute="top" secondItem="bXz-1D-1p4" secondAttribute="top" id="DYc-e1-XiL"/>
@@ -73,7 +72,7 @@
                     </connections>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" name="Color"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bXz-1D-1p4" secondAttribute="bottom" constant="41" id="UiH-HQ-RV6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bXz-1D-1p4" secondAttribute="trailing" constant="40" id="VQl-UN-yzC"/>
@@ -90,5 +89,8 @@
     </objects>
     <resources>
         <image name="ic_google" width="25" height="25"/>
+        <namedColor name="Color">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

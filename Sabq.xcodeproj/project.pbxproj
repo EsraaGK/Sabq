@@ -106,6 +106,7 @@
 		CE3F1204235F15B800C6595F /* ImagesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImagesTableViewCell.xib; sourceTree = "<group>"; };
 		CE4F2965236ECF0600D2818E /* 4_27.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4_27.otf; sourceTree = "<group>"; };
 		CE4F2966236ECF0600D2818E /* 4_28.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4_28.otf; sourceTree = "<group>"; };
+		CE785794237D5CCB0007681F /* Sabq.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sabq.entitlements; sourceTree = "<group>"; };
 		CE7F526B236F23510007CF74 /* ColorExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtentions.swift; sourceTree = "<group>"; };
 		CE80E5F62379B10E00F76156 /* SocialLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginViewController.swift; sourceTree = "<group>"; };
 		CE80E5F72379B10E00F76156 /* SocialLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocialLoginViewController.xib; sourceTree = "<group>"; };
@@ -357,6 +358,7 @@
 		CEF2D11523587147005D2C96 /* Sabq */ = {
 			isa = PBXGroup;
 			children = (
+				CE785794237D5CCB0007681F /* Sabq.entitlements */,
 				CE4F2964236ECE4E00D2818E /* Font */,
 				CE226D062361B7D00066FDBC /* Extentions */,
 				CE38EA6D235CCD5C00229585 /* Base */,
@@ -697,7 +699,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -753,7 +755,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -768,14 +770,16 @@
 			baseConfigurationReference = 012817EA5DEAD8C964936C39 /* Pods-Sabq.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sabq/Sabq.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2C86JD592M;
 				INFOPLIST_FILE = Sabq/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.EGK.Sabq;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibtikar.sabqTrial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -787,14 +791,16 @@
 			baseConfigurationReference = 32856859724E71E1228D61A7 /* Pods-Sabq.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sabq/Sabq.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2C86JD592M;
 				INFOPLIST_FILE = Sabq/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.EGK.Sabq;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibtikar.sabqTrial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
