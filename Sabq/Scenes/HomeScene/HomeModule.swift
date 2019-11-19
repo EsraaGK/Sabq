@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 class HomeModule {
-    @objc class func logoutUser() { print("clicked") }
+    @objc
+    class func logoutUser() { print("clicked") }
     
     class func getHomeViewController() -> HomeViewController {
         let view = HomeViewController(nibName: "HomeViewController", bundle: nil)

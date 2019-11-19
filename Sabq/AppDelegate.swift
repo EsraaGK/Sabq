@@ -10,6 +10,8 @@ import UIKit
 import Foundation
 import SkeletonView
 import GoogleSignIn
+import UserNotifications
+import NotificationCenter
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -24,10 +26,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         GIDSignIn.sharedInstance().clientID = "443168031149-shpuail4ntko6os9sen3vgpn58263pvo.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
-        
+        UNUserNotificationCenter.current()
+          .requestAuthorization(options: [.alert, .sound, .badge]) {
+            [weak self] granted, error in
+              
+            print("Permission granted: \(granted)")
+        }
+        UIApplication.shared.registerForRemoteNotifications()
         window?.makeKeyAndVisible()
         setupNetworking()
         return true
+    }
+    
+    func application(_ application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+        print("the token is \(token)")
+    }
+    
+    func application(_ application: UIApplication,
+                     didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("the error is \(error)")
+    }
+    
+    func application(_ application: UIApplication,
+                     didReceiveRemoteNotification userInfo: [AnyHashable : Any],
+                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
     }
     
     func sign(_ signIn: GIDSignIn!,

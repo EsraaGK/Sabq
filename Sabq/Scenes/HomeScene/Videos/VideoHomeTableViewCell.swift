@@ -79,4 +79,3 @@ extension VideoHomeTableViewCell {
     static var nib = UINib(nibName: identifier, bundle: Bundle.main)
 
 }
-
