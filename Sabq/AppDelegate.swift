@@ -26,13 +26,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         GIDSignIn.sharedInstance().clientID = "443168031149-shpuail4ntko6os9sen3vgpn58263pvo.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
+        
         UNUserNotificationCenter.current()
-          .requestAuthorization(options: [.alert, .sound, .badge]) {
-            [weak self] granted, error in
-              
-            print("Permission granted: \(granted)")
-        }
+            .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
+                print("Permission granted: \(granted)")
+            }
         UIApplication.shared.registerForRemoteNotifications()
+        
         window?.makeKeyAndVisible()
         setupNetworking()
         return true
@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
     
     func application(_ application: UIApplication,
-                     didReceiveRemoteNotification userInfo: [AnyHashable : Any],
+                     didReceiveRemoteNotification userInfo: [AnyHashable: Any],
                      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         
     }
