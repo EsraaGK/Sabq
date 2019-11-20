@@ -17,9 +17,9 @@ class ArticlesTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        let title = NSLocalizedString("More", comment: "")
+        let title = L10n.Localizable.more
         moreButton.setTitle(title, for: .normal)
-        articlesLable.text = NSLocalizedString("Articles", comment: "")
+        articlesLable.text = L10n.Localizable.articles
         articlesCollectionView.delegate = self
         articlesCollectionView.dataSource = self
         

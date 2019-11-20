@@ -29,6 +29,7 @@ PODS:
     - SDWebImage/Core (= 5.2.3)
   - SDWebImage/Core (5.2.3)
   - SkeletonView (1.8.2)
+  - SwiftGen (6.1.0)
 
 DEPENDENCIES:
   - DateToolsSwift
@@ -37,6 +38,7 @@ DEPENDENCIES:
   - Moya (~> 13.0)
   - SDWebImage (~> 5.0)
   - SkeletonView
+  - SwiftGen
 
 SPEC REPOS:
   trunk:
@@ -51,6 +53,7 @@ SPEC REPOS:
     - Result
     - SDWebImage
     - SkeletonView
+    - SwiftGen
 
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
@@ -64,7 +67,8 @@ SPEC CHECKSUMS:
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SDWebImage: 46a7f73228f84ce80990c786e4372cf4db5875ce
   SkeletonView: bb27c39857e5492136f02ee8a3aa78de55d12ecd
+  SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
 
-PODFILE CHECKSUM: 596fd5d77482aa4530712bd0cadc22363d1f4ba1
+PODFILE CHECKSUM: 35e2a5dff8383b4213e085ce967c1cb770cf891b
 
 COCOAPODS: 1.8.3

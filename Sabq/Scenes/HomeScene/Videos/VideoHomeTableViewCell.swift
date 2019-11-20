@@ -19,8 +19,8 @@ class VideoHomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColle
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        videosTitleLable.text = NSLocalizedString("Videos", comment: "")
-        moreVideosButton.setTitle(NSLocalizedString("More", comment: ""), for: .normal)
+        videosTitleLable.text = L10n.Localizable.videos
+        moreVideosButton.setTitle(L10n.Localizable.more, for: .normal)
 
         videosCollectionView.delegate = self
         videosCollectionView.dataSource = self

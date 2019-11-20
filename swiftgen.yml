@@ -1,0 +1,13 @@
+
+strings:
+  inputs: Sabq/ar.lproj
+  filter: .+\.strings$
+  outputs:
+    - templateName: structured-swift4
+      output: Sabq/SwiftGeneratedFiles/strings.swift
+xcassets:
+  inputs:
+    - Sabq/Assets.xcassets
+  outputs:
+    - templateName: swift4
+      output: Sabq/SwiftGeneratedFiles/assets-images.swift

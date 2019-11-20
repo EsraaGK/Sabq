@@ -10,6 +10,7 @@ target 'Sabq' do
   pod 'DateToolsSwift', :inhibit_warnings => true
   pod 'GoogleSignIn'
  pod 'FittedSheets', :inhibit_warnings => true
+pod 'SwiftGen'
   # Pods for Sabq
 
 end

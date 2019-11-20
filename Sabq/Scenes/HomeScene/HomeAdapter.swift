@@ -4,7 +4,7 @@
 //
 //  Created by EsraaGK on 10/20/19.
 //  Copyright © 2019 EsraaGK. All rights reserved.
-//
+//  swiftlint:disable all
 
 import Foundation
 import UIKit

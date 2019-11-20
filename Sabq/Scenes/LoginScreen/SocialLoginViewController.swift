@@ -24,8 +24,7 @@ class SocialLoginViewController: UIViewController {
         loginView.layer.borderColor = #colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 1, alpha: 0.5)
         logoView.layer.borderWidth = 2.0
         logoView.layer.borderColor = #colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 1, alpha: 0.4989297945)
-        googleLoginLable.text = NSLocalizedString("Log In with google", comment: "")
-
+        googleLoginLable.text = L10n.Localizable.logInWithGoogle
     }
     @IBAction func googleLogInView(_ sender: Any) {
         GIDSignIn.sharedInstance().signIn()

@@ -11,6 +11,9 @@
 		B16DB9C1235A3C1B0035ECDF /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16DB9BF235A3C1B0035ECDF /* SliderCollectionViewCell.swift */; };
 		B16DB9C2235A3C1B0035ECDF /* SliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B16DB9C0235A3C1B0035ECDF /* SliderCollectionViewCell.xib */; };
 		CE083A8D23639BA300017F2A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE083A8F23639BA300017F2A /* Localizable.strings */; };
+		CE17190D23855EAC00E63247 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = CE17190C23855EAC00E63247 /* swiftgen.yml */; };
+		CE1719112385650E00E63247 /* assets-images.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE17190F2385650E00E63247 /* assets-images.swift */; };
+		CE1719122385650E00E63247 /* strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1719102385650E00E63247 /* strings.swift */; };
 		CE226D082361BA990066FDBC /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE226D072361BA990066FDBC /* Extentions.swift */; };
 		CE27025D23756DC600E3DF14 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE27025C23756DC600E3DF14 /* credentials.plist */; };
 		CE270261237571EA00E3DF14 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27025F237571EA00E3DF14 /* LoginScreenViewController.swift */; };
@@ -76,6 +79,9 @@
 		B16DB9C0235A3C1B0035ECDF /* SliderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCollectionViewCell.xib; sourceTree = "<group>"; };
 		CE083A88236390CF00017F2A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CE083A8E23639BA300017F2A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE17190C23855EAC00E63247 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		CE17190F2385650E00E63247 /* assets-images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "assets-images.swift"; sourceTree = "<group>"; };
+		CE1719102385650E00E63247 /* strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = strings.swift; sourceTree = "<group>"; };
 		CE226D072361BA990066FDBC /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		CE27025C23756DC600E3DF14 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		CE27025F237571EA00E3DF14 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +186,15 @@
 				CE38EA69235CBBD400229585 /* HomeAdapterProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CE17190E2385601400E63247 /* SwiftGeneratedFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CE17190F2385650E00E63247 /* assets-images.swift */,
+				CE1719102385650E00E63247 /* strings.swift */,
+			);
+			path = SwiftGeneratedFiles;
 			sourceTree = "<group>";
 		};
 		CE226D062361B7D00066FDBC /* Extentions */ = {
@@ -340,6 +355,7 @@
 		CEF2D10A23587147005D2C96 = {
 			isa = PBXGroup;
 			children = (
+				CE17190C23855EAC00E63247 /* swiftgen.yml */,
 				CEF2D11523587147005D2C96 /* Sabq */,
 				CEF2D11423587147005D2C96 /* Products */,
 				EA2E39A1E3FD5F217EEC0B27 /* Pods */,
@@ -358,6 +374,7 @@
 		CEF2D11523587147005D2C96 /* Sabq */ = {
 			isa = PBXGroup;
 			children = (
+				CE17190E2385601400E63247 /* SwiftGeneratedFiles */,
 				CE785794237D5CCB0007681F /* Sabq.entitlements */,
 				CE4F2964236ECE4E00D2818E /* Font */,
 				CE226D062361B7D00066FDBC /* Extentions */,
@@ -495,6 +512,7 @@
 				CEF8E38C235F5E000003E53E /* VideosCollectionViewCell.xib in Resources */,
 				CE4F2967236ECF0600D2818E /* 4_27.otf in Resources */,
 				CEEC7516236057B5004D13DE /* ArticleCollectionViewCell.xib in Resources */,
+				CE17190D23855EAC00E63247 /* swiftgen.yml in Resources */,
 				CEEC750D23604A4A004D13DE /* ImageCollectionViewCell.xib in Resources */,
 				B16DB9C2235A3C1B0035ECDF /* SliderCollectionViewCell.xib in Resources */,
 			);
@@ -574,7 +592,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\nif which swiftgen >/dev/null; then\n  swiftgen\nelse\n  echo \"warning: swiftgen not installed\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -586,6 +604,7 @@
 				CEF8E38B235F5E000003E53E /* VideosCollectionViewCell.swift in Sources */,
 				CE80E5F82379B10E00F76156 /* SocialLoginViewController.swift in Sources */,
 				CE2BBE3E235C7E5700F4D19B /* NetworkService+ActorsService.swift in Sources */,
+				CE1719112385650E00E63247 /* assets-images.swift in Sources */,
 				CE270261237571EA00E3DF14 /* LoginScreenViewController.swift in Sources */,
 				CEF2D1282358732C005D2C96 /* AppDelegate.swift in Sources */,
 				CEA80EAA2358A55B004C6C70 /* SearchViewController.swift in Sources */,
@@ -600,6 +619,7 @@
 				CE3F1205235F15B800C6595F /* ImagesTableViewCell.swift in Sources */,
 				CE2BBE36235C60D100F4D19B /* HomeApiResponse.swift in Sources */,
 				CE226D082361BA990066FDBC /* Extentions.swift in Sources */,
+				CE1719122385650E00E63247 /* strings.swift in Sources */,
 				CE38EA5E235C98E000229585 /* HomeModel.swift in Sources */,
 				CE36AFF22365B575007E5145 /* SkeletonTableViewCell.swift in Sources */,
 				CE2BBE3F235C7E5700F4D19B /* ProductService.swift in Sources */,

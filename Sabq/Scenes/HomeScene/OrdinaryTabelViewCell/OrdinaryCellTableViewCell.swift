@@ -43,7 +43,7 @@ class OrdinaryCellTableViewCell: UITableViewCell {
         timeLable.text = obj.publishDate?.convertStringToTimeAgo()
         guard let viewsNumber = obj.noOfViews else { return }
         viewsLable.text = String(viewsNumber)
-        viewsImg.image = viewsNumber > 5000 ? #imageLiteral(resourceName: "ic_views_icon_hot") : #imageLiteral(resourceName: "ic_views_icon")
+        viewsImg.image = viewsNumber > 5000 ? Asset.icViewsIconHot.image: Asset.icViewsIcon.image
         
         guard let stringPath = obj.coverPhoto else { return }
                newsImg.sd_setImage(with: URL(string: stringPath), placeholderImage: #imageLiteral(resourceName: "placeHolder"))
